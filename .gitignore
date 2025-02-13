@@ -10,3 +10,12 @@ Logs/
 UserSettings/
 obj/
 Packages/
+Library/
+Temp/
+Logs/
+UserSettings/
+obj/
+Packages/
+.vs/
+*.csproj
+*.sln
