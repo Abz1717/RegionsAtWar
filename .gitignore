@@ -1,5 +1,4 @@
 Library/
-Packages/
 Temp/
 Logs/
 UserSettings/
@@ -7,3 +6,5 @@ obj/
 .vs/
 *.csproj
 *.sln
+
+
