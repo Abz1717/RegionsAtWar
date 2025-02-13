@@ -1,0 +1,1358 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.57f1 (9d8bd91adc0a) revision 10324953'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 16085 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.57f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker5
+-projectPath
+C:/Users/awine/Regions at war
+-logFile
+Logs/AssetImportWorker5.log
+-srvPort
+64048
+Successfully changed project path to: C:/Users/awine/Regions at war
+C:/Users/awine/Regions at war
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [28764]  Target information:
+
+Player connection [28764]  * "[IP] 192.168.247.1 [Port] 0 [Flags] 2 [Guid] 392282318 [EditorId] 392282318 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [28764]  * "[IP] 192.168.253.1 [Port] 0 [Flags] 2 [Guid] 392282318 [EditorId] 392282318 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [28764]  * "[IP] 192.168.1.117 [Port] 0 [Flags] 2 [Guid] 392282318 [EditorId] 392282318 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [28764] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [28764] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+Refreshing native plugins compatible for Editor in 10.11 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.57f1 (9d8bd91adc0a)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.57f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/awine/Regions at war/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 4050 Laptop GPU (ID=0x28a1)
+    Vendor:   NVIDIA
+    VRAM:     5921 MB
+    Driver:   32.0.15.6614
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.57f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.57f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.57f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56728
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.57f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.007150 seconds.
+- Loaded All Assemblies, in  0.336 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.271 seconds
+Domain Reload Profiling: 606ms
+	BeginReloadAssembly (110ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (63ms)
+	LoadAllAssembliesAndSetupDomain (120ms)
+		LoadAssemblies (108ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (118ms)
+			TypeCache.Refresh (117ms)
+				TypeCache.ScanAssembly (104ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (272ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (230ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (168ms)
+			ProcessInitializeOnLoadMethodAttributes (41ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in 23.918 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.152 seconds
+Domain Reload Profiling: 25063ms
+	BeginReloadAssembly (156ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (56ms)
+	LoadAllAssembliesAndSetupDomain (23650ms)
+		LoadAssemblies (21971ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (1775ms)
+			TypeCache.Refresh (1749ms)
+				TypeCache.ScanAssembly (1509ms)
+			ScanForSourceGeneratedMonoScriptInfo (17ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1152ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1007ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (80ms)
+			ProcessInitializeOnLoadAttributes (832ms)
+			ProcessInitializeOnLoadMethodAttributes (71ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 13.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4947 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (346.9 KB). Loaded Objects now: 5408.
+Memory consumption went from 199.0 MB to 198.6 MB.
+Total: 3.249200 ms (FindLiveObjects: 0.247200 ms CreateObjectMapping: 0.117100 ms MarkObjects: 2.749200 ms  DeleteObjects: 0.134700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 298702.430171 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Aberdeenshire_1_.svg
+  artifactKey: Guid(896e4c9f1f733254da433e37816380e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Aberdeenshire_1_.svg using Guid(896e4c9f1f733254da433e37816380e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '3b697e693a8792b8e1668a674be614c9') in 0.658976 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 27
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Fife__x3C_Group_x3E__1_.svg
+  artifactKey: Guid(b6af7eb0cd39f3d4ab7a668871615ff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Fife__x3C_Group_x3E__1_.svg using Guid(b6af7eb0cd39f3d4ab7a668871615ff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '04d9ada9ff005ae7f32afc281794d1cc') in 0.129078 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Falkirk_1_.svg
+  artifactKey: Guid(c75de2f5a1feaac448deab290d83b498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Falkirk_1_.svg using Guid(c75de2f5a1feaac448deab290d83b498) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '284ca1a04ab55e199a8144f76db0447e') in 0.120932 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Glasgow_City_1_.svg
+  artifactKey: Guid(fb960f75a57997c4c9ea2b8e23d251b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Glasgow_City_1_.svg using Guid(fb960f75a57997c4c9ea2b8e23d251b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'cbf94f74d36e69055c0730034080da54') in 0.028006 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Dundee_City_1_.svg
+  artifactKey: Guid(955fea180c7504c44b7055d5ab414d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Dundee_City_1_.svg using Guid(955fea180c7504c44b7055d5ab414d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'c712b7675a9a2e22899073f1aec4ca08') in 0.027987 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Orkney__x3C_Group_x3E__1_.svg
+  artifactKey: Guid(643aa32e1c044ac4e9a19279d4a30adc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Orkney__x3C_Group_x3E__1_.svg using Guid(643aa32e1c044ac4e9a19279d4a30adc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'bf633e4ef8b742167565cdb76e55b6bb') in 0.044484 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Moray_1_.svg
+  artifactKey: Guid(b4a621acc751d1641a7a343adcda272c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Moray_1_.svg using Guid(b4a621acc751d1641a7a343adcda272c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e2fc1a8278786d47094157acffac35de') in 0.047008 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Highland__x3C_Group_x3E__1_.svg
+  artifactKey: Guid(f74cc7fa39a75154ea49c29a295a3be5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Highland__x3C_Group_x3E__1_.svg using Guid(f74cc7fa39a75154ea49c29a295a3be5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '0faf1e965bea08f677e2fcc08c2a0425') in 0.056127 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/East_Dunbartonshire_1_.svg
+  artifactKey: Guid(fec94334224b30a4c8f74b46ff29ea62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/East_Dunbartonshire_1_.svg using Guid(fec94334224b30a4c8f74b46ff29ea62) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'c4bcc89de1e42b5c9c3c78126b665f93') in 0.022701 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Dumfries_and_Galloway_1_.svg
+  artifactKey: Guid(d10fbbff36d0ee74eaf1b99a26286e62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Dumfries_and_Galloway_1_.svg using Guid(d10fbbff36d0ee74eaf1b99a26286e62) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4fc9e94f0bf321a0bc06730f18c9c431') in 0.055401 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Perth_and_Kinross_2_.svg
+  artifactKey: Guid(9d82ab83b4d24964fad54c706dcd2d81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Perth_and_Kinross_2_.svg using Guid(9d82ab83b4d24964fad54c706dcd2d81) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '93cc23010a64e321a320b6dbf2768677') in 0.192404 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/East_Renfrewshire_1_.svg
+  artifactKey: Guid(c423bfe52f6a8284bb3eeb3b9540a5ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/East_Renfrewshire_1_.svg using Guid(c423bfe52f6a8284bb3eeb3b9540a5ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '36c037f4362069acd426f50756ef42e7') in 0.075752 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 3.975550 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Shetland__x3C_Group_x3E__1_.svg
+  artifactKey: Guid(60b274cd9e9733f418d9d7140bcef7dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Shetland__x3C_Group_x3E__1_.svg using Guid(60b274cd9e9733f418d9d7140bcef7dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '645b48d3f2056a3f9afdb8bfa36149fa') in 0.089200 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/South_Ayrshire_1_.svg
+  artifactKey: Guid(c87214208d499754d8ae6d500f2c3c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/South_Ayrshire_1_.svg using Guid(c87214208d499754d8ae6d500f2c3c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '1d2336f1caae2f05e3cac7303e8f2884') in 0.122785 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/West_Lothian_1_.svg
+  artifactKey: Guid(8bb841499b546ed45987c0b2c6cf8ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/West_Lothian_1_.svg using Guid(8bb841499b546ed45987c0b2c6cf8ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '45e472c9e7e57e15b2245c355fc0a543') in 0.046506 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Stirling_1_.svg
+  artifactKey: Guid(542c85201a9a3ba478cf893efdc42a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Stirling_1_.svg using Guid(542c85201a9a3ba478cf893efdc42a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'd29a95e6a4f91f44b6fd85d29c2ee250') in 0.219314 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 424.639060 seconds.
+  path: Assets/UniversalRenderPipelineGlobalSettings.asset
+  artifactKey: Guid(18dc0cd2c080841dea60987a38ce93fa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(18dc0cd2c080841dea60987a38ce93fa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'd270c9de89467b56aa7d66f8f092d2cf') in 0.459387 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Scenes/country_base_fills/England_fill.svg
+  artifactKey: Guid(16138fa43564a4444aeb7b58adfb384f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_base_fills/England_fill.svg using Guid(16138fa43564a4444aeb7b58adfb384f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a1dd08782029b59031be609cf31e0722') in 0.131860 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Durham_1_.svg
+  artifactKey: Guid(7a00acf72c056c941bbbc513817892d3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Durham_1_.svg using Guid(7a00acf72c056c941bbbc513817892d3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '893b0a18c0e21c60004681c9582a7749') in 0.086378 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Herefordshire_1_.svg
+  artifactKey: Guid(dc46be46bd1dc5c4390e751a45060d77) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Herefordshire_1_.svg using Guid(dc46be46bd1dc5c4390e751a45060d77) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'eef31d403e1933fbe42eeffe987b0824') in 0.056314 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Kilkenny_2_.svg
+  artifactKey: Guid(9cf57a344606ba14383e1c71f974b568) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Kilkenny_2_.svg using Guid(9cf57a344606ba14383e1c71f974b568) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'c819cea1cdf8878e5092a1268c98922f') in 0.050326 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Nottinghamshire_1_.svg
+  artifactKey: Guid(4ce91b8f02d27ea4bbe6f9efe24df630) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Nottinghamshire_1_.svg using Guid(4ce91b8f02d27ea4bbe6f9efe24df630) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '7e0d8b56eeac9a3db23084e2b0cd313c') in 0.057778 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Settings/URP-Balanced.asset
+  artifactKey: Guid(e1260c1148f6143b28bae5ace5e9c5d1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Settings/URP-Balanced.asset using Guid(e1260c1148f6143b28bae5ace5e9c5d1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '1aa8fcc3249ab027ba5e0181f2ceb96d') in 0.200072 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Scenes/islands_coastline/Scottish_islands.svg
+  artifactKey: Guid(f10458953ff172149a001a942dd9e3d4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/islands_coastline/Scottish_islands.svg using Guid(f10458953ff172149a001a942dd9e3d4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '037bbb67c1ef1769a9cce2423a778241') in 0.063242 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(99c9720ab356a0642a771bea13969a05) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/SampleScene.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '170711b72f5bad030432d59a04784bf4') in 0.047235 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000337 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Northumberland.svg
+  artifactKey: Guid(e6616d966cf3e5841b1234fec904d71e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Northumberland.svg using Guid(e6616d966cf3e5841b1234fec904d71e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '62b41c1c0b28d4754d028f10f51b54d2') in 0.063528 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000086 seconds.
+  path: Assets/Settings/SampleSceneProfile.asset
+  artifactKey: Guid(a6560a915ef98420e9faacc1c7438823) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Settings/SampleSceneProfile.asset using Guid(a6560a915ef98420e9faacc1c7438823) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '6fd590d59c103e282ba3a3dc4dd8c63a') in 0.066935 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Cheshire_1_.svg
+  artifactKey: Guid(68f57319b4f3daf4f9b182c325c8b519) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Cheshire_1_.svg using Guid(68f57319b4f3daf4f9b182c325c8b519) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '5213050e6a288618f895c1afe6524852') in 0.073370 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Hertfordshire_1_.svg
+  artifactKey: Guid(0acd26746b17cf84ba535e01cc979f43) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Hertfordshire_1_.svg using Guid(0acd26746b17cf84ba535e01cc979f43) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '77cc7c8244f2ba4e8416653bfddb1d25') in 0.045837 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Wexford__x3C_Group_x3E__2_.svg
+  artifactKey: Guid(ad5b78ee9a2bf2f46ab6c7f479bee7eb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Wexford__x3C_Group_x3E__2_.svg using Guid(ad5b78ee9a2bf2f46ab6c7f479bee7eb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ec8c3d798e9d8db3c867b82ddf4d1973') in 0.056370 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Staffordshire_1_.svg
+  artifactKey: Guid(28a98dda74cdfaf4b91ad60ab5233d67) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Staffordshire_1_.svg using Guid(28a98dda74cdfaf4b91ad60ab5233d67) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'eff6420b371a0d32e3ee18b368ff8335') in 0.054372 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Rutland_1_.svg
+  artifactKey: Guid(4cfe977f4dc21ab42b6c88b17ec05d14) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Rutland_1_.svg using Guid(4cfe977f4dc21ab42b6c88b17ec05d14) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'aa768112b4fd8d2a3576b474a30af6f5') in 0.065355 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Surrey_1_.svg
+  artifactKey: Guid(4c50e97f67e5fc7409b49acb308b7747) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Surrey_1_.svg using Guid(4c50e97f67e5fc7409b49acb308b7747) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '539a34c60e93258d8621e195210b7a46') in 0.048136 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Aberdeen_City_1_.svg
+  artifactKey: Guid(49ecc243faee3e54182c352514688720) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Aberdeen_City_1_.svg using Guid(49ecc243faee3e54182c352514688720) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f8cc5f5854fefd4f32c80a26bd1c870f') in 0.059857 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Sligo__x3C_Group_x3E__2_.svg
+  artifactKey: Guid(2bede58d27b791d4f97c202edc04359e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Sligo__x3C_Group_x3E__2_.svg using Guid(2bede58d27b791d4f97c202edc04359e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '46e988f564c46274d5de055581dc24a3') in 0.053530 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Scenes/country_base_fills/Isle_of_Man_and_Channel_Islands_fill.svg
+  artifactKey: Guid(f38e27c663148c44db0c1405e6a88bb3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_base_fills/Isle_of_Man_and_Channel_Islands_fill.svg using Guid(f38e27c663148c44db0c1405e6a88bb3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '960e04d64b2505b55b7e44270d611d41') in 0.058688 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Dundee_City_1_.svg
+  artifactKey: Guid(955fea180c7504c44b7055d5ab414d7a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Dundee_City_1_.svg using Guid(955fea180c7504c44b7055d5ab414d7a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '9f067c816923b304efab63274fc4064c') in 0.049584 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/East_Dunbartonshire_1_.svg
+  artifactKey: Guid(fec94334224b30a4c8f74b46ff29ea62) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/East_Dunbartonshire_1_.svg using Guid(fec94334224b30a4c8f74b46ff29ea62) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '98ac93d8181c54b6782b6a1d9b81c58e') in 0.060304 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Scenes/country_fills/northern_ireland_country_fill/Down__x3C_Group_x3E_.svg
+  artifactKey: Guid(34192bae1bb2c9740ae890f1ae11799e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/northern_ireland_country_fill/Down__x3C_Group_x3E_.svg using Guid(34192bae1bb2c9740ae890f1ae11799e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b3b22c3ab256d729759369b71847e365') in 0.066404 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Aberdeenshire_1_.svg
+  artifactKey: Guid(896e4c9f1f733254da433e37816380e9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Aberdeenshire_1_.svg using Guid(896e4c9f1f733254da433e37816380e9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '44d6bddaa1f111374d7c043cfd805d00') in 0.055406 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/Scenes/islands_coastline/Irish_islands.svg
+  artifactKey: Guid(ba7aabba5cba92d4bb71128af6d12478) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/islands_coastline/Irish_islands.svg using Guid(ba7aabba5cba92d4bb71128af6d12478) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '21f12c101694bcc6a6c07a1f751812d9') in 0.076818 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000102 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Dorset_2_.svg
+  artifactKey: Guid(51b0013222ac75d4c80e4192089d28ce) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Dorset_2_.svg using Guid(51b0013222ac75d4c80e4192089d28ce) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b5efed3b49f0e9de9a49a197ef84c558') in 0.049054 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Scenes/country_base_fills/Wales_fill.svg
+  artifactKey: Guid(0b2115388197d0f409ccf3644952d50e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_base_fills/Wales_fill.svg using Guid(0b2115388197d0f409ccf3644952d50e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '11e757d4748ea94682c4e9dde6d2bfb1') in 0.052107 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Orkney__x3C_Group_x3E__1_.svg
+  artifactKey: Guid(643aa32e1c044ac4e9a19279d4a30adc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Orkney__x3C_Group_x3E__1_.svg using Guid(643aa32e1c044ac4e9a19279d4a30adc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'de366f489032621b2fc51ef71ba56c26') in 0.052148 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/West_Lothian_1_.svg
+  artifactKey: Guid(8bb841499b546ed45987c0b2c6cf8ec5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/West_Lothian_1_.svg using Guid(8bb841499b546ed45987c0b2c6cf8ec5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '6900f1c950ffbf9f5e597cb22de3e19a') in 0.058724 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Renfrewshire_1_.svg
+  artifactKey: Guid(bfc3f6dc80bdc494993fceaec32b846b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Renfrewshire_1_.svg using Guid(bfc3f6dc80bdc494993fceaec32b846b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '55ac7f2168fa125984f5d5abbdcb59a8') in 0.050400 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/East_Sussex_1_.svg
+  artifactKey: Guid(c5a62642192af9d48927f0d940dc5da0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/East_Sussex_1_.svg using Guid(c5a62642192af9d48927f0d940dc5da0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8bf5c2a8b452cde50fe306a053fe3b16') in 0.055123 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/West_Dunbartonshire_1_.svg
+  artifactKey: Guid(074a64171da72ca4fbe6d8ebcd5c04a8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/West_Dunbartonshire_1_.svg using Guid(074a64171da72ca4fbe6d8ebcd5c04a8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '0cf53b60cc4bd1d7dbc7dcb52ba1507d') in 0.049629 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Lancashire_1_.svg
+  artifactKey: Guid(1cc84a61ee5dc8a4d91bf14f6125e49c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Lancashire_1_.svg using Guid(1cc84a61ee5dc8a4d91bf14f6125e49c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4b5cc13fefbe0cd11b35fbbec29b1097') in 0.057204 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.014996 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Angus_1_.svg
+  artifactKey: Guid(aca788dd84ee15b40b0120015d89133a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Angus_1_.svg using Guid(aca788dd84ee15b40b0120015d89133a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ef5ffc26c59d2c6036c80a017caf69ff') in 0.048766 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Monmouthshire__x2F__Sir_Fynwy_2_.svg
+  artifactKey: Guid(7359d8422f40dfc48985e657bf73acc4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Monmouthshire__x2F__Sir_Fynwy_2_.svg using Guid(7359d8422f40dfc48985e657bf73acc4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f4141f40594790d45d4b8724fa97cdd4') in 0.056620 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Flintshire__x2F__Sir_y_Fflint_2_.svg
+  artifactKey: Guid(7f74f487dd8eff04e87faf376d7f228b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Flintshire__x2F__Sir_y_Fflint_2_.svg using Guid(7f74f487dd8eff04e87faf376d7f228b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '5a1e1b711116d55400c705f85fb0bf93') in 0.050081 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Gwynedd__x3C_Group_x3E__2_.svg
+  artifactKey: Guid(9c22cb0f01186594584c91e25fa815fe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Gwynedd__x3C_Group_x3E__2_.svg using Guid(9c22cb0f01186594584c91e25fa815fe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '1002d5db3018c805963e5b5d1907a357') in 0.053640 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000401 seconds.
+  path: Assets/Scenes/County_boundaries/English_county_boundaries.svg
+  artifactKey: Guid(7fe6d336f07311f42bd6c0b194cc2b0b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/County_boundaries/English_county_boundaries.svg using Guid(7fe6d336f07311f42bd6c0b194cc2b0b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '55a0ddf95cef5d3821bd290cbd910a9c') in 0.077896 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Settings/URP-Performant.asset
+  artifactKey: Guid(d0e2fc18fe036412f8223b3b3d9ad574) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Settings/URP-Performant.asset using Guid(d0e2fc18fe036412f8223b3b3d9ad574) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '82e423a47ecce7487c0c70d9fbfd94f1') in 0.094113 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/City_of_Edinburgh_.svg
+  artifactKey: Guid(42a10406c2600fb4b97d22332d38efe3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/City_of_Edinburgh_.svg using Guid(42a10406c2600fb4b97d22332d38efe3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '338b431578821a981a4ced0c408b603f') in 0.056099 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Torfaen__x2F__Tor-faen_2_.svg
+  artifactKey: Guid(39c9f1aa27fc7a64e84e8fee169af7ad) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Torfaen__x2F__Tor-faen_2_.svg using Guid(39c9f1aa27fc7a64e84e8fee169af7ad) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '222087537fab50c416b51c4043ae3337') in 0.059891 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Newport__x2F__Casnewydd_2_.svg
+  artifactKey: Guid(1bed2c05ac6b29049ab530dfdd68cf69) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Newport__x2F__Casnewydd_2_.svg using Guid(1bed2c05ac6b29049ab530dfdd68cf69) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '1accc2c1fd092683f3d60945b7661edc') in 0.054409 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Scenes/sea/sea.svg
+  artifactKey: Guid(8ea115a9cdb2e5a4888e83403027eb56) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/sea/sea.svg using Guid(8ea115a9cdb2e5a4888e83403027eb56) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '1641ce1e1df169f41a57df5899e884fe') in 0.054197 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Stirling_1_.svg
+  artifactKey: Guid(542c85201a9a3ba478cf893efdc42a2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Stirling_1_.svg using Guid(542c85201a9a3ba478cf893efdc42a2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '092197ff19343d7e70c5a188ee49823a') in 0.055763 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/West_Sussex_1_.svg
+  artifactKey: Guid(db88cff8e7081b241909ac28cf532a3a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/West_Sussex_1_.svg using Guid(db88cff8e7081b241909ac28cf532a3a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '700c04989758a5563f69db6891c0ea37') in 0.052695 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Derbyshire_1_.svg
+  artifactKey: Guid(8d60863a220d59d4cb35108e64d639af) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Derbyshire_1_.svg using Guid(8d60863a220d59d4cb35108e64d639af) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b0edb728bc272d7855a143a17d226679') in 0.078254 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Glasgow_City_1_.svg
+  artifactKey: Guid(fb960f75a57997c4c9ea2b8e23d251b6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Glasgow_City_1_.svg using Guid(fb960f75a57997c4c9ea2b8e23d251b6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '6947d6b32f4ffad2de8bdc26d37fa60f') in 0.054152 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Roscommon_2_.svg
+  artifactKey: Guid(9985d089622202444affc2d85088389a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Roscommon_2_.svg using Guid(9985d089622202444affc2d85088389a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f97c19387fd222723e8496456acdcb50') in 0.054736 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Shetland__x3C_Group_x3E__1_.svg
+  artifactKey: Guid(60b274cd9e9733f418d9d7140bcef7dc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Shetland__x3C_Group_x3E__1_.svg using Guid(60b274cd9e9733f418d9d7140bcef7dc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '98acd1527df8f8856aac049c09a352b7') in 0.065826 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Cavan_2_.svg
+  artifactKey: Guid(04070f938b7753d4fa9ffc1f712e3674) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Cavan_2_.svg using Guid(04070f938b7753d4fa9ffc1f712e3674) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b2bd864942778adc06210e4405b8cac5') in 0.048495 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Shropshire_1_.svg
+  artifactKey: Guid(5f48b72d7723c534e8aa537dc981aef0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Shropshire_1_.svg using Guid(5f48b72d7723c534e8aa537dc981aef0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '7f63b432ae74211978138c5d65c37889') in 0.060228 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Settings/URP-Balanced-Renderer.asset
+  artifactKey: Guid(e634585d5c4544dd297acaee93dc2beb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Settings/URP-Balanced-Renderer.asset using Guid(e634585d5c4544dd297acaee93dc2beb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'fec117c3fe6f2849adac902824205059') in 0.080344 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Scenes/islands_coastline/Welsh_islands.svg
+  artifactKey: Guid(ab1d1cf00ceb067479ffe47877aa2966) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/islands_coastline/Welsh_islands.svg using Guid(ab1d1cf00ceb067479ffe47877aa2966) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '1216af6fc58586721c6b1808a27a90f0') in 0.049968 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Scenes/country_fills/northern_ireland_country_fill/Tyrone.svg
+  artifactKey: Guid(302c43aa659bc9849bf7ea63ac012189) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/northern_ireland_country_fill/Tyrone.svg using Guid(302c43aa659bc9849bf7ea63ac012189) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '17c04caad843bcd8e35e0dd6bbad8b4c') in 0.066161 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Swansea__x2F__Abertawe_2_.svg
+  artifactKey: Guid(fe4e429fbe87e1c49bd6a8d795c4a06c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Swansea__x2F__Abertawe_2_.svg using Guid(fe4e429fbe87e1c49bd6a8d795c4a06c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a8ae9710cf76ad66379d6b71f3da05ed') in 0.066026 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Inverclyde_1_.svg
+  artifactKey: Guid(e155de42a003cae48b9a6a8b686cb584) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Inverclyde_1_.svg using Guid(e155de42a003cae48b9a6a8b686cb584) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '061f0d293dcc365f77b0be3b7602eb69') in 0.073902 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Hampshire_1_.svg
+  artifactKey: Guid(d41e02c7f9778f9409cd933e53d62388) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Hampshire_1_.svg using Guid(d41e02c7f9778f9409cd933e53d62388) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ca9fa5fc7b42ec4cd055fe93785a3ade') in 0.060328 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Dumfries_and_Galloway_1_.svg
+  artifactKey: Guid(d10fbbff36d0ee74eaf1b99a26286e62) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Dumfries_and_Galloway_1_.svg using Guid(d10fbbff36d0ee74eaf1b99a26286e62) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ba6006af5e92c5fcf18060536723eb65') in 0.076586 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Scenes/country_fills/northern_ireland_country_fill/Antrim__x3C_Group_x3E_.svg
+  artifactKey: Guid(c44339aa9fac46045a13e2abecb8ba86) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/northern_ireland_country_fill/Antrim__x3C_Group_x3E_.svg using Guid(c44339aa9fac46045a13e2abecb8ba86) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '88cfd737fa78bfb672eb92c3dd45af46') in 0.055094 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/South_Yorkshire_1_.svg
+  artifactKey: Guid(86aeac1377259ab449f77abfe9ad6e5c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/South_Yorkshire_1_.svg using Guid(86aeac1377259ab449f77abfe9ad6e5c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '7cd422261f12fcd8ce827ab73f847dd8') in 0.064498 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Westmeath_2_.svg
+  artifactKey: Guid(24f5a353b40e1bc4bad35329c8883c79) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Westmeath_2_.svg using Guid(24f5a353b40e1bc4bad35329c8883c79) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '80113a21e7d199ee6aa65ab8a12246cb') in 0.054643 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Monaghan_2_.svg
+  artifactKey: Guid(ff57808fdbc88fd4eb9a24722a461d0d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Monaghan_2_.svg using Guid(ff57808fdbc88fd4eb9a24722a461d0d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'dac24f6a90b8c2921e55dc1b28f6bff0') in 0.051939 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Laois_2_.svg
+  artifactKey: Guid(6455d44acc7beb3448fd47a730b72052) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Laois_2_.svg using Guid(6455d44acc7beb3448fd47a730b72052) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'cf0040d174c779672c8a940abe5517dd') in 0.045462 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Moray_1_.svg
+  artifactKey: Guid(b4a621acc751d1641a7a343adcda272c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Moray_1_.svg using Guid(b4a621acc751d1641a7a343adcda272c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e475eead84e19a750da7609febaa55c9') in 0.050597 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Wrexham__x2F__Wrecsam_2_.svg
+  artifactKey: Guid(f1230f2ec49f4e04aa2bb1bb8413c0bc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Wrexham__x2F__Wrecsam_2_.svg using Guid(f1230f2ec49f4e04aa2bb1bb8413c0bc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '9750514174d6b587c2268541f69450ea') in 0.040966 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Donegal__x3C_Group_x3E__2_.svg
+  artifactKey: Guid(689d20e1524c31d418cca462328ebcfb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Donegal__x3C_Group_x3E__2_.svg using Guid(689d20e1524c31d418cca462328ebcfb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8c3a2aa1ff65bc3727a5d2caf2adec57') in 0.057192 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/North_Yorkshire_1_.svg
+  artifactKey: Guid(e990662ad34554c419e2ff9d0be8835b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/North_Yorkshire_1_.svg using Guid(e990662ad34554c419e2ff9d0be8835b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '11d580f040ec16d52d6dadeeaec4a584') in 0.061534 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Bridgend__x2F__Pen-y-Bont_ar_Ogwr_2_.svg
+  artifactKey: Guid(c385a4df285648c4ebd64a66ffdf8bb8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Bridgend__x2F__Pen-y-Bont_ar_Ogwr_2_.svg using Guid(c385a4df285648c4ebd64a66ffdf8bb8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '9c904a74cb220590e29626757ec9e250') in 0.059380 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Warwickshire_1_.svg
+  artifactKey: Guid(5db2c49897d3d6f418926dc74619532d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Warwickshire_1_.svg using Guid(5db2c49897d3d6f418926dc74619532d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'dc0087ad3254c9440ba4e24fd6ec721d') in 0.060795 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Essex.svg
+  artifactKey: Guid(5ec0df9ae17d57343b4dff2a7e83bc79) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Essex.svg using Guid(5ec0df9ae17d57343b4dff2a7e83bc79) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f50ded2311d73910a91aa2a2808a7494') in 0.044640 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Scenes/Mainland_Ireland_coastline/Mainland_Ireland_coastline.svg
+  artifactKey: Guid(efe2039c7de68e549962cfa2b526e46b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/Mainland_Ireland_coastline/Mainland_Ireland_coastline.svg using Guid(efe2039c7de68e549962cfa2b526e46b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '299fa7bed7a1d2b9a0b9a6777a39b5ba') in 0.058108 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Highland__x3C_Group_x3E__1_.svg
+  artifactKey: Guid(f74cc7fa39a75154ea49c29a295a3be5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Highland__x3C_Group_x3E__1_.svg using Guid(f74cc7fa39a75154ea49c29a295a3be5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a9203aeae62c896a58274b87e7ad54c0') in 0.088200 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Scenes/country_base_fills/Northern_Ireland_fill.svg
+  artifactKey: Guid(c5fd3f0472357714986200cd6e2456e6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_base_fills/Northern_Ireland_fill.svg using Guid(c5fd3f0472357714986200cd6e2456e6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '1e18823fdd33d61fa1a8b3cb6cda9ab0') in 0.057198 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Scenes/country_fills/northern_ireland_country_fill/Fermanagh.svg
+  artifactKey: Guid(ae199380332e11f4a95f3565c343eb2d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/northern_ireland_country_fill/Fermanagh.svg using Guid(ae199380332e11f4a95f3565c343eb2d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '7d29c09138e31708dca62c8649d22581') in 0.072230 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Buckinghamshire_1_.svg
+  artifactKey: Guid(57a8ca7e700590148ac95adb5918269d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Buckinghamshire_1_.svg using Guid(57a8ca7e700590148ac95adb5918269d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f33f180b936d908ae68e56e41285e61a') in 0.090399 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000105 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Dublin__x3C_Group_x3E__2_.svg
+  artifactKey: Guid(673c8af081d3f7f4e8fdcf86a4ebc2bf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Dublin__x3C_Group_x3E__2_.svg using Guid(673c8af081d3f7f4e8fdcf86a4ebc2bf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '6ee95d83be53b8dc0504319be20bba23') in 0.065975 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Ceredigion_2_.svg
+  artifactKey: Guid(5373dcb12207d2447a98be423b5ae417) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Ceredigion_2_.svg using Guid(5373dcb12207d2447a98be423b5ae417) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '3b8cd30b506c9f0d322563a3d35aaa48') in 0.045953 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/East_Renfrewshire_1_.svg
+  artifactKey: Guid(c423bfe52f6a8284bb3eeb3b9540a5ef) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/East_Renfrewshire_1_.svg using Guid(c423bfe52f6a8284bb3eeb3b9540a5ef) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '5be5bbfac27e87aba849a70e9287af24') in 0.055227 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Neath_Port_Talbot__x2F__Castell-nedd_Port_Talbot_2_.svg
+  artifactKey: Guid(58f28045ace72784f8b368b4f77ff3d0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Neath_Port_Talbot__x2F__Castell-nedd_Port_Talbot_2_.svg using Guid(58f28045ace72784f8b368b4f77ff3d0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a126b0e3192faa0498097a7a02a78eff') in 0.050435 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Carlow_2_.svg
+  artifactKey: Guid(bea7cf779b4004a4b8dd360e661ef5d9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Carlow_2_.svg using Guid(bea7cf779b4004a4b8dd360e661ef5d9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'cbdf5c83ef7e10b6a8395d0774dbfe49') in 0.065466 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Offaly_2_.svg
+  artifactKey: Guid(47e0b546967a50b4fb3b117ef8d82425) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Offaly_2_.svg using Guid(47e0b546967a50b4fb3b117ef8d82425) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '604ca501c6b8cc4b6884019ef1721e88') in 0.057188 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Midlothian_1_.svg
+  artifactKey: Guid(f12ab62cc1bcb2b4e9a40307d026b3b1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Midlothian_1_.svg using Guid(f12ab62cc1bcb2b4e9a40307d026b3b1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '62b4853365be072c44c7514086c58057') in 0.059894 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Scenes/country_boundaries/Country_boundaries.svg
+  artifactKey: Guid(0fdc0ebfd1bbaa24d9ad6ed27c0ec582) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_boundaries/Country_boundaries.svg using Guid(0fdc0ebfd1bbaa24d9ad6ed27c0ec582) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '800e0689a321fa5620d6731e63abeacb') in 0.047370 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Somerset_1_.svg
+  artifactKey: Guid(7c922b0ebc3a8964c9618d84fc9aea0a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Somerset_1_.svg using Guid(7c922b0ebc3a8964c9618d84fc9aea0a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '52c073c64a1f4eaf9b96d85de6844e89') in 0.052259 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Scenes/country_fills/channel_islands_country_fill/Channel_Islands_2_.svg
+  artifactKey: Guid(1222f96ed3f11b34fadc3d311eaacfa5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/channel_islands_country_fill/Channel_Islands_2_.svg using Guid(1222f96ed3f11b34fadc3d311eaacfa5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '78456791d271c980ada2b9fa913298f7') in 0.053485 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Powys_2_.svg
+  artifactKey: Guid(e73557819fb0cbf4a82684ab5d4d41c7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Powys_2_.svg using Guid(e73557819fb0cbf4a82684ab5d4d41c7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f758b92354b3fec8195007612a674f30') in 0.048758 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Meath_2_.svg
+  artifactKey: Guid(06a861c5e13b03a48911e0567b90ee91) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Meath_2_.svg using Guid(06a861c5e13b03a48911e0567b90ee91) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '734dfcfeabed59aa2f84fc03bdf99599') in 0.064429 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Vale_of_Glamorgan__x2F__Bro_Morgannwg_2_.svg
+  artifactKey: Guid(2a283d7cab118c84e88c2e23cdc6073f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Vale_of_Glamorgan__x2F__Bro_Morgannwg_2_.svg using Guid(2a283d7cab118c84e88c2e23cdc6073f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b04ec370d80b5d16507be2e5320b5dbc') in 0.051736 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Scenes/country_fills/scotland_country_fill/Falkirk_1_.svg
+  artifactKey: Guid(c75de2f5a1feaac448deab290d83b498) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/scotland_country_fill/Falkirk_1_.svg using Guid(c75de2f5a1feaac448deab290d83b498) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '710303ef92e69de59dbc77f4dd02cb67') in 0.054962 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Scenes/lakes_on_county_boundaries/Major_lakes_on_county_boundaries.svg
+  artifactKey: Guid(94dbb34f67b889a4695cef4566f5be20) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/lakes_on_county_boundaries/Major_lakes_on_county_boundaries.svg using Guid(94dbb34f67b889a4695cef4566f5be20) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f7b1b0249d01ee08d0446ce223f58608') in 0.057605 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Leicestershire_1_.svg
+  artifactKey: Guid(7fa4aaaeb6b636746aeb23da0d1673b2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/country_fills/england_country_fill/Leicestershire_1_.svg using Guid(7fa4aaaeb6b636746aeb23da0d1673b2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '953a8041b00208f5c98d4e4523b80113') in 0.049588 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 711.595173 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Cavan_2_.svg
+  artifactKey: Guid(04070f938b7753d4fa9ffc1f712e3674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Cavan_2_.svg using Guid(04070f938b7753d4fa9ffc1f712e3674) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '75cf79725eb2033bc937a780c2064ee1') in 0.027598 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.004701 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Galway__x3C_Group_x3E__2_.svg
+  artifactKey: Guid(5f1970d946b1fae4e8b97e8c396e3da8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Galway__x3C_Group_x3E__2_.svg using Guid(5f1970d946b1fae4e8b97e8c396e3da8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8f52759af66d394b6244d4e39a12b030') in 0.039938 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Wexford__x3C_Group_x3E__2_.svg
+  artifactKey: Guid(ad5b78ee9a2bf2f46ab6c7f479bee7eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Wexford__x3C_Group_x3E__2_.svg using Guid(ad5b78ee9a2bf2f46ab6c7f479bee7eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8fcf7b56e8ee09b5bb13f22d05c8092e') in 0.040887 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Cork__x3C_Group_x3E__2_.svg
+  artifactKey: Guid(5fa99dcdd7a97124d9ab82e2a0da9fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Cork__x3C_Group_x3E__2_.svg using Guid(5fa99dcdd7a97124d9ab82e2a0da9fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'c907b3056c211f725a06e364dffc359d') in 0.038513 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Westmeath_2_.svg
+  artifactKey: Guid(24f5a353b40e1bc4bad35329c8883c79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Westmeath_2_.svg using Guid(24f5a353b40e1bc4bad35329c8883c79) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '769be9f6c9d2692872755dca8f7971d5') in 0.037469 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Kildare_2_.svg
+  artifactKey: Guid(8aaa141168a61c74a8c765baea1ef689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Kildare_2_.svg using Guid(8aaa141168a61c74a8c765baea1ef689) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ad6180f226a8b02a4cdf5d668c8c832f') in 0.044613 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Louth_2_.svg
+  artifactKey: Guid(e6fbad3f629e38145bcbda047aeba600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Louth_2_.svg using Guid(e6fbad3f629e38145bcbda047aeba600) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '16b84eacd6e53f98a9d9cd52c11bac24') in 0.044068 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Kerry__x3C_Group_x3E__2_.svg
+  artifactKey: Guid(9148f4cd5effd6c419a388cc32797f71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Kerry__x3C_Group_x3E__2_.svg using Guid(9148f4cd5effd6c419a388cc32797f71) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4cd7113a637d62a792d1bce81e0da1b7') in 0.047685 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Donegal__x3C_Group_x3E__2_.svg
+  artifactKey: Guid(689d20e1524c31d418cca462328ebcfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Donegal__x3C_Group_x3E__2_.svg using Guid(689d20e1524c31d418cca462328ebcfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '1e5274d3b00a0d10bcbf49a13d81634d') in 0.048324 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Monaghan_2_.svg
+  artifactKey: Guid(ff57808fdbc88fd4eb9a24722a461d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Monaghan_2_.svg using Guid(ff57808fdbc88fd4eb9a24722a461d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'bde03ac9e82ce19483bd4aa435327dca') in 0.058424 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Leitrim_2_.svg
+  artifactKey: Guid(61880ba1cb7d8f74baa7f4f8a8be44fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Leitrim_2_.svg using Guid(61880ba1cb7d8f74baa7f4f8a8be44fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '9942cd20504ac9bc9bb5170852bea33f') in 0.057945 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Scenes/country_fills/republic_ireland_country_fill/Sligo__x3C_Group_x3E__2_.svg
+  artifactKey: Guid(2bede58d27b791d4f97c202edc04359e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/republic_ireland_country_fill/Sligo__x3C_Group_x3E__2_.svg using Guid(2bede58d27b791d4f97c202edc04359e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '44e9352757a62250a72a285e6d8a1c42') in 0.059079 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 36.106267 seconds.
+  path: Assets/Scenes/country_fills/northern_ireland_country_fill/Fermanagh.svg
+  artifactKey: Guid(ae199380332e11f4a95f3565c343eb2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/northern_ireland_country_fill/Fermanagh.svg using Guid(ae199380332e11f4a95f3565c343eb2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4ab107dae029e093842f50659f29a0b6') in 0.041668 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Scenes/country_fills/northern_ireland_country_fill/Tyrone.svg
+  artifactKey: Guid(302c43aa659bc9849bf7ea63ac012189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/northern_ireland_country_fill/Tyrone.svg using Guid(302c43aa659bc9849bf7ea63ac012189) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f9c922af6ea71d6738124c4770587f3e') in 0.030156 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 17.045598 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Cardiff__x2F__Caerdydd_2_.svg
+  artifactKey: Guid(64af3f8fdcf6fed44be732dcbcaa0832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Cardiff__x2F__Caerdydd_2_.svg using Guid(64af3f8fdcf6fed44be732dcbcaa0832) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'd87c5fa7224d1473cfc2ae5ff6a87b4d') in 0.014748 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Flintshire__x2F__Sir_y_Fflint_2_.svg
+  artifactKey: Guid(7f74f487dd8eff04e87faf376d7f228b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Flintshire__x2F__Sir_y_Fflint_2_.svg using Guid(7f74f487dd8eff04e87faf376d7f228b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b95c4d9bf0d617af5d969aff2cebddc2') in 0.030000 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Monmouthshire__x2F__Sir_Fynwy_2_.svg
+  artifactKey: Guid(7359d8422f40dfc48985e657bf73acc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Monmouthshire__x2F__Sir_Fynwy_2_.svg using Guid(7359d8422f40dfc48985e657bf73acc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '11b9159787183a0518da6a0314357be6') in 0.030108 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Denbighshire__x2F__Sir_Ddinbych_2_.svg
+  artifactKey: Guid(0b90f9735a72000409e81c9a44d06567) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Denbighshire__x2F__Sir_Ddinbych_2_.svg using Guid(0b90f9735a72000409e81c9a44d06567) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b8a0fac64ff07da0b8ddda0ca0ebf562') in 0.033796 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Scenes/country_fills/wales_country_fill/Gwynedd__x3C_Group_x3E__2_.svg
+  artifactKey: Guid(9c22cb0f01186594584c91e25fa815fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/wales_country_fill/Gwynedd__x3C_Group_x3E__2_.svg using Guid(9c22cb0f01186594584c91e25fa815fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '41d9fc83995f5089b7235b22c86fabc4') in 0.038461 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

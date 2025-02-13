@@ -1,0 +1,440 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.57f1 (9d8bd91adc0a) revision 10324953'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 16085 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.57f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/awine/Regions at war
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+64048
+Successfully changed project path to: C:/Users/awine/Regions at war
+C:/Users/awine/Regions at war
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [15616]  Target information:
+
+Player connection [15616]  * "[IP] 192.168.247.1 [Port] 0 [Flags] 2 [Guid] 3431092847 [EditorId] 3431092847 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [15616]  * "[IP] 192.168.253.1 [Port] 0 [Flags] 2 [Guid] 3431092847 [EditorId] 3431092847 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [15616]  * "[IP] 10.154.74.251 [Port] 0 [Flags] 2 [Guid] 3431092847 [EditorId] 3431092847 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [15616]  * "[IP] 192.168.1.117 [Port] 0 [Flags] 2 [Guid] 3431092847 [EditorId] 3431092847 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [15616] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [15616] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+Refreshing native plugins compatible for Editor in 9469.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.57f1 (9d8bd91adc0a)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.57f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/awine/Regions at war/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 4050 Laptop GPU (ID=0x28a1)
+    Vendor:   NVIDIA
+    VRAM:     5921 MB
+    Driver:   32.0.15.6614
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.57f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.57f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.57f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56564
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.57f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 1.044458 seconds.
+- Loaded All Assemblies, in 36.415 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.753 seconds
+Domain Reload Profiling: 38157ms
+	BeginReloadAssembly (25465ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (2937ms)
+	RebuildNativeTypeToScriptingClass (52ms)
+	initialDomainReloadingComplete (1333ms)
+	LoadAllAssembliesAndSetupDomain (6615ms)
+		LoadAssemblies (25492ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (6576ms)
+			TypeCache.Refresh (6567ms)
+				TypeCache.ScanAssembly (4724ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (1755ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1178ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (66ms)
+			SetLoadedEditorAssemblies (43ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (13ms)
+			ProcessInitializeOnLoadAttributes (843ms)
+			ProcessInitializeOnLoadMethodAttributes (214ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in 38.650 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.719 seconds
+Domain Reload Profiling: 41366ms
+	BeginReloadAssembly (355ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (17ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (36ms)
+	RebuildCommonClasses (77ms)
+	RebuildNativeTypeToScriptingClass (24ms)
+	initialDomainReloadingComplete (106ms)
+	LoadAllAssembliesAndSetupDomain (38083ms)
+		LoadAssemblies (35909ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (2388ms)
+			TypeCache.Refresh (2304ms)
+				TypeCache.ScanAssembly (2052ms)
+			ScanForSourceGeneratedMonoScriptInfo (56ms)
+			ResolveRequiredComponents (26ms)
+	FinalizeReload (2721ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2386ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (16ms)
+			SetLoadedEditorAssemblies (13ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (174ms)
+			ProcessInitializeOnLoadAttributes (2030ms)
+			ProcessInitializeOnLoadMethodAttributes (140ms)
+			AfterProcessingInitializeOnLoad (13ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.26 seconds
+Refreshing native plugins compatible for Editor in 24.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4947 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (346.5 KB). Loaded Objects now: 5408.
+Memory consumption went from 199.0 MB to 198.7 MB.
+Total: 8.048600 ms (FindLiveObjects: 0.499200 ms CreateObjectMapping: 0.267400 ms MarkObjects: 7.005700 ms  DeleteObjects: 0.273600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2512.163934 seconds.
+  path: Assets/Scenes/County_boundaries/English_county_boundaries.svg
+  artifactKey: Guid(7fe6d336f07311f42bd6c0b194cc2b0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/County_boundaries/English_county_boundaries.svg using Guid(7fe6d336f07311f42bd6c0b194cc2b0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ae1fd2a8701bbe3b7a8029458dd99151') in 0.933423 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 27
+========================================================================
+Received Import Request.
+  Time since last request: 10735.148263 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill
+  artifactKey: Guid(ea50de87e0710284999d31ac88a0acb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill using Guid(ea50de87e0710284999d31ac88a0acb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8f277ac9f15cdf388b0b4df857de3c43') in 0.010326 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.036855 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Bedfordshire_1_.svg
+  artifactKey: Guid(0390ec839392ee847979b5740a98d350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Bedfordshire_1_.svg using Guid(0390ec839392ee847979b5740a98d350) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a82d5824f2472419ebfc34580b673320') in 0.235455 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.311024 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Cambridgeshire_1_.svg
+  artifactKey: Guid(a0c57cb1c8b6ab8489aa04b3b01fcd67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Cambridgeshire_1_.svg using Guid(a0c57cb1c8b6ab8489aa04b3b01fcd67) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'd9d0e0a0d758651ce7c337ecf1f94b34') in 0.036136 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Cumbria_1_.svg
+  artifactKey: Guid(ac8bc3b893994414ab98baa1007682df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Cumbria_1_.svg using Guid(ac8bc3b893994414ab98baa1007682df) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '6b74444705b54b7089656c02940b0b79') in 0.038873 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Hertfordshire_1_.svg
+  artifactKey: Guid(0acd26746b17cf84ba535e01cc979f43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Hertfordshire_1_.svg using Guid(0acd26746b17cf84ba535e01cc979f43) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8a68370df3bf76ad52fac77a413c82fc') in 0.045308 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Isles_of_Scilly.svg
+  artifactKey: Guid(750ef2271a38aa047b64935d43534839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Isles_of_Scilly.svg using Guid(750ef2271a38aa047b64935d43534839) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ccfa6118c15ba261192158f891da702b') in 0.037351 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Lancashire_1_.svg
+  artifactKey: Guid(1cc84a61ee5dc8a4d91bf14f6125e49c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Lancashire_1_.svg using Guid(1cc84a61ee5dc8a4d91bf14f6125e49c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a832abb70c87eb12a6a9f0be64605ebd') in 0.052020 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Greater_Manchester_1_.svg
+  artifactKey: Guid(f369780dc1f564b41bbfd694adce9e8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Greater_Manchester_1_.svg using Guid(f369780dc1f564b41bbfd694adce9e8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '0a50c6de537ead686a0b8aebbb074186') in 0.035342 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Essex.svg
+  artifactKey: Guid(5ec0df9ae17d57343b4dff2a7e83bc79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Essex.svg using Guid(5ec0df9ae17d57343b4dff2a7e83bc79) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a8680ef4fcaed544d19db307ad4be4db') in 0.045849 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Derbyshire_1_.svg
+  artifactKey: Guid(8d60863a220d59d4cb35108e64d639af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Derbyshire_1_.svg using Guid(8d60863a220d59d4cb35108e64d639af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '747324d699a305c89ab43a12f5099732') in 0.038923 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Cheshire_1_.svg
+  artifactKey: Guid(68f57319b4f3daf4f9b182c325c8b519) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Cheshire_1_.svg using Guid(68f57319b4f3daf4f9b182c325c8b519) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '713bd92a9e3c80c5b7d61dc98a4915f5') in 0.049073 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Leicestershire_1_.svg
+  artifactKey: Guid(7fa4aaaeb6b636746aeb23da0d1673b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Leicestershire_1_.svg using Guid(7fa4aaaeb6b636746aeb23da0d1673b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '360405ee9058e21639f299bd71695eaa') in 0.045939 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Bristol_1_.svg
+  artifactKey: Guid(6cab8645b48cb4e47a8b73e334723c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Bristol_1_.svg using Guid(6cab8645b48cb4e47a8b73e334723c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '037f3726f4f3d807a602820d0ff55b21') in 0.041275 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 7.196236 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Lincolnshire__.svg
+  artifactKey: Guid(35771c86c570e0b48879e4b30bfc108d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Lincolnshire__.svg using Guid(35771c86c570e0b48879e4b30bfc108d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a67b33e5df425ac33784420833a71bf0') in 0.040440 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Northumberland.svg
+  artifactKey: Guid(e6616d966cf3e5841b1234fec904d71e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Northumberland.svg using Guid(e6616d966cf3e5841b1234fec904d71e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '2ea2f7c13bbef9b982a118a703142294') in 0.069292 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000124 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Norfolk_1_.svg
+  artifactKey: Guid(7e4568ec840274b4aa7ec82370dd937f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Norfolk_1_.svg using Guid(7e4568ec840274b4aa7ec82370dd937f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '722e69eb254ab76a2926e6f2d8c68742') in 0.063025 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Nottinghamshire_1_.svg
+  artifactKey: Guid(4ce91b8f02d27ea4bbe6f9efe24df630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Nottinghamshire_1_.svg using Guid(4ce91b8f02d27ea4bbe6f9efe24df630) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e1de369eb17ce6eba7aa998a016a7a95') in 0.097396 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Rutland_1_.svg
+  artifactKey: Guid(4cfe977f4dc21ab42b6c88b17ec05d14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Rutland_1_.svg using Guid(4cfe977f4dc21ab42b6c88b17ec05d14) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'fe4ccdb4c7eb9cd15828e00ba562fcc3') in 0.083709 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/South_Yorkshire_1_.svg
+  artifactKey: Guid(86aeac1377259ab449f77abfe9ad6e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/South_Yorkshire_1_.svg using Guid(86aeac1377259ab449f77abfe9ad6e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4e8eed45862254a1daeb56e416efd7e1') in 0.113540 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000123 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/West_Sussex_1_.svg
+  artifactKey: Guid(db88cff8e7081b241909ac28cf532a3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/West_Sussex_1_.svg using Guid(db88cff8e7081b241909ac28cf532a3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f4025af86ffc780721d8c7ff78a13c2f') in 0.087321 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000102 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Oxfordshire_1_.svg
+  artifactKey: Guid(77aa14604dc99204db0061ae4390edc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Oxfordshire_1_.svg using Guid(77aa14604dc99204db0061ae4390edc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '23f08d1f09f6e9011ee04f14797e1273') in 0.077297 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Surrey_1_.svg
+  artifactKey: Guid(4c50e97f67e5fc7409b49acb308b7747) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Surrey_1_.svg using Guid(4c50e97f67e5fc7409b49acb308b7747) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '074a82c0e09478889b010824b5b136c7') in 0.049149 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Somerset_1_.svg
+  artifactKey: Guid(7c922b0ebc3a8964c9618d84fc9aea0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Somerset_1_.svg using Guid(7c922b0ebc3a8964c9618d84fc9aea0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '6b561776063ae981b946d9f675c18278') in 0.045903 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Scenes/country_fills/england_country_fill/Worcestershire_1_.svg
+  artifactKey: Guid(f178105db73a7a74b887e33719e817b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/country_fills/england_country_fill/Worcestershire_1_.svg using Guid(f178105db73a7a74b887e33719e817b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '9ac4f8d968d89cf05905081883121950') in 0.064054 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
