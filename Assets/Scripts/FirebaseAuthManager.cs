@@ -21,10 +21,17 @@ public class FirebaseAuthManager : MonoBehaviour
     public GameObject registerUI;    // Register Page
     public GameObject usernamePopup; // Google First-Time Username Prompt
 
-    public TMP_InputField emailInput;
-    public TMP_InputField passwordInput;
-    public TMP_InputField usernameInput;         // For Registration
     public TMP_InputField googleUsernameInput;   // For Google username
+
+    [Header("Login UI References")]
+    public TMP_InputField loginEmailInput;
+    public TMP_InputField loginPasswordInput;
+
+    [Header("Register UI References")]
+    public TMP_InputField registerEmailInput;
+    public TMP_InputField registerPasswordInput;
+    public TMP_InputField registerUsernameInput;
+
 
     public TextMeshProUGUI messageText;
     public Button registerButton;
@@ -77,12 +84,15 @@ public class FirebaseAuthManager : MonoBehaviour
     // REGISTER USER WITH EMAIL & PASSWORD
     public void RegisterUser()
     {
-        string email = emailInput.text;
-        string password = passwordInput.text;
-        string username = usernameInput.text;
+        Debug.Log("✅ RegisterUser() function was called!"); // Debugging
+
+        string email = registerEmailInput.text;
+        string password = registerPasswordInput.text;
+        string username = registerUsernameInput.text;
 
         if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(username))
         {
+            Debug.LogWarning("⚠️ Missing Fields: Email, Password, or Username is empty.");
             messageText.text = "Please enter Email, Password, and Username.";
             return;
         }
@@ -91,24 +101,27 @@ public class FirebaseAuthManager : MonoBehaviour
         {
             if (task.IsCanceled || task.IsFaulted)
             {
+                Debug.LogError("❌ Registration Failed: " + task.Exception);
                 messageText.text = "Registration Failed: " + task.Exception.Message;
                 return;
             }
 
-            FirebaseAuth authInstance = FirebaseAuth.DefaultInstance;
-            FirebaseUser newUser = authInstance.CurrentUser;
-
+            FirebaseUser newUser = auth.CurrentUser;
             if (newUser != null)
             {
+                Debug.Log("✅ User Created: " + newUser.Email);
+
                 UserProfile profile = new UserProfile { DisplayName = username };
                 newUser.UpdateUserProfileAsync(profile).ContinueWithOnMainThread(profileTask =>
                 {
                     if (profileTask.IsFaulted)
                     {
+                        Debug.LogError("❌ Username update failed.");
                         messageText.text = "Username update failed.";
                     }
                     else
                     {
+                        Debug.Log("✅ Registration Successful! Redirecting to Main Menu.");
                         messageText.text = "Registration Successful!";
                         SceneManager.LoadScene("MainMenuScene");
                     }
@@ -117,11 +130,12 @@ public class FirebaseAuthManager : MonoBehaviour
         });
     }
 
+
     // LOGIN USER WITH EMAIL & PASSWORD
     public void LoginUser()
     {
-        string email = emailInput.text;
-        string password = passwordInput.text;
+        string email = loginEmailInput.text;
+        string password = loginPasswordInput.text;
 
         if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
         {
@@ -203,6 +217,7 @@ public class FirebaseAuthManager : MonoBehaviour
     public void ConfirmGoogleUsername()
     {
         string newUsername = googleUsernameInput.text;
+
         if (string.IsNullOrEmpty(newUsername))
         {
             messageText.text = "Please enter a username.";
