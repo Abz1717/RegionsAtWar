@@ -50,3 +50,12 @@ TagManager:
   - name: Region_borders
     uniqueID: 121207331
     locked: 0
+  - name: road
+    uniqueID: 3412784573
+    locked: 0
+  - name: centerpoint
+    uniqueID: 3454734199
+    locked: 0
+  - name: Border
+    uniqueID: 607417005
+    locked: 0
