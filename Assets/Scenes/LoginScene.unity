@@ -1921,7 +1921,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 854197427}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1386185027}
+        m_TargetAssemblyTypeName: FirebaseAuthManager, Assembly-CSharp
+        m_MethodName: RegisterUser
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &854197427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2388,7 +2400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3510,7 +3522,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1231723432}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1386185027}
+        m_TargetAssemblyTypeName: FirebaseAuthManager, Assembly-CSharp
+        m_MethodName: ShowRegisterUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1231723432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4023,10 +4047,12 @@ MonoBehaviour:
   loginUI: {fileID: 915644158}
   registerUI: {fileID: 1806923402}
   usernamePopup: {fileID: 1670462924}
-  emailInput: {fileID: 1607041808}
-  passwordInput: {fileID: 457467594}
-  usernameInput: {fileID: 294332917}
   googleUsernameInput: {fileID: 782632054}
+  loginEmailInput: {fileID: 1607041808}
+  loginPasswordInput: {fileID: 457467594}
+  registerEmailInput: {fileID: 350539979}
+  registerPasswordInput: {fileID: 1276506618}
+  registerUsernameInput: {fileID: 294332917}
   messageText: {fileID: 846848847}
   registerButton: {fileID: 1231723431}
   loginButton: {fileID: 1236103130}
@@ -4703,7 +4729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5048,7 +5074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
