@@ -36,6 +36,26 @@ public class ClickManager : MonoBehaviour
 
             // Get all colliders under the click.
             RaycastHit2D[] hits = Physics2D.RaycastAll(mousePos, Vector2.zero);
+
+
+            // --- Added Section for Move Mode ---
+            if (GameManager.Instance != null && GameManager.Instance.IsMoveModeActive)
+            {
+                Debug.Log("Move mode active; processing road clicks only.");
+                foreach (RaycastHit2D hit in hits)
+                {
+                    Road road = hit.collider.GetComponentInParent<Road>();
+                    if (road != null && road.isSelectable)
+                    {
+                        // Trigger the road's click handler.
+                        road.OnMouseDown();
+                        return;
+                    }
+                }
+                Debug.Log("No selectable road was clicked.");
+                return;
+            }
+
             if (hits.Length > 0)
             {
                 Debug.Log($"ClickManager: Found {hits.Length} hit(s).");
@@ -77,6 +97,12 @@ public class ClickManager : MonoBehaviour
             else
             {
                 Debug.Log("ClickManager: No hit found.");
+
+
+                if (GameManager.Instance.selectedUnit != null)
+                {
+                    GameManager.Instance.DeactivateMoveMode();
+                }
             }
 
             // Optionally, if nothing relevant was hit, you can close panels.

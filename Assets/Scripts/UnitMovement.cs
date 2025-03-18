@@ -4,7 +4,6 @@ using System.Collections;
 public class UnitMovement : MonoBehaviour
 {
     public float moveSpeed = 3f;
-
     private Vector3 destination;
     private bool isMoving = false;
 
@@ -54,6 +53,7 @@ public class UnitMovement : MonoBehaviour
         unitToRoadLine.enabled = true;
         roadWaypointLine.enabled = true;
 
+        // Move towards the nearest road point first.
         while (Vector3.Distance(transform.position, nearestRoadPoint) > 0.05f)
         {
             transform.position = Vector3.MoveTowards(transform.position, nearestRoadPoint, moveSpeed * Time.deltaTime);
@@ -66,6 +66,7 @@ public class UnitMovement : MonoBehaviour
 
         transform.position = nearestRoadPoint;
 
+        // Then move along the road towards the destination.
         while (Vector3.Distance(transform.position, roadDest) > 0.05f)
         {
             transform.position = Vector3.MoveTowards(transform.position, roadDest, moveSpeed * Time.deltaTime);
@@ -83,5 +84,31 @@ public class UnitMovement : MonoBehaviour
         Debug.Log("Unit reached final road destination.");
     }
 
-    
+    // Optional: Called when the unit has snapped to a centerpoint.
+    public void OnReachedCenterPoint()
+    {
+        Debug.Log("Unit reached centerpoint and is ready for new movement.");
+        // Here you could reset movement states or trigger UI updates.
+    }
+
+    // Handle trigger events for snapping to centerpoints.
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Assuming centerpoints have the tag "CenterPoint"
+        if (collision.CompareTag("CenterPoint"))
+        {
+            // Snap unit exactly to the centerpoint's position.
+            transform.position = collision.transform.position;
+            Debug.Log("Unit snapped to centerpoint: " + collision.transform.position);
+
+            // Stop movement if desired.
+            StopAllCoroutines();
+            isMoving = false;
+            roadWaypointLine.enabled = false;
+            unitToRoadLine.enabled = false;
+
+            // Notify that we've reached the centerpoint.
+            OnReachedCenterPoint();
+        }
+    }
 }

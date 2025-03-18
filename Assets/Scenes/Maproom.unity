@@ -236,9 +236,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 307.43}
   m_LocalScale: {x: 4.6425757, y: 4.6425757, z: 4.6425757}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1672332656}
-  - {fileID: 1675029881}
+  m_Children: []
   m_Father: {fileID: 1728019324}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -1238,7 +1236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.19215688, g: 0.19607845, b: 0.16862746, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2610,7 +2608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 16.481411}
+  m_AnchoredPosition: {x: -0.000030517578, y: 16.481384}
   m_SizeDelta: {x: 0, y: -32.9625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &74395881
@@ -5410,6 +5408,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 159298444}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &164038285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 164038286}
+  m_Layer: 0
+  m_Name: MapBoarder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &164038286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164038285}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1908469102}
+  m_Father: {fileID: 1323298864}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &167611750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6786,7 +6816,7 @@ GameObject:
   - component: {fileID: 219086955}
   - component: {fileID: 219086954}
   m_Layer: 5
-  m_Name: Resource
+  m_Name: Resource2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6825,7 +6855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.86274517, g: 0.83921576, b: 0.7725491, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9291,7 +9321,7 @@ GameObject:
   - component: {fileID: 281924345}
   - component: {fileID: 281924344}
   m_Layer: 5
-  m_Name: Resource
+  m_Name: Resource3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9330,7 +9360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.86274517, g: 0.83921576, b: 0.7686275, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10205,7 +10235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &328417361
 PolygonCollider2D:
@@ -10368,12 +10398,17 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1515461754}
   - {fileID: 1732332752}
   - {fileID: 1131844008}
   - {fileID: 795808124}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 594913146}
 --- !u!1001 &330026537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10632,7 +10667,7 @@ MonoBehaviour:
   zoomSpeed: 500
   minZoom: 0.2
   maxZoom: 1150
-  minBounds: {x: -500, y: 500}
+  minBounds: {x: -500, y: 350}
   maxBounds: {x: 1500, y: 1500}
 --- !u!1001 &332755014
 PrefabInstance:
@@ -11023,6 +11058,55 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 357187692}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &362262359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 362262361}
+  - component: {fileID: 362262360}
+  m_Layer: 0
+  m_Name: UnitSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &362262360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362262359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b3410977a39544ab292aa0daee1c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitPrefab: {fileID: 1350201347}
+  spawnAtRegionCenter: 1
+  startingRegion: {fileID: 1652231337}
+  startingRoad: {fileID: 1993673803}
+  fractionAlongRoad: 0.1
+--- !u!4 &362262361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362262359}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 760.56, y: 555.38776, z: -0.26546955}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &364923420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12314,7 +12398,7 @@ GameObject:
   - component: {fileID: 424691435}
   - component: {fileID: 424691434}
   m_Layer: 5
-  m_Name: Money
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12718,6 +12802,140 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &444932747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 444932748}
+  - component: {fileID: 444932750}
+  - component: {fileID: 444932749}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &444932748
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444932747}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1923891884}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 101, y: -99}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &444932749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444932747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Negotiate
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4288457389
+  m_fontColor: {r: 0.6784314, g: 0.6666667, b: 0.6117647, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 28
+  m_fontSizeBase: 28
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -13.675308, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &444932750
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444932747}
+  m_CullTransparentMesh: 1
 --- !u!1 &445102341
 GameObject:
   m_ObjectHideFlags: 0
@@ -12743,19 +12961,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445102341}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 307.43}
+  m_LocalScale: {x: 4.6425757, y: 4.6425757, z: 4.6425757}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 74395880}
   - {fileID: 1357342997}
-  m_Father: {fileID: 1507741849}
+  m_Father: {fileID: 1532833994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -9.2814}
-  m_SizeDelta: {x: 0, y: -18.563}
+  m_AnchoredPosition: {x: 0, y: -43.76953}
+  m_SizeDelta: {x: -847.37, y: -277.6284}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &445102343
 MonoBehaviour:
@@ -12824,7 +13042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b5b0343a810e7042907ae391216af41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   taskbarPanel: {fileID: 1491349428}
   mapPanel: {fileID: 1323298863}
   negotiatePanel: {fileID: 1288223876}
@@ -12836,7 +13054,7 @@ MonoBehaviour:
   provinceButton: {fileID: 1552668268}
   marketButton: {fileID: 1207659824}
   regionNameText: {fileID: 0}
-  unitActionPanel: {fileID: 1507741848}
+  unitActionPanel: {fileID: 1532833993}
   unitNameText: {fileID: 1348323146}
 --- !u!4 &445446667
 Transform:
@@ -14169,7 +14387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -7, y: -38}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &504514541
@@ -14203,8 +14421,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283190348
-  m_fontColor: {r: 0.29803923, g: 0.29803923, b: 0.29803923, a: 1}
+    rgba: 4288457389
+  m_fontColor: {r: 0.6784314, g: 0.6666667, b: 0.6117647, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14221,14 +14439,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -14257,7 +14475,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -14.530151, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -15852,7 +16070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &554478185
 PolygonCollider2D:
@@ -15972,10 +16190,15 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1566422129}
   - {fileID: 2131047228}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1004097925}
 --- !u!1 &559677891
 GameObject:
   m_ObjectHideFlags: 0
@@ -17386,19 +17609,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615679945}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 307.43}
+  m_LocalScale: {x: 4.6425757, y: 4.6425757, z: 4.6425757}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 675077069}
   - {fileID: 1916922374}
-  m_Father: {fileID: 1507741849}
+  m_Father: {fileID: 1532833994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -63.6, y: 26.6}
-  m_SizeDelta: {x: 0, y: -50.834}
+  m_AnchoredPosition: {x: -295.26788, y: 122.81262}
+  m_SizeDelta: {x: -847.37, y: -309.89938}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &615679947
 MonoBehaviour:
@@ -17867,7 +18090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.79607844}
+  m_Color: {r: 0.8705883, g: 0.83921576, b: 0.7725491, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -17910,7 +18133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &633018627
 PolygonCollider2D:
@@ -18136,13 +18359,18 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 639013906}
   - {fileID: 2090761922}
   - {fileID: 1149580485}
   - {fileID: 868326122}
   - {fileID: 1969182954}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1523079141}
 --- !u!1001 &639013897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18275,7 +18503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &639013903
 PolygonCollider2D:
@@ -18413,10 +18641,15 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 633018630}
   - {fileID: 1351208407}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 450875228}
 --- !u!1 &640538163
 GameObject:
   m_ObjectHideFlags: 0
@@ -18727,96 +18960,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 645002542}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &651750834
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1323298864}
-    m_Modifications:
-    - target: {fileID: -3888481672020999207, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_Name
-      value: sea
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 54.806084
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 54.806084
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 54.806084
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -195.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 989.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 307.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 7243324766535440047, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-    type: 3}
---- !u!4 &651750835 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-    type: 3}
-  m_PrefabInstance: {fileID: 651750834}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &655309766
 GameObject:
   m_ObjectHideFlags: 0
@@ -18981,7 +19124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &669001182
 PolygonCollider2D:
@@ -19121,12 +19264,17 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1143113512}
   - {fileID: 1036098739}
   - {fileID: 1297716210}
   - {fileID: 1124038326}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1826331466}
 --- !u!1 &675077068
 GameObject:
   m_ObjectHideFlags: 0
@@ -19461,7 +19609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &679189809
 PolygonCollider2D:
@@ -19697,11 +19845,16 @@ MonoBehaviour:
   regionID: Bedfordshire
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 2131047228}
   - {fileID: 1844177450}
   - {fileID: 1974895468}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 2080836190}
 --- !u!1001 &680737910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19825,7 +19978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &680764273
 PolygonCollider2D:
@@ -19905,6 +20058,11 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors: []
   centerPoint: {fileID: 0}
 --- !u!1 &691512063 stripped
@@ -20261,6 +20419,50 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2078255655}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &716259631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 716259632}
+  - component: {fileID: 716259634}
+  m_Layer: 5
+  m_Name: UnitActionPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &716259632
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716259631}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1728019324}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &716259634
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716259631}
+  m_CullTransparentMesh: 1
 --- !u!1001 &720244378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21976,7 +22178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &795808121
 PolygonCollider2D:
@@ -22288,12 +22490,17 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1286482098}
   - {fileID: 1576112417}
   - {fileID: 328417364}
   - {fileID: 1589263997}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 645002543}
 --- !u!1 &798252330
 GameObject:
   m_ObjectHideFlags: 0
@@ -24008,7 +24215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &834200186
 PolygonCollider2D:
@@ -24112,11 +24319,16 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 980275406}
   - {fileID: 2131047228}
   - {fileID: 1576112417}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 2145764005}
 --- !u!1001 &838122961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24673,6 +24885,83 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &858052861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 858052862}
+  - component: {fileID: 858052864}
+  - component: {fileID: 858052863}
+  m_Layer: 5
+  m_Name: RegionAction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &858052862
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858052861}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1672332656}
+  - {fileID: 1675029881}
+  m_Father: {fileID: 1728019324}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -795.32}
+  m_SizeDelta: {x: 0, y: -1590.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &858052863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858052861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &858052864
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858052861}
+  m_CullTransparentMesh: 1
 --- !u!1001 &858686613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25091,7 +25380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &867700978
 PolygonCollider2D:
@@ -25195,11 +25484,16 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 2079816952}
   - {fileID: 1236997868}
   - {fileID: 1908738042}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 940701513}
 --- !u!1 &868326113 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 5db2c49897d3d6f418926dc74619532d,
@@ -25218,7 +25512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &868326119
 PolygonCollider2D:
@@ -25356,13 +25650,18 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 633018630}
   - {fileID: 1467077606}
   - {fileID: 1131844008}
   - {fileID: 1298299743}
   - {fileID: 1974895468}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 506249173}
 --- !u!1 &868798735
 GameObject:
   m_ObjectHideFlags: 0
@@ -28854,7 +29153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &980275403
 PolygonCollider2D:
@@ -28946,11 +29245,16 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 834200189}
   - {fileID: 1298299743}
   - {fileID: 1974895468}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 310284831}
 --- !u!1001 &980334223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29083,7 +29387,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1323298864}
+    m_TransformParent: {fileID: 1293979538}
     m_Modifications:
     - target: {fileID: -7871556540511652807, guid: 8ea115a9cdb2e5a4888e83403027eb56,
         type: 3}
@@ -29296,7 +29600,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 215.25, y: 100}
+  m_SizeDelta: {x: 215.25, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &993369724
 MonoBehaviour:
@@ -29311,7 +29615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19607845, g: 0.19607845, b: 0.16862746, a: 0.9607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -30038,7 +30342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1032081410
 PolygonCollider2D:
@@ -30322,12 +30626,17 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1566422129}
   - {fileID: 2131047228}
   - {fileID: 1777701615}
   - {fileID: 1250732494}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1874372061}
 --- !u!1001 &1036098729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30460,7 +30769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1036098736
 PolygonCollider2D:
@@ -30722,12 +31031,17 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1372730175}
   - {fileID: 1143113512}
   - {fileID: 669001185}
   - {fileID: 1297716210}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1123090996}
 --- !u!1 &1036213078
 GameObject:
   m_ObjectHideFlags: 0
@@ -31706,7 +32020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -7, y: -37}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1090332603
@@ -31738,8 +32052,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283321934
-  m_fontColor: {r: 0.30588236, g: 0.30588236, b: 0.30588236, a: 1}
+    rgba: 4288457389
+  m_fontColor: {r: 0.6784314, g: 0.6666667, b: 0.6117647, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -31756,14 +32070,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -31792,7 +32106,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -13.675293, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -32959,7 +33273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1124038323
 PolygonCollider2D:
@@ -33073,12 +33387,17 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 669001185}
   - {fileID: 1297716210}
   - {fileID: 1589263997}
   - {fileID: 1278981268}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1927268667}
 --- !u!1 &1127229175
 GameObject:
   m_ObjectHideFlags: 0
@@ -33304,7 +33623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1131844005
 PolygonCollider2D:
@@ -33433,11 +33752,16 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1467077606}
   - {fileID: 868326122}
   - {fileID: 328417364}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1341315362}
 --- !u!1001 &1132564889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34239,7 +34563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1143113509
 PolygonCollider2D:
@@ -34380,11 +34704,16 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1372730175}
   - {fileID: 1036098739}
   - {fileID: 669001185}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 22939377}
 --- !u!1001 &1143504099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34616,7 +34945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1149580482
 PolygonCollider2D:
@@ -34722,13 +35051,18 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 2125575534}
   - {fileID: 2090761922}
   - {fileID: 1974895468}
   - {fileID: 633018630}
   - {fileID: 1844177450}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1103454891}
 --- !u!1 &1151569160
 GameObject:
   m_ObjectHideFlags: 0
@@ -36183,7 +36517,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 215.25, y: 100}
+  m_SizeDelta: {x: 215.25, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1207659822
 MonoBehaviour:
@@ -36198,7 +36532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19607845, g: 0.19607845, b: 0.16470589, a: 0.9607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -36994,7 +37328,7 @@ GameObject:
   - component: {fileID: 1236832771}
   - component: {fileID: 1236832770}
   m_Layer: 5
-  m_Name: Resource
+  m_Name: Resource1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37033,7 +37367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.854902, g: 0.8431373, b: 0.7803922, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -37076,7 +37410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1236997865
 PolygonCollider2D:
@@ -37203,12 +37537,17 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 867700981}
   - {fileID: 2109481300}
   - {fileID: 1250732494}
   - {fileID: 2125575534}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 29268863}
 --- !u!1001 &1241071135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37435,7 +37774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1250732491
 PolygonCollider2D:
@@ -37550,12 +37889,17 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1236997868}
   - {fileID: 2109481300}
   - {fileID: 1032081413}
   - {fileID: 1777701615}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 864274270}
 --- !u!1 &1252127017
 GameObject:
   m_ObjectHideFlags: 0
@@ -38116,7 +38460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -7, y: -37}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1272596265
@@ -38148,8 +38492,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283453519
-  m_fontColor: {r: 0.30980393, g: 0.3137255, b: 0.3137255, a: 1}
+    rgba: 4288391852
+  m_fontColor: {r: 0.6745098, g: 0.6666667, b: 0.60784316, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -38166,14 +38510,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -38202,7 +38546,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -14.530029, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -38798,7 +39142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1278981265
 PolygonCollider2D:
@@ -38907,10 +39251,15 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1124038326}
   - {fileID: 1589263997}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 159298445}
 --- !u!1 &1282029338 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: a809755062530f5408a5274b08c981a9,
@@ -39070,7 +39419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1286482095
 PolygonCollider2D:
@@ -39186,11 +39535,16 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1576112417}
   - {fileID: 795808124}
   - {fileID: 1746324022}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 25141996}
 --- !u!1 &1288223876
 GameObject:
   m_ObjectHideFlags: 0
@@ -39243,7 +39597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.854902, g: 0.8431373, b: 0.7843138, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -39574,6 +39928,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1293977802}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1293979537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1293979538}
+  m_Layer: 0
+  m_Name: Sea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1293979538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293979537}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 987751154}
+  m_Father: {fileID: 1323298864}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1296581776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39814,7 +40200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1297716207
 PolygonCollider2D:
@@ -39964,13 +40350,18 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1036098739}
   - {fileID: 669001185}
   - {fileID: 1124038326}
   - {fileID: 1746324022}
   - {fileID: 1949410436}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1373874465}
 --- !u!1 &1298299734 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 7fa4aaaeb6b636746aeb23da0d1673b2,
@@ -39989,7 +40380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1298299740
 PolygonCollider2D:
@@ -40085,12 +40476,17 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1576112417}
   - {fileID: 980275406}
   - {fileID: 1974895468}
   - {fileID: 868326122}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 239204782}
 --- !u!1001 &1298786913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40682,13 +41078,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 987751154}
-  - {fileID: 651750835}
-  - {fileID: 1766365473}
+  - {fileID: 1293979538}
   - {fileID: 655309767}
   - {fileID: 563185020}
   - {fileID: 966431502}
-  - {fileID: 1908469102}
+  - {fileID: 164038286}
   - {fileID: 1434418182}
   - {fileID: 1140980052}
   - {fileID: 1146726701}
@@ -41975,7 +42369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 008a301fd40607d43863e288f0704edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitActionPanel: {fileID: 1507741848}
+  unitActionPanel: {fileID: 1532833993}
   unitNameText: {fileID: 1348323146}
   moveButton: {fileID: 1916922375}
 --- !u!1 &1351208398 stripped
@@ -41996,7 +42390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1351208404
 PolygonCollider2D:
@@ -42105,12 +42499,17 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 2136256483}
   - {fileID: 1772480766}
   - {fileID: 2090761922}
   - {fileID: 639013906}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1953475794}
 --- !u!1 &1355171553 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: c8e6b76e706392d4cb2e7426ed7f1227,
@@ -42278,7 +42677,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -9.3845}
+  m_AnchoredPosition: {x: 0, y: -9.3845215}
   m_SizeDelta: {x: 0, y: -18.769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1357342998
@@ -42729,7 +43128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1372730172
 PolygonCollider2D:
@@ -42828,10 +43227,15 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1143113512}
   - {fileID: 1036098739}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 908235078}
 --- !u!1001 &1373874464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44649,7 +45053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1467077603
 PolygonCollider2D:
@@ -44787,11 +45191,16 @@ MonoBehaviour:
   regionID: Worcestershire
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1131844008}
   - {fileID: 868326122}
   - {fileID: 1969182954}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 134094151}
 --- !u!1001 &1471284741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45621,7 +46030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.24313727, g: 0.24313727, b: 0.24313727, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -45904,107 +46313,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7367791, y: 0.0560382}
   m_EdgeRadius: 0
---- !u!1 &1507741848
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1507741849}
-  - component: {fileID: 1507741851}
-  - component: {fileID: 1507741850}
-  - component: {fileID: 1507741853}
-  m_Layer: 5
-  m_Name: UnitActionPanel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1507741849
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507741848}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 307.43}
-  m_LocalScale: {x: 4.6425757, y: 4.6425757, z: 4.6425757}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 615679946}
-  - {fileID: 445102342}
-  m_Father: {fileID: 1728019324}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 164}
-  m_SizeDelta: {x: 232.63, y: 70.2946}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1507741850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507741848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1507741851
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507741848}
-  m_CullTransparentMesh: 1
---- !u!223 &1507741853
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507741848}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!1 &1508049479
 GameObject:
   m_ObjectHideFlags: 0
@@ -46240,7 +46548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1515461751
 PolygonCollider2D:
@@ -46371,11 +46679,16 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1732332752}
   - {fileID: 328417364}
   - {fileID: 1969182954}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1334139469}
 --- !u!1 &1516040447
 GameObject:
   m_ObjectHideFlags: 0
@@ -46829,6 +47142,83 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532280050}
+  m_CullTransparentMesh: 1
+--- !u!1 &1532833993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1532833994}
+  - component: {fileID: 1532833996}
+  - component: {fileID: 1532833995}
+  m_Layer: 5
+  m_Name: UnitAction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1532833994
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532833993}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 615679946}
+  - {fileID: 445102342}
+  m_Father: {fileID: 1728019324}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -795.32}
+  m_SizeDelta: {x: 0, y: -1590.64}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1532833995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532833993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1532833996
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532833993}
   m_CullTransparentMesh: 1
 --- !u!1 &1533247613 stripped
 GameObject:
@@ -47296,7 +47686,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 215.25, y: 100}
+  m_SizeDelta: {x: 215.25, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1552668266
 MonoBehaviour:
@@ -47311,7 +47701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19607845, g: 0.19607845, b: 0.17254902, a: 0.9607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -47718,7 +48108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1566422126
 PolygonCollider2D:
@@ -47866,10 +48256,15 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 554478188}
   - {fileID: 1032081413}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1482449338}
 --- !u!1 &1569224013
 GameObject:
   m_ObjectHideFlags: 0
@@ -48258,7 +48653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1576112414
 PolygonCollider2D:
@@ -48370,12 +48765,17 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1298299743}
   - {fileID: 834200189}
   - {fileID: 795808124}
   - {fileID: 1286482098}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1028778116}
 --- !u!1 &1584284159
 GameObject:
   m_ObjectHideFlags: 0
@@ -48412,7 +48812,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -9.3845}
+  m_AnchoredPosition: {x: 0, y: -9.3845215}
   m_SizeDelta: {x: 0, y: -18.769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1584284161
@@ -48492,7 +48892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1589263994
 PolygonCollider2D:
@@ -48598,13 +48998,18 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1746324022}
   - {fileID: 795808124}
   - {fileID: 1278981268}
   - {fileID: 1124038326}
   - {fileID: 1732332752}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 104583224}
 --- !u!1001 &1598771475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49213,7 +49618,7 @@ GameObject:
   - component: {fileID: 1636613888}
   - component: {fileID: 1636613887}
   m_Layer: 5
-  m_Name: Points
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49447,7 +49852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 008a301fd40607d43863e288f0704edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitActionPanel: {fileID: 1507741848}
+  unitActionPanel: {fileID: 1532833993}
   unitNameText: {fileID: 1348323146}
   moveButton: {fileID: 1916922375}
 --- !u!4 &1642584260
@@ -49597,7 +50002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1652231334
 PolygonCollider2D:
@@ -49726,9 +50131,14 @@ MonoBehaviour:
   regionID: Cornwall
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 2136256483}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1761823668}
 --- !u!1 &1659385391
 GameObject:
   m_ObjectHideFlags: 0
@@ -50042,19 +50452,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672332655}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 307.43}
+  m_LocalScale: {x: 4.6425757, y: 4.6425757, z: 4.6425757}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1252127018}
   - {fileID: 868798736}
-  m_Father: {fileID: 7616026}
+  m_Father: {fileID: 858052862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 25.417}
-  m_SizeDelta: {x: 0, y: -50.834}
+  m_AnchoredPosition: {x: 0, y: 117.32038}
+  m_SizeDelta: {x: -847.37, y: -309.93945}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1672332657
 MonoBehaviour:
@@ -50119,19 +50529,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675029880}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 307.43}
+  m_LocalScale: {x: 4.6425757, y: 4.6425757, z: 4.6425757}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2091604230}
   - {fileID: 1584284160}
-  m_Father: {fileID: 7616026}
+  m_Father: {fileID: 858052862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -9.2814}
-  m_SizeDelta: {x: 0, y: -18.563}
+  m_AnchoredPosition: {x: 0, y: -43.769558}
+  m_SizeDelta: {x: -847.37, y: -277.66843}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1675029882
 MonoBehaviour:
@@ -51176,10 +51586,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -51223,13 +51633,15 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7616026}
-  - {fileID: 1507741849}
   - {fileID: 1491349429}
   - {fileID: 30582984}
   - {fileID: 1288223877}
   - {fileID: 508612205}
   - {fileID: 56167295}
   - {fileID: 30103537}
+  - {fileID: 716259632}
+  - {fileID: 1532833994}
+  - {fileID: 858052862}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -51436,7 +51848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1732332749
 PolygonCollider2D:
@@ -51841,11 +52253,16 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1589263997}
   - {fileID: 328417364}
   - {fileID: 1515461754}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1784638800}
 --- !u!1 &1735684754
 GameObject:
   m_ObjectHideFlags: 0
@@ -51897,7 +52314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.854902, g: 0.8431373, b: 0.7843138, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -52429,7 +52846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1746324019
 PolygonCollider2D:
@@ -52533,11 +52950,16 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1297716210}
   - {fileID: 1589263997}
   - {fileID: 1286482098}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1262248784}
 --- !u!1001 &1747724730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53491,96 +53913,6 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!1001 &1766365472
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1323298864}
-    m_Modifications:
-    - target: {fileID: -3888481672020999207, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_Name
-      value: sea
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 54.806084
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 54.806084
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 54.806084
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2320.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 999.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 301.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 7243324766535440047, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-    type: 3}
---- !u!4 &1766365473 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8742538545776668643, guid: 8ea115a9cdb2e5a4888e83403027eb56,
-    type: 3}
-  m_PrefabInstance: {fileID: 1766365472}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1768715058
 GameObject:
   m_ObjectHideFlags: 0
@@ -53618,7 +53950,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 215.25, y: 100}
+  m_SizeDelta: {x: 215.25, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1768715060
 MonoBehaviour:
@@ -53633,7 +53965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19607845, g: 0.19607845, b: 0.17254902, a: 0.9607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -53938,7 +54270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1772480763
 PolygonCollider2D:
@@ -54174,12 +54506,17 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 2136256483}
   - {fileID: 1351208407}
   - {fileID: 1908738042}
   - {fileID: 2090761922}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1758317045}
 --- !u!1001 &1777701605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54312,7 +54649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1777701612
 PolygonCollider2D:
@@ -54418,11 +54755,16 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 2131047228}
   - {fileID: 1032081413}
   - {fileID: 1250732494}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 241846461}
 --- !u!1 &1779766942
 GameObject:
   m_ObjectHideFlags: 0
@@ -55111,7 +55453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.854902, g: 0.8431373, b: 0.7843138, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -55718,7 +56060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1844177447
 PolygonCollider2D:
@@ -56218,11 +56560,16 @@ MonoBehaviour:
   regionID: Buckinghamshire
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 2125575534}
   - {fileID: 1149580485}
   - {fileID: 679189812}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 720244379}
 --- !u!1 &1844394152
 GameObject:
   m_ObjectHideFlags: 0
@@ -57453,140 +57800,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   region: {fileID: 1032081413}
---- !u!1 &1888940615
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1888940616}
-  - component: {fileID: 1888940618}
-  - component: {fileID: 1888940617}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1888940616
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888940615}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1923891884}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: -50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1888940617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888940615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Negotiate
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4283453519
-  m_fontColor: {r: 0.30980393, g: 0.3137255, b: 0.3137255, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1888940618
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888940615}
-  m_CullTransparentMesh: 1
 --- !u!1 &1895421837 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 7ac3f0ef721f8944a9954cd1d5e462b7,
@@ -57852,7 +58065,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1323298864}
+    m_TransformParent: {fileID: 164038286}
     m_Modifications:
     - target: {fileID: -7871556540511652807, guid: b056310e87efec040a3c141d41d12d4b,
         type: 3}
@@ -57897,7 +58110,7 @@ PrefabInstance:
     - target: {fileID: 8742538545776668643, guid: b056310e87efec040a3c141d41d12d4b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00000013411
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: b056310e87efec040a3c141d41d12d4b,
         type: 3}
@@ -58078,7 +58291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1908738039
 PolygonCollider2D:
@@ -58208,12 +58421,17 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 867700981}
   - {fileID: 2125575534}
   - {fileID: 2090761922}
   - {fileID: 1772480766}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 66968211}
 --- !u!1 &1911347862
 GameObject:
   m_ObjectHideFlags: 0
@@ -58916,13 +59134,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1888940616}
+  - {fileID: 444932748}
   m_Father: {fileID: 1491349429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 215.25, y: 100}
+  m_SizeDelta: {x: 215.25, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1923891885
 MonoBehaviour:
@@ -58937,7 +59155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19215688, g: 0.18823531, b: 0.15686275, a: 0.9607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -59828,6 +60046,52 @@ MonoBehaviour:
   startRegion: {fileID: 328417364}
   endRegion: {fileID: 1515461754}
   isSelectable: 0
+--- !u!1 &1946264427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1946264429}
+  - component: {fileID: 1946264428}
+  m_Layer: 0
+  m_Name: DebugThreshold
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1946264428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946264427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcd1abd8d9d72549a2623cb0d505fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positionThreshold: 1000
+  scaleThreshold: 1000
+--- !u!4 &1946264429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946264427}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 760.56, y: 555.38776, z: -0.26546955}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1949015590 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 516742119d54b1147b6fc6c9173f4610,
@@ -59867,7 +60131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1949410433
 PolygonCollider2D:
@@ -60047,9 +60311,14 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1297716210}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1511918052}
 --- !u!1001 &1953475793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60415,7 +60684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1969182951
 PolygonCollider2D:
@@ -60536,11 +60805,16 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1515461754}
   - {fileID: 1467077606}
   - {fileID: 633018630}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 266814542}
 --- !u!1 &1972593772 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 13d555efae1aad84292f1619b0303211,
@@ -60580,7 +60854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1974895465
 PolygonCollider2D:
@@ -60728,6 +61002,11 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1149580485}
   - {fileID: 679189812}
@@ -60735,7 +61014,7 @@ MonoBehaviour:
   - {fileID: 980275406}
   - {fileID: 1298299743}
   - {fileID: 868326122}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 877773533}
 --- !u!1 &1975222402
 GameObject:
   m_ObjectHideFlags: 0
@@ -60851,7 +61130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -7, y: -37}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1977807537
@@ -60885,8 +61164,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283519312
-  m_fontColor: {r: 0.3137255, g: 0.31764707, b: 0.31764707, a: 1}
+    rgba: 4288457389
+  m_fontColor: {r: 0.6784314, g: 0.6666667, b: 0.6117647, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -60903,14 +61182,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -60939,7 +61218,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -14.529968, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -61311,7 +61590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &1995818474
 PolygonCollider2D:
@@ -61403,6 +61682,11 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors: []
   centerPoint: {fileID: 0}
 --- !u!1 &2001655360
@@ -62422,7 +62706,7 @@ GameObject:
   - component: {fileID: 2027025869}
   - component: {fileID: 2027025868}
   m_Layer: 5
-  m_Name: Money
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63488,6 +63772,22 @@ MonoBehaviour:
   aiPoints: 0
   pointsPerRegion: 10
   pointsToWin: 100
+  money: 0
+  manpower: 0
+  resource1: 0
+  resource2: 0
+  resource3: 0
+  aiMoney: 0
+  aiManpower: 0
+  aiResource1: 0
+  aiResource2: 0
+  aiResource3: 0
+  playerPointsText: {fileID: 1636613887}
+  moneyText: {fileID: 424691434}
+  manpowerText: {fileID: 1171224073}
+  resource1Text: {fileID: 1502046127}
+  resource2Text: {fileID: 2027025868}
+  resource3Text: {fileID: 1859375039}
   resourceCollectionInterval: 1
   allRegions: []
   selectedUnit: {fileID: 0}
@@ -63944,7 +64244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &2079816949
 PolygonCollider2D:
@@ -64114,10 +64414,15 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 2109481300}
   - {fileID: 867700981}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 41733108}
 --- !u!1001 &2080067478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64767,7 +65072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &2090761919
 PolygonCollider2D:
@@ -64882,13 +65187,18 @@ MonoBehaviour:
   regionID: Wiltshire
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1772480766}
   - {fileID: 1908738042}
   - {fileID: 1149580485}
   - {fileID: 633018630}
   - {fileID: 1351208407}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 818690156}
 --- !u!1 &2091604229
 GameObject:
   m_ObjectHideFlags: 0
@@ -64927,7 +65237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 16.481411}
+  m_AnchoredPosition: {x: -0.000030517578, y: 16.481384}
   m_SizeDelta: {x: 0, y: -32.9625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2091604231
@@ -65359,7 +65669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &2109481297
 PolygonCollider2D:
@@ -65493,11 +65803,16 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1250732494}
   - {fileID: 1236997868}
   - {fileID: 2079816952}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1598771476}
 --- !u!1 &2112096149
 GameObject:
   m_ObjectHideFlags: 0
@@ -65706,7 +66021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &2125575531
 PolygonCollider2D:
@@ -66017,12 +66332,17 @@ MonoBehaviour:
   regionID: Berkshire
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1908738042}
   - {fileID: 1236997868}
   - {fileID: 1844177450}
   - {fileID: 1149580485}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 1003109278}
 --- !u!1001 &2126635497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66380,7 +66700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &2131047225
 PolygonCollider2D:
@@ -66944,6 +67264,11 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 554478188}
   - {fileID: 834200189}
@@ -66951,7 +67276,7 @@ MonoBehaviour:
   - {fileID: 1974895468}
   - {fileID: 679189812}
   - {fileID: 1777701615}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 858686614}
 --- !u!1001 &2136256473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67084,7 +67409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600e8354de56ad746ba542f91094ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regionActionPanel: {fileID: 7616025}
+  regionActionPanel: {fileID: 858052861}
   provinceNameText: {fileID: 142736206}
 --- !u!60 &2136256480
 PolygonCollider2D:
@@ -67232,11 +67557,16 @@ MonoBehaviour:
   regionID: Region_1
   ownerID: 0
   resourceRate: 10
+  moneyRate: 0
+  manpowerRate: 0
+  resource1Rate: 0
+  resource2Rate: 0
+  resource3Rate: 0
   neighbors:
   - {fileID: 1351208407}
   - {fileID: 1772480766}
   - {fileID: 1652231337}
-  centerPoint: {fileID: 0}
+  centerPoint: {fileID: 210416718}
 --- !u!1001 &2136453607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67830,5 +68160,7 @@ SceneRoots:
   - {fileID: 1350201346}
   - {fileID: 2066527994}
   - {fileID: 1642584260}
+  - {fileID: 1946264429}
+  - {fileID: 362262361}
   - {fileID: 1508049480}
   - {fileID: 1763691182}

@@ -24,7 +24,7 @@ public class Road : MonoBehaviour
 
 
     // Called when the road is clicked (2D collider based)
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         if (!isSelectable)
             return;

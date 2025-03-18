@@ -1,19 +1,46 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
     [Header("Global Resources & Points")]
+    // Base resource pools:
     public int playerResources = 0;
     public int aiResources = 0;
     public int playerPoints = 0;
     public int aiPoints = 0;
-    public int pointsPerRegion = 10;
-    public int pointsToWin = 100; // Win condition.
+    public int pointsPerRegion = 1;
+    public int pointsToWin = 45; // Win condition.
+
+    [Header("Additional Resources (Player)")]
+    public int money = 0;
+    public int manpower = 0;
+    public int resource1 = 0;
+    public int resource2 = 0;
+    public int resource3 = 0;
+
+    [Header("Additional Resources (AI)")]
+    public int aiMoney = 0;
+    public int aiManpower = 0;
+    public int aiResource1 = 0;
+    public int aiResource2 = 0;
+    public int aiResource3 = 0;
+
+    [Header("UI References (Player)")]
+    // Assign these in the Inspector with your Text components.
+    public TextMeshProUGUI playerPointsText;
+    public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI manpowerText;
+    public TextMeshProUGUI resource1Text;
+    public TextMeshProUGUI resource2Text;
+    public TextMeshProUGUI resource3Text;
 
     [Header("Resource Production")]
+    // Set your desired collection interval (currently set to 1 second; update as needed).
     public float resourceCollectionInterval = 1f;
     public List<Region> allRegions = new List<Region>();
 
@@ -25,6 +52,11 @@ public class GameManager : MonoBehaviour
     [Header("Global State")]
     public bool unitClickedThisFrame = false;
     public bool isMoveModeActive = false;
+
+    public bool IsMoveModeActive
+    {
+        get { return isMoveModeActive; }
+    }
 
     private void Awake()
     {
@@ -43,6 +75,8 @@ public class GameManager : MonoBehaviour
             resourceTimer = 0f;
             CollectResources();
         }
+
+        UpdateUI();
     }
 
     public void SelectUnit(GameObject unit)
@@ -63,19 +97,34 @@ public class GameManager : MonoBehaviour
             Debug.Log($"GameManager: Region {region.regionID} selected. Owner: {region.ownerID}");
     }
 
+    // Updated CollectResources to handle all production values.
     private void CollectResources()
     {
         foreach (Region region in allRegions)
         {
             if (region.ownerID == 1)
+            {
                 playerResources += region.resourceRate;
+                money += region.moneyRate;
+                manpower += region.manpowerRate;
+                resource1 += region.resource1Rate;
+                resource2 += region.resource2Rate;
+                resource3 += region.resource3Rate;
+            }
             else if (region.ownerID == 2)
+            {
                 aiResources += region.resourceRate;
+                aiMoney += region.moneyRate;
+                aiManpower += region.manpowerRate;
+                aiResource1 += region.resource1Rate;
+                aiResource2 += region.resource2Rate;
+                aiResource3 += region.resource3Rate;
+            }
         }
-        Debug.Log($"GameManager: Player Resources: {playerResources}, AI Resources: {aiResources}");
+        Debug.Log($"GameManager: Player Resources: {playerResources} (Money: {money}, Manpower: {manpower}, R1: {resource1}, R2: {resource2}, R3: {resource3})");
+        Debug.Log($"GameManager: AI Resources: {aiResources} (Money: {aiMoney}, Manpower: {aiManpower}, R1: {aiResource1}, R2: {aiResource2}, R3: {aiResource3})");
     }
 
-    // Called when a region is captured by a unit.
     public void RegionCaptured(Region region, int factionID)
     {
         if (factionID == 1)
@@ -94,7 +143,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     public void ActivateMoveMode()
     {
         if (selectedUnit == null)
@@ -104,29 +152,21 @@ public class GameManager : MonoBehaviour
         }
 
         isMoveModeActive = true;
-
-        // ✅ Highlight roads for selection
         Road[] roads = FindObjectsOfType<Road>();
         foreach (Road road in roads)
             road.SetSelectable(true);
-
         Debug.Log("GameManager: Move mode activated.");
     }
 
-    // ✅ Deactivate Move Mode when movement is done
     public void DeactivateMoveMode()
     {
         isMoveModeActive = false;
-
-        // Remove highlights
         Road[] roads = FindObjectsOfType<Road>();
         foreach (Road road in roads)
             road.SetSelectable(false);
-
         Debug.Log("GameManager: Move mode deactivated.");
     }
 
-    // Called by Road.cs when a road is clicked.
     public void MoveSelectedUnitViaRoad(Road road, float percentAlongRoad)
     {
         if (selectedUnit == null)
@@ -139,15 +179,13 @@ public class GameManager : MonoBehaviour
         Vector3 endPos = (road.endRegion.centerPoint != null) ? road.endRegion.centerPoint.position : road.endRegion.transform.position;
         Vector3 destination = Vector3.Lerp(startPos, endPos, percentAlongRoad);
 
-        // Find closest point on road line from the unit.
+        // Find closest point on the road line from the unit.
         Vector3 nearestRoadPoint = NearestPointOnLine(startPos, endPos, selectedUnit.transform.position);
-
         UnitMovement movement = selectedUnit.GetComponent<UnitMovement>();
         if (movement != null)
             movement.MoveAlongRoad(nearestRoadPoint, destination);
     }
 
-    // Helper method: calculate nearest point on a line.
     public static Vector3 NearestPointOnLine(Vector3 lineStart, Vector3 lineEnd, Vector3 point)
     {
         Vector3 lineDir = (lineEnd - lineStart).normalized;
@@ -156,5 +194,24 @@ public class GameManager : MonoBehaviour
         return lineStart + lineDir * projectionLength;
     }
 
-    
+    private void UpdateUI()
+    {
+        if (playerPointsText != null)
+            playerPointsText.text = playerPoints.ToString();
+
+        if (moneyText != null)
+            moneyText.text = money.ToString();
+
+        if (manpowerText != null)
+            manpowerText.text = manpower.ToString();
+
+        if (resource1Text != null)
+            resource1Text.text = resource1.ToString();
+
+        if (resource2Text != null)
+            resource2Text.text = resource2.ToString();
+
+        if (resource3Text != null)
+            resource3Text.text = resource3.ToString();
+    }
 }
