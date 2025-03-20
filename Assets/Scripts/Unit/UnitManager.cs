@@ -1,62 +1,45 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using System.Drawing;
 
-public class UnitManager : MonoBehaviour
+public class UnitManager : Singleton<UnitManager>
 {
     // Singleton instance for easy global access
-    public static UnitManager Instance;
 
     [SerializeField] private UnitController unitPrefab;
-    [SerializeField] private List<Transform> centerPoints; // Assign in the Inspector (unit spawn point)
 
     //private UnitController unitController;
     private List<UnitController> spawnedUnits = new List<UnitController>();
 
-    private RegionManager regionManager;
-
-    private void Awake()
+    public void SpawnPlayerUnits(PlayerData playerData)
     {
-        // Set the static instance reference
-        Instance = this;
+        foreach(var spawnRegion in playerData.SpawnPoints)
+        {
+            var region = RegionManager.Instance.regions[spawnRegion];
+            SpawnUnit(region.transform, playerData.Id);
+        }
     }
 
-    private void Start()
+    public void SpawnUnit(Transform point, int faction)
     {
-        /*
-        // Capture the centerPoint’s position
-        Vector3 spawnPos = centerPoint.position;
+        Vector3 spawnPos = point.position;
+        spawnPos.z = 0f; // Force Z to 0 if needed
+        UnitController newUnit = Instantiate(unitPrefab, spawnPos, Quaternion.identity);
+        // If your unit has an Initialize method that takes a Transform:
+        newUnit.Initialize(point);
+        newUnit.SetFaction(faction);
 
-        // Override the Z if you want it fixed at 0 (or some other value)
-        spawnPos.z = 0f;
-        // Instantiate the unit at the specified center point
-        unitController = Instantiate(unitPrefab, spawnPos, Quaternion.identity);
-        // UnitController unitController = Instantiate(unitPrefab, centerPoint.position, Quaternion.identity);
+        spawnedUnits.Add(newUnit);
+    }
 
-        // Initialize the unit at the center point
-        unitController.Initialize(centerPoint);
-
-        // Find the RegionManager in the scene
-        regionManager = FindObjectOfType<RegionManager>();
-
-        */
-
-        // Assign the RegionManager first:
-        regionManager = FindObjectOfType<RegionManager>();
-
-        // Spawn one unit for each center point
-        foreach (Transform point in centerPoints)
+    public void Reset()
+    {
+        foreach (var spawnedUnit in spawnedUnits) 
         {
-            Vector3 spawnPos = point.position;
-            spawnPos.z = 0f; // Force Z to 0 if needed
-            UnitController newUnit = Instantiate(unitPrefab, spawnPos, Quaternion.identity);
-            // If your unit has an Initialize method that takes a Transform:
-            newUnit.Initialize(point);
-
-            spawnedUnits.Add(newUnit);
-
+            Destroy(spawnedUnit.gameObject);
         }
-
+        spawnedUnits.Clear();
     }
 
 
@@ -67,11 +50,6 @@ public class UnitManager : MonoBehaviour
     /// </summary>
     public void OnMoveButtonPressed(UnitController selectedUnit, RegionCapturePoint destinationRegion)
     {
-        if (regionManager == null)
-        {
-            Debug.LogError("UnitManager: regionManager is NULL!");
-            return;
-        }
         if (selectedUnit == null)
         {
             Debug.LogError("UnitManager: selectedUnit is NULL!");
@@ -85,7 +63,7 @@ public class UnitManager : MonoBehaviour
         }
 
         // Calculate the start region from the SELECTED UNIT's position
-        RegionCapturePoint startRegion = regionManager.GetCurrentRegion(selectedUnit.transform.position);
+        RegionCapturePoint startRegion = RegionManager.Instance.GetCurrentRegion(selectedUnit.transform.position);
         if (startRegion == null)
         {
             Debug.LogError("UnitManager: startRegion is NULL!");
@@ -102,7 +80,7 @@ public class UnitManager : MonoBehaviour
         }
 
         // Compute the path and move the selected Unit.
-        List<RegionCapturePoint> path = regionManager.GetPath(startRegion, destinationRegion);
+        List<RegionCapturePoint> path = RegionManager.Instance.GetPath(startRegion, destinationRegion);
         selectedUnit.MoveAlongPath(path);
     }
 

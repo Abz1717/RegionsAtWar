@@ -2,13 +2,16 @@
 using UnityEngine;
 using DG.Tweening;  // Make sure you have DOTween imported
 using System.Collections.Generic;
+using System;
 
 public class UnitController : MonoBehaviour
 {
     [SerializeField] private Unit unit;
     [SerializeField] private Transform pivot;
-    [SerializeField] private MeshRenderer mesh;
+    [SerializeField] private SkinnedMeshRenderer mesh;
     [SerializeField] private float speed = 1.0f;
+
+    private Sequence tweener;
     // Optionally, reference a UI button that triggers movement.
 
     // Call this method when instantiating your unit.
@@ -19,11 +22,28 @@ public class UnitController : MonoBehaviour
 
         newPos.z = 0f;
         transform.position = newPos;
+
+
+        unit.OnEnemyKilled += ProcessEnemyKilled;
+    }
+
+    private void ProcessEnemyKilled()
+    {
+        if (tweener != null && !tweener.IsComplete() && !tweener.IsPlaying())
+        {
+            tweener.TogglePause();
+        }
     }
 
     public void SetColor(Color color)
     {
         mesh.material.color = color;
+    }
+
+    public void SetFaction(int faction)
+    {
+        unit.factionID = faction;
+        SetColor(GameManager.Instance.gameConfig.Players.Find(p => p.Id == faction).color);
     }
 
     // Call this method when move is triggered (e.g., via a button press).
@@ -40,7 +60,6 @@ public class UnitController : MonoBehaviour
 
         // Create a DOTween sequence to chain movements.
         Sequence moveSequence = DOTween.Sequence();
-        float moveDuration = 1f;  // Adjust duration per segment as needed
 
         foreach (RegionCapturePoint region in path)
         {
@@ -51,11 +70,40 @@ public class UnitController : MonoBehaviour
             var distance = targetPos - transform.position;
 
             // Assuming each RegionCapturePoint’s transform.position is the center of that region.
+            var tween = transform.DOMove(targetPos, distance.magnitude / unit.moveSpeed).SetEase(Ease.Linear)
+                .OnComplete(() =>
+                {
+                    if (!region.IsContested())  // You need to implement IsContested() accordingly.
+                    {
+                        region.region.SetOwner(unit.factionID);
+                    }
+                });
             moveSequence.Append(pivot.DOLookAt(targetPos, 0.2f, AxisConstraint.Y));
-            moveSequence.Append(transform.DOMove(targetPos, moveDuration));
+            moveSequence.Append(tween);
         }
 
+        tweener = moveSequence;
         moveSequence.Play().OnComplete(() => unit.Reset());
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var enemy = collision.gameObject.GetComponent<Unit>();
+        if(enemy != null && enemy.factionID != unit.factionID)
+        {
+            if(tweener != null && !tweener.IsComplete())
+            {
+                tweener.Pause();
+            }
+            unit.StartAttack(enemy);
+            pivot.DOLookAt(enemy.transform.position+ Vector3.back*10, 0.2f, AxisConstraint.Y);
+            //Vector3.up
+            //Vector3.down
+            //Vector3.right
+            //Vector3.left
+     
+
+        }
     }
 }
 

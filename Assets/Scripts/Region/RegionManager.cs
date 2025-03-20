@@ -145,9 +145,12 @@ public class RegionManager : Singleton<RegionManager>
 
     */
 
-    private void Reset()
+    public void Reset()
     {
-        //endRegion = null;
+        foreach (var region in regionData)
+        { 
+            region.SetOwner(-1);
+        }
     }
 
     private class SearchPathResult

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RegionCapturePoint : MonoBehaviour
@@ -5,9 +6,12 @@ public class RegionCapturePoint : MonoBehaviour
     [Tooltip("Reference to the Region data for this capture point.")]
     public Region region;
 
+    private List<Unit> unitsInRegion = new List<Unit>();
+
+
     private void Awake()
     {
-        
+
         if (region == null)
         {
             // Assuming the hierarchy: Region (parent) -> Centerpoint (child) -> CenterpointCollider (this GameObject)
@@ -15,23 +19,26 @@ public class RegionCapturePoint : MonoBehaviour
         }
     }
 
-    // Called when another collider enters the trigger collider on this GameObject.
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // Assume your unit has a Unit component with a faction property.
-        Unit unit = collision.GetComponent<Unit>();
-        if (unit != null)
-        {
-            // Check if the region is not already owned by this unit's faction.
-            if (region.ownerID != unit.factionID)
-            {
-                // Update region ownership.
-                region.ownerID = unit.factionID;
-                Debug.Log($"Region {region.regionID} captured by faction {unit.factionID}");
 
-                // Notify the GameManager so points can be awarded.
-                GameManager.Instance.RegionCaptured(region, unit.factionID);
-            }
+
+    /// <summary>
+    /// Returns true if there are units from more than one faction inside the capture point.
+    /// </summary>
+    public bool IsContested()
+    {
+        if (unitsInRegion.Count == 0)
+            return false;
+
+        // Assume the faction of the first unit is the baseline.
+        int baseFaction = unitsInRegion[0].factionID;
+
+        // If any unit belongs to a different faction, the region is contested.
+        foreach (var unit in unitsInRegion)
+        {
+            if (unit.factionID != baseFaction)
+                return true;
         }
+        return false;
     }
 }
+

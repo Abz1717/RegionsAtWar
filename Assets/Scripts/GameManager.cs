@@ -221,16 +221,20 @@ public class GameManager : MonoBehaviour
 
 */
 
+
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+    private const float PERCENT_TO_WIN = 80f;
     public bool IsMoveModeActive { get; private set; }
 
     private RegionCapturePoint destinationRegion;
     private UnitController selectedUnit;
 
-    [SerializeField] private GameConfig gameConfig;
+    [SerializeField] public GameConfig gameConfig;
+
+
 
     private void Start()
     {
@@ -240,11 +244,33 @@ public class GameManager : Singleton<GameManager>
     private void StartGame()
     {
         var regions = RegionManager.Instance.regionData;
-        for (int i = 0; i < gameConfig.Players.Count; i++) 
+        // Set starting ownership based on GameConfig.
+        foreach (var player in gameConfig.Players)
         {
-            foreach (var region in gameConfig.Players[i].StartRegions)
+            foreach (var region in player.StartRegions)
             {
-                regions[region].ownerID = i;
+                regions[region].SetOwner(player.Id);
+            }
+            UnitManager.Instance.SpawnPlayerUnits(player);
+        }
+    }
+
+    private void EndGame()
+    {
+        RegionManager.Instance.Reset();
+        UnitManager.Instance.Reset();
+
+        StartGame();
+    }
+
+    public void CheckGameEnd()
+    {
+        foreach (var player in gameConfig.Players)
+        {
+            var regionsCount = RegionManager.Instance.regionData.FindAll(region => region.ownerID == player.Id).Count;
+            if (regionsCount >= RegionManager.Instance.regionData.Count * PERCENT_TO_WIN / 100f)
+            {
+                EndGame();
             }
         }
     }
@@ -276,9 +302,22 @@ public class GameManager : Singleton<GameManager>
             return;
         }
 
+        if (IsMoveModeActive)
+        {
+            Debug.Log("Move mode is already active; ignoring duplicate input.");
+            return;
+        }
+
         IsMoveModeActive = true;
         Debug.Log("Move mode activated. Click on a destination region.");
     }
+
+    public void DeactivateMoveMode()
+    {
+        IsMoveModeActive = false;
+        Debug.Log("Move mode deactivated.");
+    }
+
 
     // Called by RegionSelector when a region is clicked.
     public void SetDestination(RegionCapturePoint selectedRegion)
@@ -302,11 +341,10 @@ public class GameManager : Singleton<GameManager>
         UnitManager.Instance.OnMoveButtonPressed(selectedUnit, destinationRegion);
 
     }
-
-
-
-    public void RegionCaptured(Region region, int factionID)
+    public enum State
     {
-        // Implement region capture logic as needed.
+        Idle,
+        Move,
+        Attack
     }
 }

@@ -10,8 +10,10 @@ public class GameConfig : ScriptableObject
 [System.Serializable]
 public class PlayerData
 {
+    public int Id;
     public PlayerType Type;
     public List<int> StartRegions;
+    public List<int> SpawnPoints;
     public Color color;
 }
 

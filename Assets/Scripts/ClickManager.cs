@@ -42,6 +42,15 @@ public class ClickManager : MonoBehaviour
             if (GameManager.Instance != null && GameManager.Instance.IsMoveModeActive)
             {
                 Debug.Log("Move mode active; processing road clicks only.");
+
+                if (hits.Length == 0)
+                {
+                    Debug.Log("Empty space clicked. Cancelling move mode.");
+                    GameManager.Instance.DeactivateMoveMode();
+                    return;
+                }
+                //bool validDestinationClicked = false;
+
                 foreach (RaycastHit2D hit in hits)
                 {
                     RegionCapturePoint point = hit.collider.GetComponentInParent<RegionCapturePoint>();
@@ -49,6 +58,7 @@ public class ClickManager : MonoBehaviour
                     {
                         // Trigger the road's click handler.
                         GameManager.Instance.SetDestination(point);
+                        //validDestinationClicked = true;
                         return;
                     }
                 }
@@ -70,6 +80,7 @@ public class ClickManager : MonoBehaviour
                         // Found a unit script on the parent
                         if (GameManager.Instance != null)
                            // GameManager.Instance.unitClickedThisFrame = true;
+
                         unit.OnUnitSelected();
                         return;
                     }

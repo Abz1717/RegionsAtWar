@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class RegionClickHandler : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer spriteRenderer;
-    private Color originalColor;
     public static RegionClickHandler currentlySelectedRegion = null; // Last selected region
 
     // Public references for the Region Action Panel and province Text.
@@ -21,9 +19,6 @@ public class RegionClickHandler : MonoBehaviour
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        if (spriteRenderer != null)
-            originalColor = spriteRenderer.color;
 
         // Get region data if the Region component exists.
         regionData = GetComponent<Region>();
@@ -55,8 +50,7 @@ public class RegionClickHandler : MonoBehaviour
             //Debug.LogError(currentlySelectedRegion.name + "   " + name);
 
         // Highlight this region.
-        if (spriteRenderer != null)
-            spriteRenderer.color = Color.red;
+        regionData.SetColor(Color.red);
         currentlySelectedRegion = this;
 
         // Delegate panel control to the UI Manager.
@@ -71,8 +65,6 @@ public class RegionClickHandler : MonoBehaviour
 
     public void ResetColor()
     {
-        //Debug.LogError("Close region");
-        if (spriteRenderer != null)
-            spriteRenderer.color = originalColor;
+        regionData.ResetColor();
     }
 }

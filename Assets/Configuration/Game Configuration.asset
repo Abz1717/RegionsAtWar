@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d95cea6e48de224d97ed806d00b8af8, type: 3}
   m_Name: Game Configuration
   m_EditorClassIdentifier: 
+  Players:
+  - Id: 0
+    Type: 0
+    StartRegions: 080000002300000009000000030000002d00000010000000
+    SpawnPoints: 090000000800000023000000
+    color: {r: 0, g: 0.22736311, b: 1, a: 1}
+  - Id: 1
+    Type: 1
+    StartRegions: 2b0000000c0000002700000015000000190000000d00000012000000
+    SpawnPoints: 19000000120000000d000000
+    color: {r: 1, g: 0.7312783, b: 0, a: 1}
