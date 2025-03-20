@@ -11,7 +11,7 @@ public class Region : MonoBehaviour
 
     [Header("Region Settings")]
     public string regionID = "Region_1";
-    public int ownerID = 0; // 0=Neutral, 1=Player, 2=AI
+    public int ownerID = -1;
 
     [Header("Production Rates (per interval)")]
     public int resourceRate = 10;
@@ -28,5 +28,11 @@ public class Region : MonoBehaviour
     private void Awake()
     {
         capturePoint = GetComponentInChildren<RegionCapturePoint>();
+    }
+
+    public void SetOwner(int id)
+    {
+        ownerID = id;
+        //TODO show owner
     }
 }

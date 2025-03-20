@@ -332,7 +332,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 97.05786, y: 20}
+  m_AnchoredPosition: {x: 97.05762, y: 20}
   m_SizeDelta: {x: -903.7043, y: 34.8971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &11542210
@@ -1120,7 +1120,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -26.650757}
+  m_AnchoredPosition: {x: 0, y: -26.65039}
   m_SizeDelta: {x: 0, y: -377.9928}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30103538
@@ -2020,7 +2020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -26.651611}
+  m_AnchoredPosition: {x: 0, y: -26.651367}
   m_SizeDelta: {x: 0, y: -377.9928}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &56167296
@@ -3606,7 +3606,7 @@ Transform:
   m_GameObject: {fileID: 113869780}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.354, y: -2.668, z: 0}
+  m_LocalPosition: {x: 2.7995, y: -2.6704, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3644,9 +3644,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &113869783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5129,7 +5129,7 @@ Transform:
   m_GameObject: {fileID: 174116517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.83, y: -3.311, z: 0}
+  m_LocalPosition: {x: 1.2672, y: -3.3239, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5167,9 +5167,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &174116520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5223,7 +5223,7 @@ Transform:
   m_GameObject: {fileID: 177226215}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.534, y: -3.93, z: 0}
+  m_LocalPosition: {x: 2.9762, y: -3.9298, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5261,9 +5261,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &177226218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6291,7 +6291,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitPrefab: {fileID: 5943939939191043856, guid: cdde97322b4562d4cb69360afbbcc1e9,
     type: 3}
-  centerPoint: {fileID: 1761823668}
+  centerPoints:
+  - {fileID: 886565922}
+  - {fileID: 1365167797}
+  - {fileID: 1799131918}
 --- !u!4 &230643298
 Transform:
   m_ObjectHideFlags: 0
@@ -6301,7 +6304,7 @@ Transform:
   m_GameObject: {fileID: 230643296}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 946.58124, y: 716.38025, z: 877.04626}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7698,7 +7701,7 @@ Transform:
   m_GameObject: {fileID: 268317843}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.651, y: -3.138, z: 0}
+  m_LocalPosition: {x: 2.0979, y: -3.1382, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7736,9 +7739,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &268317846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8526,7 +8529,7 @@ Transform:
   m_GameObject: {fileID: 291240868}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.6959, y: -5.6993, z: 0}
+  m_LocalPosition: {x: 5.1378, y: -5.7015, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8564,9 +8567,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &291240871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8620,7 +8623,7 @@ Transform:
   m_GameObject: {fileID: 292141504}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.088, y: -4.934, z: 0}
+  m_LocalPosition: {x: 6.5316, y: -4.9285, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8658,9 +8661,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &292141507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8893,7 +8896,7 @@ Transform:
   m_GameObject: {fileID: 317332230}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.307, y: -3.842, z: 0}
+  m_LocalPosition: {x: 1.7477, y: -3.8433, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8931,9 +8934,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &317332233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9442,7 +9445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -9847,7 +9850,7 @@ Transform:
   m_GameObject: {fileID: 343783522}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.286, y: -3.948, z: 0}
+  m_LocalPosition: {x: 4.735, y: -3.944, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9885,9 +9888,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &343783525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12164,7 +12167,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 103.94495, y: -96.400024}
+  m_AnchoredPosition: {x: 103.944824, y: -96.40039}
   m_SizeDelta: {x: 180, y: 69.6562}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &444932749
@@ -12688,7 +12691,7 @@ Transform:
   m_GameObject: {fileID: 455767858}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.986, y: -8.826, z: 0}
+  m_LocalPosition: {x: 5.4296, y: -8.8286, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12726,9 +12729,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &455767861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12782,7 +12785,7 @@ Transform:
   m_GameObject: {fileID: 456824738}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.062, y: -8.152, z: 0}
+  m_LocalPosition: {x: 4.508, y: -8.151, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12820,9 +12823,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &456824741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14324,7 +14327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -26.6526}
+  m_AnchoredPosition: {x: 0, y: -26.652344}
   m_SizeDelta: {x: 0, y: -377.9928}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508612206
@@ -14433,7 +14436,7 @@ Transform:
   m_GameObject: {fileID: 511600564}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.405, y: -0.428, z: 0}
+  m_LocalPosition: {x: 2.8515, y: -0.4301, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14471,9 +14474,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &511600567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15144,7 +15147,7 @@ Transform:
   m_GameObject: {fileID: 529899263}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.79, y: -5.053, z: 0}
+  m_LocalPosition: {x: 4.242, y: -5.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15182,9 +15185,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &529899266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15587,7 +15590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -695.99}
+  m_AnchoredPosition: {x: 0, y: -677}
   m_SizeDelta: {x: 0, y: -1173.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &552684563
@@ -15766,7 +15769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -17918,7 +17921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -18201,8 +18204,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
-  regionID: Region_1
-  ownerID: 0
+  regionID: Bristol
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -18618,6 +18621,55 @@ MonoBehaviour:
   - {fileID: 292141507}
   - {fileID: 1485107646}
   - {fileID: 2001655363}
+  regionData:
+  - {fileID: 679189812}
+  - {fileID: 2125575534}
+  - {fileID: 1844177450}
+  - {fileID: 639013906}
+  - {fileID: 2131047228}
+  - {fileID: 1732332752}
+  - {fileID: 669001185}
+  - {fileID: 795808124}
+  - {fileID: 2136256483}
+  - {fileID: 1772480766}
+  - {fileID: 1036098739}
+  - {fileID: 1949410436}
+  - {fileID: 2079816952}
+  - {fileID: 1032081413}
+  - {fileID: 633018630}
+  - {fileID: 1589263997}
+  - {fileID: 1908738042}
+  - {fileID: 1969182954}
+  - {fileID: 1777701615}
+  - {fileID: 1995818477}
+  - {fileID: 680764276}
+  - {fileID: 2109481300}
+  - {fileID: 1124038326}
+  - {fileID: 1298299743}
+  - {fileID: 834200189}
+  - {fileID: 1250732494}
+  - {fileID: 1278981268}
+  - {fileID: 554478188}
+  - {fileID: 1297716210}
+  - {fileID: 1974895468}
+  - {fileID: 1143113512}
+  - {fileID: 1576112417}
+  - {fileID: 1149580485}
+  - {fileID: 980275406}
+  - {fileID: 1515461754}
+  - {fileID: 1351208407}
+  - {fileID: 1286482098}
+  - {fileID: 328417364}
+  - {fileID: 1566422129}
+  - {fileID: 1236997868}
+  - {fileID: 1372730175}
+  - {fileID: 868326122}
+  - {fileID: 1131844008}
+  - {fileID: 867700981}
+  - {fileID: 1746324022}
+  - {fileID: 2090761922}
+  - {fileID: 1467077606}
+  - {fileID: 1652231337}
 --- !u!1001 &665553217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18884,7 +18936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -18925,7 +18977,7 @@ Transform:
   m_GameObject: {fileID: 677430979}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.953, y: -6.319, z: 0}
+  m_LocalPosition: {x: 1.397, y: -6.325, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18963,9 +19015,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &677430982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19359,7 +19411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Bedfordshire
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -19574,7 +19626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -20075,7 +20127,7 @@ Transform:
   m_GameObject: {fileID: 732787182}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.452, y: -6.867, z: 0}
+  m_LocalPosition: {x: 4.895, y: -6.876, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20113,9 +20165,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &732787185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20702,7 +20754,7 @@ Transform:
   m_GameObject: {fileID: 752579503}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.94, y: 0.729, z: 0}
+  m_LocalPosition: {x: 2.388, y: 0.735, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20740,9 +20792,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &752579506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21339,7 +21391,7 @@ Transform:
   m_GameObject: {fileID: 774955405}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.922, y: -6.868, z: 0}
+  m_LocalPosition: {x: 2.362, y: -6.865, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21377,9 +21429,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &774955408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21624,7 +21676,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -71.930786}
+  m_AnchoredPosition: {x: 0, y: -71.930664}
   m_SizeDelta: {x: 0, y: -143.8616}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &780026531
@@ -22079,7 +22131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -22870,7 +22922,7 @@ Transform:
   m_GameObject: {fileID: 812924659}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.769, y: -0.608, z: 0}
+  m_LocalPosition: {x: 1.206, y: -0.5999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22908,9 +22960,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0.0056569753}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.06268256
+  m_Radius: 0.1
 --- !u!114 &812924662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23337,7 +23389,7 @@ Transform:
   m_GameObject: {fileID: 820266215}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.567, y: 0.189, z: 0}
+  m_LocalPosition: {x: 3.007, y: 0.191, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23375,9 +23427,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &820266218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24072,7 +24124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -25240,7 +25292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -25408,7 +25460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -26084,7 +26136,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 449.4, y: 21.7}
+  m_AnchoredPosition: {x: 449.3999, y: 21.700195}
   m_SizeDelta: {x: -903.7043, y: 34.8971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880923255
@@ -26336,7 +26388,7 @@ Transform:
   m_GameObject: {fileID: 886565921}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.845, y: -8.434, z: 0}
+  m_LocalPosition: {x: 1.2921, y: -8.4291, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26374,9 +26426,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &886565924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26656,7 +26708,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 98.7478, y: -97.44856}
+  m_AnchoredPosition: {x: 98.74756, y: -97.44824}
   m_SizeDelta: {x: 180, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905897484
@@ -27341,7 +27393,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -26.653442}
+  m_AnchoredPosition: {x: 0, y: -26.65332}
   m_SizeDelta: {x: 0, y: -377.9873}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &915779449
@@ -27554,7 +27606,7 @@ Transform:
   m_GameObject: {fileID: 917307202}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.207, y: -6.13, z: 0}
+  m_LocalPosition: {x: 6.6525, y: -6.1284, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27592,9 +27644,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &917307205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29091,7 +29143,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -26.653442}
+  m_AnchoredPosition: {x: 0, y: -26.65332}
   m_SizeDelta: {x: 0, y: -377.9873}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &970432090
@@ -29791,7 +29843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -30448,7 +30500,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 93.744934, y: -97.14851}
+  m_AnchoredPosition: {x: 93.74512, y: -97.14844}
   m_SizeDelta: {x: 180, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1015285973
@@ -31112,7 +31164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -31519,7 +31571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -32386,7 +32438,7 @@ Transform:
   m_GameObject: {fileID: 1084306201}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.218, y: -2.449, z: 0}
+  m_LocalPosition: {x: 1.656, y: -2.449, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32424,9 +32476,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1084306204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32517,7 +32569,7 @@ Transform:
   m_GameObject: {fileID: 1095421380}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.623, y: -7.765, z: 0}
+  m_LocalPosition: {x: 4.0646, y: -7.7668, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32555,9 +32607,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1095421383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33635,7 +33687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -34002,7 +34054,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -34495,7 +34547,7 @@ Transform:
   m_GameObject: {fileID: 1139598304}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.123, y: -5.088, z: 0}
+  m_LocalPosition: {x: 3.564, y: -5.091, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34533,9 +34585,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1139598307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34938,7 +34990,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -35281,7 +35333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -36472,7 +36524,7 @@ Transform:
   m_GameObject: {fileID: 1201909263}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.968, y: -8.835, z: 0}
+  m_LocalPosition: {x: 4.414, y: -8.8345, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36510,9 +36562,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1201909266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36566,7 +36618,7 @@ Transform:
   m_GameObject: {fileID: 1206978403}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.029, y: -8.436, z: 0}
+  m_LocalPosition: {x: 3.472, y: -8.437, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36604,9 +36656,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1206978406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37085,7 +37137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -12.299988}
+  m_AnchoredPosition: {x: 0, y: -12.299805}
   m_SizeDelta: {x: 10.909, y: 126.1735}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1225373836
@@ -37750,7 +37802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -38104,7 +38156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -39246,7 +39298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -39532,7 +39584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -39580,7 +39632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -26.653442}
+  m_AnchoredPosition: {x: 0, y: -26.65332}
   m_SizeDelta: {x: 0, y: -377.9873}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1288223878
@@ -39766,7 +39818,7 @@ Transform:
   m_GameObject: {fileID: 1293574366}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.304, y: -7.55, z: 0}
+  m_LocalPosition: {x: 4.743, y: -7.556, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39804,9 +39856,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1293574369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40362,7 +40414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -40490,7 +40542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -40635,7 +40687,7 @@ Transform:
   m_GameObject: {fileID: 1302870606}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.502, y: -6.726, z: 0}
+  m_LocalPosition: {x: 3.9413, y: -6.7232, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40673,9 +40725,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1302870609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40750,7 +40802,7 @@ Transform:
   m_GameObject: {fileID: 1309187836}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.517, y: -5.851, z: 0}
+  m_LocalPosition: {x: 3.9628, y: -5.849, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40788,9 +40840,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1309187839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41200,7 +41252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -262.15994, y: 21.400024}
+  m_AnchoredPosition: {x: -262.16016, y: 21.40039}
   m_SizeDelta: {x: -901.83, y: 34.8971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1327562553
@@ -41886,7 +41938,7 @@ Transform:
   m_GameObject: {fileID: 1349735333}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.223, y: -1.425, z: 0}
+  m_LocalPosition: {x: 3.666, y: -1.425, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41924,9 +41976,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1349735336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42187,7 +42239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -42461,7 +42513,7 @@ Transform:
   m_GameObject: {fileID: 1365167796}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1769, y: -7.6935, z: 0}
+  m_LocalPosition: {x: 1.629, y: -7.6884, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42499,9 +42551,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.45400017, y: 0.0036749449}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.049674775
+  m_Radius: 0.1
 --- !u!114 &1365167799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42691,7 +42743,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -72.06171}
+  m_AnchoredPosition: {x: 0, y: -72.06152}
   m_SizeDelta: {x: 0, y: -144.1234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1365677340
@@ -43054,7 +43106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -43189,7 +43241,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100.3479, y: -96.74855}
+  m_AnchoredPosition: {x: 100.348145, y: -96.74902}
   m_SizeDelta: {x: 180, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1376072041
@@ -45180,7 +45232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Worcestershire
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -45428,7 +45480,7 @@ Transform:
   m_GameObject: {fileID: 1475271269}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.111, y: -5.413, z: 0}
+  m_LocalPosition: {x: 2.5546, y: -5.4203, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45466,9 +45518,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1475271272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45715,7 +45767,7 @@ Transform:
   m_GameObject: {fileID: 1485107643}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.909, y: -4.629, z: 0}
+  m_LocalPosition: {x: 2.3552, y: -4.6311, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45753,9 +45805,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1485107646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46700,7 +46752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -48044,7 +48096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -48083,7 +48135,7 @@ Transform:
   m_GameObject: {fileID: 1569224013}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.58, y: -5.982, z: 0}
+  m_LocalPosition: {x: 3.0263, y: -5.979, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48121,9 +48173,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1569224016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48568,7 +48620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -48726,7 +48778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -49350,7 +49402,7 @@ Transform:
   m_GameObject: {fileID: 1638724414}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.332, y: -3.944, z: 0}
+  m_LocalPosition: {x: 3.778, y: -3.954, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49388,9 +49440,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1638724417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49724,7 +49776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Cornwall
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -49958,7 +50010,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -445.09406, y: 20.951477}
+  m_AnchoredPosition: {x: -445.09424, y: 20.951172}
   m_SizeDelta: {x: -892.2982, y: 34.8971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1663479587
@@ -52084,7 +52136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -52707,7 +52759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -54008,7 +54060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -54259,7 +54311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -54472,7 +54524,7 @@ Transform:
   m_GameObject: {fileID: 1785102519}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.746, y: -6, z: 0}
+  m_LocalPosition: {x: 2.188, y: -6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -54510,9 +54562,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1785102522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54771,7 +54823,7 @@ Transform:
   m_GameObject: {fileID: 1795774276}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.941, y: -8.254, z: 0}
+  m_LocalPosition: {x: 6.388, y: -8.2534, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -54809,9 +54861,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1795774279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55115,7 +55167,7 @@ Transform:
   m_GameObject: {fileID: 1799131917}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.63, y: -9.09, z: 0}
+  m_LocalPosition: {x: 2.0691, y: -9.098, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55153,9 +55205,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1799131920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55251,7 +55303,7 @@ Transform:
   m_GameObject: {fileID: 1820701390}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.119, y: -7.961, z: 0}
+  m_LocalPosition: {x: 2.563, y: -7.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55289,9 +55341,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1820701393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56431,7 +56483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Buckinghamshire
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -56978,7 +57030,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 94.36694}
+  m_AnchoredPosition: {x: 0, y: 94.36719}
   m_SizeDelta: {x: 0, y: 188.7339}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1856550213
@@ -57131,7 +57183,7 @@ Transform:
   m_GameObject: {fileID: 1860298714}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.859, y: -6.977, z: 0}
+  m_LocalPosition: {x: 3.307, y: -6.982, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57169,9 +57221,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1860298717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57760,7 +57812,7 @@ Transform:
   m_GameObject: {fileID: 1876487598}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.315, y: -6.9, z: 0}
+  m_LocalPosition: {x: 5.7562, y: -6.9024, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57798,9 +57850,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1876487601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58447,7 +58499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -59368,7 +59420,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 92.18994, y: -95.74855}
+  m_AnchoredPosition: {x: 92.18994, y: -95.74902}
   m_SizeDelta: {x: 180, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1931114873
@@ -60264,7 +60316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -60543,7 +60595,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -82.083984, y: 20.7}
+  m_AnchoredPosition: {x: -82.083984, y: 20.700195}
   m_SizeDelta: {x: -898.01, y: 34.8971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1963497883
@@ -60881,7 +60933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -61080,7 +61132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -61123,7 +61175,7 @@ Transform:
   m_GameObject: {fileID: 1975222402}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.069, y: -5.151, z: 0}
+  m_LocalPosition: {x: 1.512, y: -5.156, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61161,9 +61213,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1975222405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61399,7 +61451,7 @@ Transform:
   m_GameObject: {fileID: 1994115184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.059, y: -2.257, z: 0}
+  m_LocalPosition: {x: 4.5062, y: -2.2606, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61437,9 +61489,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &1994115187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61652,7 +61704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -61689,7 +61741,7 @@ Transform:
   m_GameObject: {fileID: 2001655360}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.098, y: -6.27, z: 0}
+  m_LocalPosition: {x: 4.5372, y: -6.2745, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61727,9 +61779,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &2001655363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62520,9 +62572,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &2012565430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63548,7 +63600,7 @@ Transform:
   m_GameObject: {fileID: 2062392272}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.497, y: -9.084, z: 0}
+  m_LocalPosition: {x: -0.057, y: -9.088, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -63586,9 +63638,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &2062392275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63643,6 +63695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db3a2441cdd73234a975dba5dc0e0dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameConfig: {fileID: 11400000, guid: ee84e3f4287dea647b057cd5aa73679a, type: 2}
 --- !u!4 &2066527994
 Transform:
   m_ObjectHideFlags: 0
@@ -64398,7 +64451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -65173,7 +65226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Wiltshire
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -65712,7 +65765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -65835,7 +65888,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 95.679016, y: -96.44856}
+  m_AnchoredPosition: {x: 95.6792, y: -96.44824}
   m_SizeDelta: {x: 180, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2122874816
@@ -66424,7 +66477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Berkshire
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -66588,7 +66641,7 @@ Transform:
   m_GameObject: {fileID: 2129153720}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.676, y: -9.826, z: 0}
+  m_LocalPosition: {x: -1.23, y: -9.821, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -66626,9 +66679,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44297442, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.057025585
+  m_Radius: 0.1
 --- !u!114 &2129153723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67371,7 +67424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0
@@ -67800,7 +67853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capturePoint: {fileID: 0}
   regionID: Region_1
-  ownerID: 0
+  ownerID: -1
   resourceRate: 10
   moneyRate: 0
   manpowerRate: 0

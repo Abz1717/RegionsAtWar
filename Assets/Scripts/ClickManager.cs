@@ -64,7 +64,7 @@ public class ClickManager : MonoBehaviour
                 foreach (RaycastHit2D hit in hits)
                 {
                     // Instead of GetComponent<UnitSelection>(), use GetComponentInParent:
-                    UnitSelection unit = hit.collider.GetComponentInParent<UnitSelection>();
+                    UnitSelection unit = hit.collider.GetComponent<UnitSelection>();
                     if (unit != null)
                     {
                         // Found a unit script on the parent

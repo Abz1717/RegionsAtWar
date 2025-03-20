@@ -221,19 +221,32 @@ public class GameManager : MonoBehaviour
 
 */
 
-
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
-    public static GameManager Instance;
-
     public bool IsMoveModeActive { get; private set; }
-    private RegionCapturePoint destinationRegion;
 
-    private void Awake()
+    private RegionCapturePoint destinationRegion;
+    private UnitController selectedUnit;
+
+    [SerializeField] private GameConfig gameConfig;
+
+    private void Start()
     {
-        Instance = this;
+        StartGame();
+    }
+
+    private void StartGame()
+    {
+        var regions = RegionManager.Instance.regionData;
+        for (int i = 0; i < gameConfig.Players.Count; i++) 
+        {
+            foreach (var region in gameConfig.Players[i].StartRegions)
+            {
+                regions[region].ownerID = i;
+            }
+        }
     }
 
     public void SelectUnit(GameObject unit)
@@ -243,11 +256,26 @@ public class GameManager : MonoBehaviour
         // Optionally store it in a variable
         // selectedUnit = unit;
         // Or do any logic you need when a unit is selected
+
+
+        // Convert the clicked GameObject into a UnitController reference
+        selectedUnit = unit.GetComponent<UnitController>();
+        if (selectedUnit == null)
+        {
+            Debug.LogError("Selected GameObject has no UnitController component!");
+        }
     }
 
     // Call this when the move button is pressed.
     public void ActivateMoveMode()
     {
+
+        if (selectedUnit == null)
+        {
+            Debug.LogWarning("No unit selected.");
+            return;
+        }
+
         IsMoveModeActive = true;
         Debug.Log("Move mode activated. Click on a destination region.");
     }
@@ -258,12 +286,21 @@ public class GameManager : MonoBehaviour
         if (!IsMoveModeActive)
             return;
 
+        if (selectedUnit == null)
+        {
+            Debug.LogWarning("No selected unit to move.");
+            return;
+        }
+
+
         destinationRegion = selectedRegion;
         Debug.Log($"Destination region set: {selectedRegion.name}");
         IsMoveModeActive = false;
 
         // Trigger movement in the UnitManager.
-        UnitManager.Instance.OnMoveButtonPressed(destinationRegion);
+        //UnitManager.Instance.OnMoveButtonPressed(destinationRegion);
+        UnitManager.Instance.OnMoveButtonPressed(selectedUnit, destinationRegion);
+
     }
 
 

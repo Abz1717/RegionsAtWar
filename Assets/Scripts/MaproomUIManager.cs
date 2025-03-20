@@ -128,7 +128,7 @@ public class MaproomUIManager : MonoBehaviour
         float alpha;
 
         // Debug log to monitor zoom value.
-        Debug.Log("Camera Zoom (orthographicSize): " + zoom);
+        //Debug.Log("Camera Zoom (orthographicSize): " + zoom);
 
         if (zoom >= fadeInZoomThreshold)
         {
@@ -144,7 +144,7 @@ public class MaproomUIManager : MonoBehaviour
             alpha = Mathf.InverseLerp(fadeOutZoomThreshold, fadeInZoomThreshold, zoom);
         }
 
-        Debug.Log("Calculated Alpha: " + alpha);
+        //Debug.Log("Calculated Alpha: " + alpha);
 
         // Apply the alpha value to each world-space text.
         foreach (TMP_Text tmp in mapTexts)

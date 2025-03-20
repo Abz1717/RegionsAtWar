@@ -2,31 +2,10 @@
 using System.Linq;
 using UnityEngine;
 
-public class RegionManager : MonoBehaviour
+public class RegionManager : Singleton<RegionManager>
 {
     [SerializeField] public List<RegionCapturePoint> regions = new List<RegionCapturePoint>();
-    private RegionCapturePoint endRegion;
-
-    /*
-    private void Start()
-    {
-        //var startRegion = regions[0];
-        //endRegion = regions[regions.Count-1];
-
-        //Debug.LogError(startRegion.transform.parent.gameObject.name);
-        //Debug.LogError(endRegion.transform.parent.gameObject.name);
-
-        //var path = GetPath(startRegion);
-        var path = GetPath(startRegion, endRegion);
-
-
-        for (int i = 0; i < path.Count; i++)
-        {
-            Debug.LogError(i + "   " + path[i].region.name);
-        }
-    }
-
-    */
+    [SerializeField] public List<Region> regionData = new List<Region>();
 
     public List<RegionCapturePoint> GetPath(RegionCapturePoint startRegion, RegionCapturePoint destinationRegion)
     {
@@ -168,7 +147,7 @@ public class RegionManager : MonoBehaviour
 
     private void Reset()
     {
-        endRegion = null;
+        //endRegion = null;
     }
 
     private class SearchPathResult
