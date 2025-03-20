@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class RegionClickHandler : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     private Color originalColor;
     public static RegionClickHandler currentlySelectedRegion = null; // Last selected region
 
@@ -43,14 +43,16 @@ public class RegionClickHandler : MonoBehaviour
     {
         // Use region data if available; otherwise, fallback to the GameObject's name.
         string regionID = regionData != null ? regionData.regionID : gameObject.name;
-        Debug.Log($"RegionClickHandler: Region Selected: {regionID}");
+        Debug.Log($"[{typeof(RegionClickHandler)}] RegionClickHandler: Region Selected: {regionID}");
 
         // Reset previously selected region's color if needed.
         if (currentlySelectedRegion != null && currentlySelectedRegion != this)
             currentlySelectedRegion.ResetColor();
 
-        currentlySelectedRegion = this;
+        //Debug.LogError(currentlySelectedRegion == null);
 
+        //if (currentlySelectedRegion != null)
+            //Debug.LogError(currentlySelectedRegion.name + "   " + name);
 
         // Highlight this region.
         if (spriteRenderer != null)
@@ -69,6 +71,7 @@ public class RegionClickHandler : MonoBehaviour
 
     public void ResetColor()
     {
+        //Debug.LogError("Close region");
         if (spriteRenderer != null)
             spriteRenderer.color = originalColor;
     }

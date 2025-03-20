@@ -1,8 +1,14 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class Region : MonoBehaviour
 {
+    [SerializeField]
+    private RegionCapturePoint capturePoint;
+
+    public RegionCapturePoint CapturePoint => capturePoint;
+
     [Header("Region Settings")]
     public string regionID = "Region_1";
     public int ownerID = 0; // 0=Neutral, 1=Player, 2=AI
@@ -18,4 +24,9 @@ public class Region : MonoBehaviour
     [Header("Neighbors & Movement")]
     public List<Region> neighbors = new List<Region>();
     public Transform centerPoint;
+
+    private void Awake()
+    {
+        capturePoint = GetComponentInChildren<RegionCapturePoint>();
+    }
 }

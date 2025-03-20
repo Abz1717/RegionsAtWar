@@ -1,11 +1,11 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class Unit : MonoBehaviour
 {
     [Tooltip("Which faction/team this unit belongs to. E.g., 1 = Player, 2 = AI.")]
     public int factionID;
 
+    /*
     [Tooltip("Movement speed of the unit.")]
     public float moveSpeed = 3f;
 
@@ -27,5 +27,5 @@ public class Unit : MonoBehaviour
         // Move the unit
         Vector2 movement = new Vector2(h, v) * moveSpeed;
         rb.velocity = movement;
-    }
+    }*/
 }

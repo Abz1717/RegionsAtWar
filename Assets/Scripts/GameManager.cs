@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿
+/*
+
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
@@ -213,5 +216,60 @@ public class GameManager : MonoBehaviour
 
         if (resource3Text != null)
             resource3Text.text = resource3.ToString();
+    }
+}
+
+*/
+
+
+using UnityEngine;
+
+public class GameManager : MonoBehaviour
+{
+    public static GameManager Instance;
+
+    public bool IsMoveModeActive { get; private set; }
+    private RegionCapturePoint destinationRegion;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public void SelectUnit(GameObject unit)
+    {
+        Debug.Log("GameManager: Selected unit " + unit.name);
+
+        // Optionally store it in a variable
+        // selectedUnit = unit;
+        // Or do any logic you need when a unit is selected
+    }
+
+    // Call this when the move button is pressed.
+    public void ActivateMoveMode()
+    {
+        IsMoveModeActive = true;
+        Debug.Log("Move mode activated. Click on a destination region.");
+    }
+
+    // Called by RegionSelector when a region is clicked.
+    public void SetDestination(RegionCapturePoint selectedRegion)
+    {
+        if (!IsMoveModeActive)
+            return;
+
+        destinationRegion = selectedRegion;
+        Debug.Log($"Destination region set: {selectedRegion.name}");
+        IsMoveModeActive = false;
+
+        // Trigger movement in the UnitManager.
+        UnitManager.Instance.OnMoveButtonPressed(destinationRegion);
+    }
+
+
+
+    public void RegionCaptured(Region region, int factionID)
+    {
+        // Implement region capture logic as needed.
     }
 }

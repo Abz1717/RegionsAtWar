@@ -7,8 +7,7 @@ public class RegionCapturePoint : MonoBehaviour
 
     private void Awake()
     {
-        // If the region isn't manually assigned in the Inspector,
-        // automatically try to fetch it from the grandparent.
+        
         if (region == null)
         {
             // Assuming the hierarchy: Region (parent) -> Centerpoint (child) -> CenterpointCollider (this GameObject)

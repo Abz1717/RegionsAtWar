@@ -44,11 +44,11 @@ public class ClickManager : MonoBehaviour
                 Debug.Log("Move mode active; processing road clicks only.");
                 foreach (RaycastHit2D hit in hits)
                 {
-                    Road road = hit.collider.GetComponentInParent<Road>();
-                    if (road != null && road.isSelectable)
+                    RegionCapturePoint point = hit.collider.GetComponentInParent<RegionCapturePoint>();
+                    if (point != null)
                     {
                         // Trigger the road's click handler.
-                        road.OnMouseDown();
+                        GameManager.Instance.SetDestination(point);
                         return;
                     }
                 }
@@ -69,19 +69,19 @@ public class ClickManager : MonoBehaviour
                     {
                         // Found a unit script on the parent
                         if (GameManager.Instance != null)
-                            GameManager.Instance.unitClickedThisFrame = true;
+                           // GameManager.Instance.unitClickedThisFrame = true;
                         unit.OnUnitSelected();
                         return;
                     }
                 }
 
-                // Before processing region clicks, check if either the unit or region panel is already open.
-                if (uiManager != null &&
-                    (uiManager.unitActionPanel.activeSelf || uiManager.regionActionPanel.activeSelf))
+                // Before processing region clicks, check if either the unit panel is already open.
+                if (uiManager != null && uiManager.unitActionPanel.activeSelf)
                 {
-                    Debug.Log("ClickManager: A panel is already open; skipping region clicks.");
+                    Debug.Log("ClickManager: A unit panel is already open; skipping region clicks.");
                     return;
                 }
+
 
 
                 foreach (RaycastHit2D hit in hits)
@@ -99,10 +99,11 @@ public class ClickManager : MonoBehaviour
                 Debug.Log("ClickManager: No hit found.");
 
 
-                if (GameManager.Instance.selectedUnit != null)
+                /*if (GameManager.Instance.selectedUnit != null)
                 {
                     GameManager.Instance.DeactivateMoveMode();
                 }
+                */
             }
 
             // Optionally, if nothing relevant was hit, you can close panels.

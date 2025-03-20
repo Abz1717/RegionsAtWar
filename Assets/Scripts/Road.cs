@@ -40,7 +40,7 @@ public class Road : MonoBehaviour
         Debug.Log($"Road clicked at {percentAlongRoad * 100f:F1}% along the road.");
 
         // Here, you can call your movement logic from your GameManager or UnitMovement script.
-        GameManager.Instance.MoveSelectedUnitViaRoad(this, percentAlongRoad);
+        //GameManager.Instance.MoveSelectedUnitViaRoad(this, percentAlongRoad);
     }
 
     // ✅ Enable or disable selection
