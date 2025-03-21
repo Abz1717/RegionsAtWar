@@ -237,4 +237,17 @@ public class MaproomUIManager : MonoBehaviour
         unitActionPanel?.SetActive(false);
         taskbarPanel?.SetActive(true);
     }
+
+    public void CloseSubPanel(GameObject panel)
+    {
+        if (panel != null)
+        {
+            panel.SetActive(false);
+        }
+        if (mapPanel != null)
+        {
+            mapPanel.SetActive(true);
+        }
+    }
+
 }

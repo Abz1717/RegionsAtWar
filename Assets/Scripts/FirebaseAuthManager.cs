@@ -1,14 +1,14 @@
 ﻿using System.Collections;
-using UnityEngine;
-using Firebase;
-using Firebase.Auth;
+using System.Collections.Generic;
 using Firebase.Extensions;
+using Google;
+using System.Threading.Tasks;
+using UnityEngine;
 using TMPro;
+using Firebase.Auth;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
-using Google;
-using System.Threading.Tasks;
 
 public class FirebaseAuthManager : MonoBehaviour
 {
@@ -16,83 +16,100 @@ public class FirebaseAuthManager : MonoBehaviour
     private FirebaseAuth auth;
     private FirebaseUser user;
 
-    [Header("UI References")]
-    public GameObject loginUI;       // Login Page
-    public GameObject registerUI;    // Register Page
-    public GameObject usernamePopup; // Google First-Time Username Prompt
+    [Header("UI Panels")]
+    public GameObject mainStartPanel;  // New main start panel containing the three buttons (Google, Login, Register)
+    public GameObject loginPanel;      // Existing login panel for email and password
+    public GameObject registerPanel;   // Registration panel for username, email, and password
+    public GameObject usernamePopup;   // Popup for setting username for first-time Google logins
 
-    public TMP_InputField googleUsernameInput;   // For Google username
+    [Header("Main Start Panel Buttons")]
+    public Button googleButtonMain;    // Google sign-in button on the main start panel
+    public Button loginButtonMain;     // Button to open the login panel
+    public Button registerButtonMain;  // Button to open the registration panel
 
-    [Header("Login UI References")]
+    [Header("Login Panel UI References")]
     public TMP_InputField loginEmailInput;
     public TMP_InputField loginPasswordInput;
+    public Button loginButton;
+    public Button backButtonLogin;     // Back button on the login panel
 
-    [Header("Register UI References")]
+    [Header("Register Panel UI References")]
     public TMP_InputField registerEmailInput;
     public TMP_InputField registerPasswordInput;
     public TMP_InputField registerUsernameInput;
-
-
-    public TextMeshProUGUI messageText;
     public Button registerButton;
-    public Button loginButton;
-    public Button googleLoginButton;
-    public Button backButton;
+    public Button backButtonRegister;  // Back button on the registration panel
+
+    [Header("Google Username Popup UI References")]
+    public TMP_InputField googleUsernameInput;   // For Google username entry on first login
     public Button confirmGoogleUsernameButton;
+
+    [Header("Message Display")]
+    public TextMeshProUGUI messageText;
 
     [Header("Google Sign-In")]
     public string GoogleAPI = "YOUR_GOOGLE_CLIENT_ID"; // Replace with your Google OAuth Client ID
-    private GoogleSignInConfiguration configuration;
     private bool isGoogleSignInInitialized = false;
 
     void Start()
     {
         auth = FirebaseAuth.DefaultInstance;
 
-        // Button Listeners
-        registerButton.onClick.AddListener(RegisterUser);
-        loginButton.onClick.AddListener(LoginUser);
-        googleLoginButton.onClick.AddListener(GoogleLogin);
-        backButton.onClick.AddListener(ShowLoginUI);
-        confirmGoogleUsernameButton.onClick.AddListener(ConfirmGoogleUsername);
-
-        loginUI.SetActive(true);
-        registerUI.SetActive(false);
+        // Start with only the main start panel visible.
+        mainStartPanel.SetActive(true);
+        loginPanel.SetActive(false);
+        registerPanel.SetActive(false);
         usernamePopup.SetActive(false);
 
+        // Setup listeners for main start panel buttons.
+        googleButtonMain.onClick.AddListener(GoogleLogin);
+        loginButtonMain.onClick.AddListener(() =>
+        {
+            mainStartPanel.SetActive(false);
+            loginPanel.SetActive(true);
+        });
+        registerButtonMain.onClick.AddListener(() =>
+        {
+            mainStartPanel.SetActive(false);
+            registerPanel.SetActive(true);
+        });
+
+        // Setup listeners for login panel buttons.
+        loginButton.onClick.AddListener(LoginUser);
+        backButtonLogin.onClick.AddListener(() =>
+        {
+            loginPanel.SetActive(false);
+            mainStartPanel.SetActive(true);
+        });
+
+        // Setup listeners for register panel buttons.
+        registerButton.onClick.AddListener(RegisterUser);
+        backButtonRegister.onClick.AddListener(() =>
+        {
+            registerPanel.SetActive(false);
+            mainStartPanel.SetActive(true);
+        });
+
+        // Setup listener for Google username popup.
+        confirmGoogleUsernameButton.onClick.AddListener(ConfirmGoogleUsername);
+
+        // Auto-login if already signed in.
         user = auth.CurrentUser;
         if (user != null)
         {
-            SceneManager.LoadScene("MainMenuScene"); // Auto-login if already signed in
+            SceneManager.LoadScene("MainMenuScene");
         }
-    }
-
-    // SHOW REGISTER UI
-    public void ShowRegisterUI()
-    {
-        loginUI.SetActive(false);
-        registerUI.SetActive(true);
-    }
-
-    // SHOW LOGIN UI
-    public void ShowLoginUI()
-    {
-        registerUI.SetActive(false);
-        loginUI.SetActive(true);
     }
 
     // REGISTER USER WITH EMAIL & PASSWORD
     public void RegisterUser()
     {
-        Debug.Log("✅ RegisterUser() function was called!"); // Debugging
-
         string email = registerEmailInput.text;
         string password = registerPasswordInput.text;
         string username = registerUsernameInput.text;
 
         if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(username))
         {
-            Debug.LogWarning("⚠️ Missing Fields: Email, Password, or Username is empty.");
             messageText.text = "Please enter Email, Password, and Username.";
             return;
         }
@@ -101,7 +118,6 @@ public class FirebaseAuthManager : MonoBehaviour
         {
             if (task.IsCanceled || task.IsFaulted)
             {
-                Debug.LogError("❌ Registration Failed: " + task.Exception);
                 messageText.text = "Registration Failed: " + task.Exception.Message;
                 return;
             }
@@ -109,19 +125,15 @@ public class FirebaseAuthManager : MonoBehaviour
             FirebaseUser newUser = auth.CurrentUser;
             if (newUser != null)
             {
-                Debug.Log("✅ User Created: " + newUser.Email);
-
                 UserProfile profile = new UserProfile { DisplayName = username };
                 newUser.UpdateUserProfileAsync(profile).ContinueWithOnMainThread(profileTask =>
                 {
                     if (profileTask.IsFaulted)
                     {
-                        Debug.LogError("❌ Username update failed.");
                         messageText.text = "Username update failed.";
                     }
                     else
                     {
-                        Debug.Log("✅ Registration Successful! Redirecting to Main Menu.");
                         messageText.text = "Registration Successful!";
                         SceneManager.LoadScene("MainMenuScene");
                     }
@@ -129,7 +141,6 @@ public class FirebaseAuthManager : MonoBehaviour
             }
         });
     }
-
 
     // LOGIN USER WITH EMAIL & PASSWORD
     public void LoginUser()
@@ -151,9 +162,7 @@ public class FirebaseAuthManager : MonoBehaviour
                 return;
             }
 
-            FirebaseAuth authInstance = FirebaseAuth.DefaultInstance;
-            FirebaseUser newUser = authInstance.CurrentUser;
-
+            FirebaseUser newUser = auth.CurrentUser;
             if (newUser != null)
             {
                 messageText.text = "Login Successful!";
@@ -175,6 +184,16 @@ public class FirebaseAuthManager : MonoBehaviour
             };
             isGoogleSignInInitialized = true;
         }
+        else
+        {
+            // Reconfigure if needed.
+            GoogleSignIn.Configuration = new GoogleSignInConfiguration
+            {
+                RequestIdToken = true,
+                WebClientId = GoogleAPI,
+                RequestEmail = true
+            };
+        }
 
         GoogleSignIn.DefaultInstance.SignIn().ContinueWithOnMainThread(task =>
         {
@@ -194,13 +213,12 @@ public class FirebaseAuthManager : MonoBehaviour
                     return;
                 }
 
-                FirebaseAuth authInstance = FirebaseAuth.DefaultInstance;
-                FirebaseUser newUser = authInstance.CurrentUser;
-
+                FirebaseUser newUser = auth.CurrentUser;
                 if (newUser != null)
                 {
                     if (string.IsNullOrEmpty(newUser.DisplayName))
                     {
+                        // If the user is signing in with Google for the first time, prompt for a username.
                         usernamePopup.SetActive(true);
                         messageText.text = "Enter a username to complete registration.";
                     }
@@ -224,9 +242,7 @@ public class FirebaseAuthManager : MonoBehaviour
             return;
         }
 
-        FirebaseAuth authInstance = FirebaseAuth.DefaultInstance;
-        FirebaseUser currentUser = authInstance.CurrentUser;
-
+        FirebaseUser currentUser = auth.CurrentUser;
         if (currentUser == null)
         {
             messageText.text = "User not found. Please login again.";
@@ -241,7 +257,6 @@ public class FirebaseAuthManager : MonoBehaviour
                 messageText.text = "Failed to set username.";
                 return;
             }
-
             usernamePopup.SetActive(false);
             SceneManager.LoadScene("MainMenuScene");
         });

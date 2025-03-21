@@ -25,11 +25,13 @@ public class ClickManager : MonoBehaviour
             }
             */
 
+            /*
             if (EventSystem.current.IsPointerOverGameObject())
             {
                 Debug.Log("🛑 ClickManager: Ignoring click on UI.");
                 return;
             }
+            */
 
             Vector3 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             mousePos.z = 0f;
