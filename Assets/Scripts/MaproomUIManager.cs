@@ -38,6 +38,11 @@ public class MaproomUIManager : MonoBehaviour
     public float fadeInZoomThreshold = 10f;     // Zoom value where texts are fully visible.
     public float fadeOutZoomThreshold = 5f;     // Zoom value where texts are completely faded out.
 
+
+    [Header("Unit Action Panel Sub-Panels")]
+    public GameObject playerUnitButtons;
+    public GameObject enemyUnitAttackButton;
+
     private bool allowClosing = false; // Controls outside-click closure.
 
     private void Start()
@@ -100,7 +105,7 @@ public class MaproomUIManager : MonoBehaviour
             RectTransform rt = regionActionPanel.GetComponent<RectTransform>();
             if (rt != null && !RectTransformUtility.RectangleContainsScreenPoint(rt, Input.mousePosition, null))
             {
-                Debug.Log("MaproomUIManager: Closing Region Action Panel due to outside click.");
+                //Debug.Log("MaproomUIManager: Closing Region Action Panel due to outside click.");
                 CloseRegionActionPanel();
             }
         }
@@ -111,7 +116,7 @@ public class MaproomUIManager : MonoBehaviour
             RectTransform rt1 = unitActionPanel.GetComponent<RectTransform>();
             if (rt1 != null && !RectTransformUtility.RectangleContainsScreenPoint(rt1, Input.mousePosition, null))
             {
-                Debug.Log("MaproomUIManager: Closing Unit Action Panel due to outside click.");
+                //Debug.Log("MaproomUIManager: Closing Unit Action Panel due to outside click.");
                 CloseUnitActionPanel();
             }
         }
@@ -207,21 +212,44 @@ public class MaproomUIManager : MonoBehaviour
     }
 
     // Unit Panel Controls.
-    public void OpenUnitActionPanel(string unitName)
+    public void OpenUnitActionPanel(Unit unit)
     {
         if (regionActionPanel != null && regionActionPanel.activeSelf)
         {
             CloseRegionActionPanel();
         }
 
-        unitActionPanel?.SetActive(true);
-        taskbarPanel?.SetActive(false);
+        // Show the main Unit Action Panel
+        if (unitActionPanel != null)
+            unitActionPanel.SetActive(true);
+
+        // Hide the taskbar so it doesn't overlap
+        if (taskbarPanel != null)
+            taskbarPanel.SetActive(false);
 
         if (unitNameText != null)
-            unitNameText.text = unitName;
+            unitNameText.text = unit.gameObject.name;
 
-        Debug.Log("MaproomUIManager: Opened Unit Action Panel - Preventing Immediate Closure.");
+        // --- The important part: decide which sub-panel to show. ---
+        // For example, if factionID == 0 means "player", else "enemy"
+        if (unit.factionID == 0)
+        {
+            // Player’s unit
+            if (playerUnitButtons != null)
+                playerUnitButtons.SetActive(true);
 
+            if (enemyUnitAttackButton != null)
+                enemyUnitAttackButton.SetActive(false);
+        }
+        else
+        {
+            // Enemy unit
+            if (playerUnitButtons != null)
+                playerUnitButtons.SetActive(false);
+
+            if (enemyUnitAttackButton != null)
+                enemyUnitAttackButton.SetActive(true);
+        }
         allowClosing = false;
         Invoke(nameof(EnablePanelClosing), 0.2f);
     }
@@ -229,7 +257,7 @@ public class MaproomUIManager : MonoBehaviour
     private void EnablePanelClosing()
     {
         allowClosing = true;
-        Debug.Log("MaproomUIManager: Now allowing outside clicks to close panels.");
+        //Debug.Log("MaproomUIManager: Now allowing outside clicks to close panels.");
     }
 
     public void CloseUnitActionPanel()

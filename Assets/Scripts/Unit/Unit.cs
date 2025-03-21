@@ -125,8 +125,18 @@ public class Unit : MonoBehaviour
         }
 
         animator.speed = 0;
+
+
+        // If your local player is stored in GameManager.Instance.SelectedUnit
+        if (GameManager.Instance != null && GameManager.Instance.SelectedUnit != null)
+        {
+            UnitManager.Instance.UpdateEnemyUnitVisibility(GameManager.Instance.SelectedUnit.transform.position);
+        }
+
         // Additional death logic can be added here.
         Destroy(gameObject);
+
+
     }
 
     public void StartAttack(Unit enemy)

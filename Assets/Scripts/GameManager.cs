@@ -232,6 +232,9 @@ public class GameManager : Singleton<GameManager>
     private RegionCapturePoint destinationRegion;
     private UnitController selectedUnit;
 
+    public GameObject SelectedUnit => selectedUnit != null ? selectedUnit.gameObject : null;
+
+
     [SerializeField] public GameConfig gameConfig;
 
 
@@ -253,6 +256,9 @@ public class GameManager : Singleton<GameManager>
             }
             UnitManager.Instance.SpawnPlayerUnits(player);
         }
+
+        UnitManager.Instance.UpdateEnemyVisibilityAtStart();
+
     }
 
     private void EndGame()
@@ -346,5 +352,23 @@ public class GameManager : Singleton<GameManager>
         Idle,
         Move,
         Attack
+    }
+
+
+    public int LocalPlayerId
+    {
+        get
+        {
+            // Suppose you find the first PlayerData that is Type == Player.
+            PlayerData localPlayer = gameConfig.Players.Find(p => p.Type == PlayerType.Player);
+            if (localPlayer != null)
+            {
+                return localPlayer.Id;
+            }
+
+            // Fallback if not found, or you can throw an error.
+            Debug.LogError("No local player found in GameConfig!");
+            return -1;
+        }
     }
 }

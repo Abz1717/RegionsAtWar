@@ -6,10 +6,15 @@ public class UnitSelection : MonoBehaviour
 {
     public GameObject unitActionPanel;
     public TextMeshProUGUI unitNameText;
-    public Button moveButton;  // Assigned in the Inspector.
+    public Button moveButton;  // Assigned in the Inspector
+
+    public Unit unit;
+
 
     private GameObject taskbarPanel;
     private static UnitSelection currentlySelectedUnit;
+
+
 
     private void Start()
     {
@@ -22,16 +27,28 @@ public class UnitSelection : MonoBehaviour
             moveButton.onClick.AddListener(ActivateMoveMode);
     }
 
+
+    private void Awake()
+    {
+        if (unit == null)
+            unit = GetComponent<Unit>();
+    }
+
+
+
     public void OnUnitSelected()
     {
+        Debug.Log("OnUnitSelected: unit is " + (unit != null ? unit.gameObject.name : "NULL"));
+
+        // Close previously open unit panel (if any)
         string unitID = gameObject.name;
         currentlySelectedUnit?.CloseUnitActionPanel();
         currentlySelectedUnit = this;
 
-        // (Assuming you have a UI manager to handle the panel.)
+        // Get the UI manager
         MaproomUIManager uiManager = FindObjectOfType<MaproomUIManager>();
         if (uiManager != null)
-            uiManager.OpenUnitActionPanel(unitID);
+            uiManager.OpenUnitActionPanel(unit);
 
         if (taskbarPanel != null)
             taskbarPanel.SetActive(false);
@@ -41,6 +58,8 @@ public class UnitSelection : MonoBehaviour
 
         if (GameManager.Instance != null)
             GameManager.Instance.SelectUnit(gameObject);
+
+
     }
 
     public void CloseUnitActionPanel()
@@ -49,6 +68,7 @@ public class UnitSelection : MonoBehaviour
             unitActionPanel.SetActive(false);
         if (taskbarPanel != null)
             taskbarPanel.SetActive(true);
+
         currentlySelectedUnit = null;
     }
 
