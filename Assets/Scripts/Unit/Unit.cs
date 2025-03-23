@@ -42,6 +42,13 @@ public class Unit : MonoBehaviour
         CurrentHealth -= effectiveDamage;
         Debug.Log($"{gameObject.name} took {effectiveDamage} damage, current health: {CurrentHealth}");
 
+
+        // If this unit is currently selected and the UnitActionPanel is open, refresh it.
+        if (GameManager.Instance.SelectedUnit == this.GetComponent<UnitController>() &&
+            MaproomUIManager.Instance.IsUnitActionPanelOpen)
+        {
+            MaproomUIManager.Instance.UnitActionPanel.Show();
+        }
         if (CurrentHealth <= 0)
         {
             Die();
@@ -126,8 +133,15 @@ public class Unit : MonoBehaviour
 
         animator.speed = 0;
 
+        // If this unit is the one currently selected, close its panel
+        var dyingUnitController = GetComponent<UnitController>();
+        if (GameManager.Instance != null &&
+            GameManager.Instance.SelectedUnit == dyingUnitController)
+        {
+            MaproomUIManager.Instance.CloseUnitActionPanel();
+        }
 
-        // If your local player is stored in GameManager.Instance.SelectedUnit
+        // Update enemy visibility if needed.
         if (GameManager.Instance != null && GameManager.Instance.SelectedUnit != null)
         {
             UnitManager.Instance.UpdateEnemyUnitVisibility(GameManager.Instance.SelectedUnit.transform.position);

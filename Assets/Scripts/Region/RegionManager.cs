@@ -7,6 +7,11 @@ public class RegionManager : Singleton<RegionManager>
     [SerializeField] public List<RegionCapturePoint> regions = new List<RegionCapturePoint>();
     [SerializeField] public List<Region> regionData = new List<Region>();
 
+    public RegionCapturePoint GetPoint(Region region)
+    {
+        return regions.Find(r => r.region.regionID == region.regionID);
+    }
+
     public List<RegionCapturePoint> GetPath(RegionCapturePoint startRegion, RegionCapturePoint destinationRegion)
     {
         if (destinationRegion == null)

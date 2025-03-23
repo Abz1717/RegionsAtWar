@@ -5,33 +5,26 @@ using UnityEngine.EventSystems;
 public class ClickManager : MonoBehaviour
 {
     private Camera mainCamera;
-    private MaproomUIManager uiManager;
+
+
 
     private void Start()
     {
         mainCamera = Camera.main;
-        uiManager = FindObjectOfType<MaproomUIManager>();
     }
 
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            /*
-            if (IsPointerOverUI())
-            {
-                Debug.Log("🛑 ClickManager: Click ignored (UI was clicked).");
-                return;
-            }
-            */
 
-            /*
+
+            // Check if the click is on a UI element.
             if (EventSystem.current.IsPointerOverGameObject())
             {
-                Debug.Log("🛑 ClickManager: Ignoring click on UI.");
                 return;
             }
-            */
+
 
             Vector3 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             mousePos.z = 0f;
@@ -41,7 +34,7 @@ public class ClickManager : MonoBehaviour
 
 
             // --- Added Section for Move Mode ---
-            if (GameManager.Instance != null && GameManager.Instance.IsMoveModeActive)
+            if (GameManager.Instance.CurrentState == GameManager.State.Move)
             {
                 Debug.Log("Move mode active; processing road clicks only.");
 
@@ -67,6 +60,7 @@ public class ClickManager : MonoBehaviour
                 Debug.Log("No selectable road was clicked.");
                 return;
             }
+            
 
             if (hits.Length > 0)
             {
@@ -76,26 +70,18 @@ public class ClickManager : MonoBehaviour
                 foreach (RaycastHit2D hit in hits)
                 {
                     // Instead of GetComponent<UnitSelection>(), use GetComponentInParent:
-                    UnitSelection unit = hit.collider.GetComponent<UnitSelection>();
+                    UnitController unit = hit.collider.GetComponent<UnitController>();
                     if (unit != null)
                     {
-                        // Found a unit script on the parent
-                        if (GameManager.Instance != null)
-                           // GameManager.Instance.unitClickedThisFrame = true;
-
-                        unit.OnUnitSelected();
+                        if (GameManager.Instance.CurrentState == GameManager.State.Attack && unit.Unit.factionID != GameManager.Instance.LocalPlayerId && GameManager.Instance.SelectedUnit != null)
+                        {
+                            GameManager.Instance.AttackRegion(GameManager.Instance.LocalPlayerId, unit.CurrentPoint.region);
+                        }
+                        GameManager.Instance.SelectUnit(unit);
+                        MaproomUIManager.Instance.OpenUnitActionPanel();
                         return;
                     }
                 }
-
-                // Before processing region clicks, check if either the unit panel is already open.
-                if (uiManager != null && uiManager.unitActionPanel.activeSelf)
-                {
-                    Debug.Log("ClickManager: A unit panel is already open; skipping region clicks.");
-                    return;
-                }
-
-
 
                 foreach (RaycastHit2D hit in hits)
                 {

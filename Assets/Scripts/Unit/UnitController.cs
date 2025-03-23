@@ -10,26 +10,37 @@ public class UnitController : MonoBehaviour
     [SerializeField] private Unit unit;
     [SerializeField] private Transform pivot;
     [SerializeField] private SkinnedMeshRenderer mesh;
-    [SerializeField] private float speed = 1.0f;
 
     public Unit Unit => unit;
 
+    public string CustomName { get; private set; }
+    public void SetCustomName(string newName)
+    {
+        CustomName = newName;
+    }
+
+    public RegionCapturePoint CurrentPoint { get; private set; }
+    public UnitData Data { get; private set; }
 
     private Sequence tweener;
     // Optionally, reference a UI button that triggers movement.
 
     // Call this method when instantiating your unit.
-    public void Initialize(Transform startPoint)
+    public void Initialize(RegionCapturePoint startPoint, UnitData data)
     {
-        transform.position = startPoint.position;
+        transform.position = startPoint.transform.position;
         Vector3 newPos = transform.position;
 
         newPos.z = 0f;
         transform.position = newPos;
 
+        CurrentPoint = startPoint;
+        Data = data;
+
 
         unit.OnEnemyKilled += ProcessEnemyKilled;
     }
+
 
     private void ProcessEnemyKilled()
     {
@@ -79,7 +90,8 @@ public class UnitController : MonoBehaviour
                 // Update enemy visibility continuously during the movement.
                 .OnUpdate(() =>
                 {
-                UnitManager.Instance.UpdateEnemyUnitVisibility(transform.position);
+                    CurrentPoint = region;
+                    UnitManager.Instance.UpdateEnemyUnitVisibility(transform.position);
                 })
                 .OnComplete(() =>
                 {
@@ -87,6 +99,7 @@ public class UnitController : MonoBehaviour
                     if (!region.IsContested())  
                     {
                         region.region.SetOwner(unit.factionID);
+
                     }
                 });
             moveSequence.Append(pivot.DOLookAt(targetPos, 0.2f, AxisConstraint.Y));
@@ -96,6 +109,21 @@ public class UnitController : MonoBehaviour
         tweener = moveSequence;
         moveSequence.Play().OnComplete(() =>
         {
+
+
+            // At the end of the movement, capture the destination region.
+            RegionCapturePoint finalRegion = path[path.Count - 1];
+            if (!finalRegion.IsContested())
+            {
+                finalRegion.region.SetOwner(unit.factionID);
+
+                // If the region action panel is open, refresh it.
+                if (MaproomUIManager.Instance.regionActionPanel.gameObject.activeSelf)
+                {
+                    MaproomUIManager.Instance.OpenRegionActionPanel(finalRegion.region);
+                }
+            }
+
             unit.Reset();
             Debug.Log("Move complete. New position: " + transform.position);
             StartCoroutine(DelayedEnemyVisibilityUpdate());

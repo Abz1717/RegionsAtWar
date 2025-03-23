@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Unit Configuration
+  m_EditorClassIdentifier: Assembly-CSharp::UnitsConfiguration
+  unitTypes:
+  - name: Infantry
+    type: 0
+    sprite: {fileID: 21300000, guid: 51e33e2dbcc3a68499a917809e188780, type: 3}
+  - name: Archer
+    type: 3
+    sprite: {fileID: 21300000, guid: 6e99cda020f58af439fc84daaa13b206, type: 3}
+  - name: Cavalry
+    type: 1
+    sprite: {fileID: 21300000, guid: 9d445b33bce261343a8b8594abdfd9e7, type: 3}
+  - name: Catapult
+    type: 2
+    sprite: {fileID: 21300000, guid: 23d05c5251304794cb98fac992d4827b, type: 3}
+  units:
+  - id: 0
+    name: Infantry
+    type: 0
+    sprite: {fileID: 21300000, guid: 955cec5215803294e9262f9480c244be, type: 3}
+    uniqueFullHealthSprite: {fileID: 21300000, guid: 51e33e2dbcc3a68499a917809e188780,
+      type: 3}
+    uniqueSeventyFiveSprite: {fileID: 21300000, guid: 3c7485a2f3c843848bff51205af60f23,
+      type: 3}
+    uniqueFiftySprite: {fileID: 21300000, guid: 99fba55df58520041b6a6456f1ffa4e3,
+      type: 3}
+    uniqueTwentyFiveSprite: {fileID: 21300000, guid: 17bca3f2ee8ddf940b6e2466c1728578,
+      type: 3}
+    prefab: {fileID: 5943939939191043856, guid: cdde97322b4562d4cb69360afbbcc1e9,
+      type: 3}
+    cost:
+    - resource: 0
+      ammount: 200
+    - resource: 3
+      ammount: 50
+    - resource: 2
+      ammount: 300
+  - id: 1
+    name: Archer
+    type: 3
+    sprite: {fileID: 21300000, guid: c9bdeb3b6eda96941a7151a7e6025e1f, type: 3}
+    uniqueFullHealthSprite: {fileID: 21300000, guid: 6e99cda020f58af439fc84daaa13b206,
+      type: 3}
+    uniqueSeventyFiveSprite: {fileID: 21300000, guid: 004ead13c51876f42a1f8df663f8e45f,
+      type: 3}
+    uniqueFiftySprite: {fileID: 21300000, guid: f0fa71376e2097941abbfd3d025e7f0d,
+      type: 3}
+    uniqueTwentyFiveSprite: {fileID: 21300000, guid: 5f5641db267bc754099f04f36b39c42a,
+      type: 3}
+    prefab: {fileID: 5943939939191043856, guid: cdde97322b4562d4cb69360afbbcc1e9,
+      type: 3}
+    cost:
+    - resource: 0
+      ammount: 300
+    - resource: 3
+      ammount: 35
+    - resource: 2
+      ammount: 300
+  - id: 2
+    name: Cavalry
+    type: 1
+    sprite: {fileID: 21300000, guid: 9ee1a2af6b5d4064cbbe999f6f8e38bd, type: 3}
+    uniqueFullHealthSprite: {fileID: 21300000, guid: fde4338de5bb5ef42b78b63ade80bf60,
+      type: 3}
+    uniqueSeventyFiveSprite: {fileID: 21300000, guid: fde4338de5bb5ef42b78b63ade80bf60,
+      type: 3}
+    uniqueFiftySprite: {fileID: 21300000, guid: 403a197472ade814da1ceb21068f0ce4,
+      type: 3}
+    uniqueTwentyFiveSprite: {fileID: 21300000, guid: 912baffe44f35974e9eec295a11de462,
+      type: 3}
+    prefab: {fileID: 5943939939191043856, guid: cdde97322b4562d4cb69360afbbcc1e9,
+      type: 3}
+    cost:
+    - resource: 0
+      ammount: 1000
+    - resource: 3
+      ammount: 100
+    - resource: 2
+      ammount: 500
+  - id: 3
+    name: Catapult
+    type: 2
+    sprite: {fileID: 21300000, guid: e033aabea7b8bae41bf2556ab08c9acb, type: 3}
+    uniqueFullHealthSprite: {fileID: 21300000, guid: 23d05c5251304794cb98fac992d4827b,
+      type: 3}
+    uniqueSeventyFiveSprite: {fileID: 21300000, guid: 0000db3d005c3264ca1368c7a467a87a,
+      type: 3}
+    uniqueFiftySprite: {fileID: 21300000, guid: 83ccffb2b139de144a280b03ec7d4b26,
+      type: 3}
+    uniqueTwentyFiveSprite: {fileID: 21300000, guid: e1b79390d180c564b9a5261c67312b7f,
+      type: 3}
+    prefab: {fileID: 5943939939191043856, guid: cdde97322b4562d4cb69360afbbcc1e9,
+      type: 3}
+    cost:
+    - resource: 0
+      ammount: 2000
+    - resource: 1
+      ammount: 1
+    - resource: 4
+      ammount: 2

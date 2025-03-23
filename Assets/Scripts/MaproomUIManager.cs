@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
-public class MaproomUIManager : MonoBehaviour
+public class MaproomUIManager : Singleton<MaproomUIManager>
 {
     [Header("Panels")]
-    public GameObject regionActionPanel;
+    public RegionActionPanel regionActionPanel;
     public GameObject taskbarPanel;
     public GameObject mapPanel;
 
@@ -29,7 +30,6 @@ public class MaproomUIManager : MonoBehaviour
     public TextMeshProUGUI regionNameText;
 
     [Header("Unit Action Panel")]
-    public GameObject unitActionPanel;
     public TextMeshProUGUI unitNameText;
 
     [Header("Map Text Fade Settings (World-Space Texts)")]
@@ -43,19 +43,27 @@ public class MaproomUIManager : MonoBehaviour
     public GameObject playerUnitButtons;
     public GameObject enemyUnitAttackButton;
 
-    private bool allowClosing = false; // Controls outside-click closure.
+    [SerializeField] private ResourcesBar resourcesBar;
+    [SerializeField] private ProductionScreen productionScreen;
+    [SerializeField] private UnitActionPanel unitActionPanel;
+    public UnitActionPanel UnitActionPanel => unitActionPanel;
 
+
+    private bool allowClosing = false; // Controls outside-click closure
+
+    IUIPanel currentPanel = null;
+    public bool HasPanel => currentPanel != null;
     private void Start()
     {
         // Hide all panels initially.
-        regionActionPanel?.SetActive(false);
+        regionActionPanel.Hide();
         negotiatePanel?.SetActive(false);
         producePanel?.SetActive(false);
         provincePanel?.SetActive(false);
         marketPanel?.SetActive(false);
         researchPanel?.SetActive(false);
         morePanel?.SetActive(false);
-        unitActionPanel?.SetActive(false);
+        unitActionPanel.Hide();
 
         taskbarPanel?.SetActive(true);
         mapPanel?.SetActive(true);
@@ -99,25 +107,35 @@ public class MaproomUIManager : MonoBehaviour
     {
         if (!allowClosing) return;
 
-        // Close region action panel if the click is outside.
-        if (regionActionPanel != null && regionActionPanel.activeSelf)
+
+        GameObject currentSelected = EventSystem.current.currentSelectedGameObject;
+
+
+        // Check if Region Action Panel is open.
+        if (regionActionPanel != null && regionActionPanel.gameObject.activeSelf)
         {
             RectTransform rt = regionActionPanel.GetComponent<RectTransform>();
             if (rt != null && !RectTransformUtility.RectangleContainsScreenPoint(rt, Input.mousePosition, null))
             {
-                //Debug.Log("MaproomUIManager: Closing Region Action Panel due to outside click.");
-                CloseRegionActionPanel();
+
+                // Also, if the currently selected UI object is not a child of the panel, then close.
+                if (currentSelected == null || !currentSelected.transform.IsChildOf(regionActionPanel.transform))
+                {
+                    CloseRegionActionPanel();
+                }
             }
         }
 
         // Close unit action panel if the click is outside.
-        if (unitActionPanel != null && unitActionPanel.activeSelf)
+        if (unitActionPanel != null && unitActionPanel.gameObject.activeSelf)
         {
             RectTransform rt1 = unitActionPanel.GetComponent<RectTransform>();
             if (rt1 != null && !RectTransformUtility.RectangleContainsScreenPoint(rt1, Input.mousePosition, null))
             {
-                //Debug.Log("MaproomUIManager: Closing Unit Action Panel due to outside click.");
-                CloseUnitActionPanel();
+                if (currentSelected == null || !currentSelected.transform.IsChildOf(unitActionPanel.transform))
+                {
+                    CloseUnitActionPanel();
+                }
             }
         }
     }
@@ -163,36 +181,56 @@ public class MaproomUIManager : MonoBehaviour
         }
     }
 
-    // Region Panel Controls.
-    public void OpenRegionActionPanel(string regionName)
+    public void UpdateResource(Resource type, int ammount)
     {
-        if (unitActionPanel != null && unitActionPanel.activeSelf)
-        {
-            CloseUnitActionPanel();
-        }
+        resourcesBar.UpdateResource(type, ammount);
+    }
 
-        regionActionPanel?.SetActive(true);
+    private void HideCurrentPanel()
+    {
+        if (currentPanel != null)
+        {
+            currentPanel.Hide();
+        }
+        currentPanel = null;
+    }
+
+    // Region Panel Controls.
+    public void OpenRegionActionPanel(Region region)
+    {
+        HideCurrentPanel();
+        currentPanel = regionActionPanel;
+
+        regionActionPanel.Show(region);
         taskbarPanel?.SetActive(false);
         // Update region name if available.
         if (regionNameText != null)
-            regionNameText.text = regionName;
+            regionNameText.text = region.regionID;
 
         // Set allowClosing with a slight delay to prevent immediate closure.
         allowClosing = false;
         Invoke(nameof(EnablePanelClosing), 0.2f);
     }
 
+    public void OpenRegionConsruction(Region region)
+    {
+        HideCurrentPanel();
+        currentPanel = productionScreen;
+        productionScreen.ShowBuildings(region);
+    }
+
+    public void OpenRegionProduction(Region region)
+    {
+        HideCurrentPanel();
+        currentPanel = productionScreen;
+        productionScreen.ShowUnits(region);
+    }
+
     public void CloseRegionActionPanel()
     {
-        regionActionPanel?.SetActive(false);
+        regionActionPanel.Hide();
         taskbarPanel?.SetActive(true);
         mapPanel?.SetActive(true);
-
-        if (RegionClickHandler.currentlySelectedRegion != null)
-        {
-            RegionClickHandler.currentlySelectedRegion.ResetColor();
-            RegionClickHandler.currentlySelectedRegion = null;
-        }
     }
 
     private void ShowSubPanel(GameObject panelToShow, Button activeButton)
@@ -212,44 +250,42 @@ public class MaproomUIManager : MonoBehaviour
     }
 
     // Unit Panel Controls.
-    public void OpenUnitActionPanel(Unit unit)
+    public void OpenUnitActionPanel()
     {
-        if (regionActionPanel != null && regionActionPanel.activeSelf)
-        {
-            CloseRegionActionPanel();
-        }
+        HideCurrentPanel();
+        currentPanel = unitActionPanel;
 
         // Show the main Unit Action Panel
-        if (unitActionPanel != null)
-            unitActionPanel.SetActive(true);
+         unitActionPanel.gameObject.SetActive(true);
 
-        // Hide the taskbar so it doesn't overlap
-        if (taskbarPanel != null)
-            taskbarPanel.SetActive(false);
+        unitActionPanel.Show();
 
-        if (unitNameText != null)
-            unitNameText.text = unit.gameObject.name;
-
-        // --- The important part: decide which sub-panel to show. ---
-        // For example, if factionID == 0 means "player", else "enemy"
-        if (unit.factionID == 0)
+        // Check the faction of the selected unit.
+        if (GameManager.Instance.SelectedUnit != null)
         {
-            // Player’s unit
-            if (playerUnitButtons != null)
+            if (GameManager.Instance.SelectedUnit.Unit.factionID == GameManager.Instance.LocalPlayerId)
+            {
+                // Friendly unit: show player buttons, hide enemy button.
                 playerUnitButtons.SetActive(true);
-
-            if (enemyUnitAttackButton != null)
                 enemyUnitAttackButton.SetActive(false);
+            }
+            else
+            {
+                // Enemy unit: show enemy attack button, hide player buttons.
+                playerUnitButtons.SetActive(false);
+                enemyUnitAttackButton.SetActive(true);
+            }
         }
         else
         {
-            // Enemy unit
-            if (playerUnitButtons != null)
-                playerUnitButtons.SetActive(false);
-
-            if (enemyUnitAttackButton != null)
-                enemyUnitAttackButton.SetActive(true);
+            // No unit selected – disable both (optional).
+            playerUnitButtons.SetActive(false);
+            enemyUnitAttackButton.SetActive(false);
         }
+
+        // Hide the taskbar so it doesn't overlap.
+        if (taskbarPanel != null)
+            taskbarPanel.SetActive(false);
         allowClosing = false;
         Invoke(nameof(EnablePanelClosing), 0.2f);
     }
@@ -262,7 +298,7 @@ public class MaproomUIManager : MonoBehaviour
 
     public void CloseUnitActionPanel()
     {
-        unitActionPanel?.SetActive(false);
+        unitActionPanel.Hide();
         taskbarPanel?.SetActive(true);
     }
 
@@ -278,4 +314,16 @@ public class MaproomUIManager : MonoBehaviour
         }
     }
 
+
+
+    public bool IsUnitActionPanelOpen
+    {
+        get
+        {
+            // If unitActionPanel is not null, return whether its GameObject is active
+            return unitActionPanel != null && unitActionPanel.gameObject.activeSelf;
+        }
+    }
 }
+
+public interface IUIPanel { void Hide(); }

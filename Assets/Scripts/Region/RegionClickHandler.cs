@@ -16,7 +16,6 @@ public class RegionClickHandler : MonoBehaviour
     // Reference to region data (if available).
     private Region regionData;
 
-
     void Start()
     {
 
@@ -54,9 +53,7 @@ public class RegionClickHandler : MonoBehaviour
         currentlySelectedRegion = this;
 
         // Delegate panel control to the UI Manager.
-        MaproomUIManager uiManager = FindObjectOfType<MaproomUIManager>();
-        if (uiManager != null)
-            uiManager.OpenRegionActionPanel(regionID);
+        MaproomUIManager.Instance.OpenRegionActionPanel(regionData);
 
         // Update the province text.
         if (provinceNameText != null)

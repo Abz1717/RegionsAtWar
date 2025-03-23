@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System;
 using Unity.VisualScripting.FullSerializer;
+using System.Collections;
 
 public class Region : MonoBehaviour
 {
@@ -15,12 +16,11 @@ public class Region : MonoBehaviour
     public int ownerID = -1;
 
     [Header("Production Rates (per interval)")]
-    public int resourceRate = 10;
-    public int moneyRate = 0;
+    public int moneyRate = 10;
     public int manpowerRate = 0;
-    public int resource1Rate = 0;
-    public int resource2Rate = 0;
-    public int resource3Rate = 0;
+    public int resourceRate = 10;
+    public Resource resourseType;
+    public float productionTime = 1f;
 
     [Header("Neighbors & Movement")]
     public List<Region> neighbors = new List<Region>();
@@ -28,6 +28,8 @@ public class Region : MonoBehaviour
 
     [SerializeField] private SpriteRenderer spriteRenderer;
     private Color originalColor;
+
+    private List<BuildingData> buildings = new();
 
 
     private void Awake()
@@ -44,6 +46,12 @@ public class Region : MonoBehaviour
         //TODO show owner
         UpdateOwnerVisual();
         GameManager.Instance.CheckGameEnd();
+
+        StopAllCoroutines();
+
+        StartCoroutine(Production(Resource.Money, moneyRate));
+        StartCoroutine(Production(Resource.Manpower, manpowerRate));
+        StartCoroutine(Production(resourseType, resourceRate));
     }
 
     public void SetColor(Color color)
@@ -55,6 +63,11 @@ public class Region : MonoBehaviour
     {
         if (spriteRenderer != null)
             spriteRenderer.color = originalColor;
+    }
+
+    public void ConstructBuilding(BuildingData building)
+    {
+        buildings.Add(building);
     }
 
 
@@ -73,6 +86,16 @@ public class Region : MonoBehaviour
                 originalColor = Color.white; // Default color for invalid ownerID.
             }
             ResetColor();
+        }
+    }
+
+    private IEnumerator Production(Resource resource, int ammount)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(productionTime);
+            GameManager.Instance.AddPlayerResource(ownerID,resource, ammount);
+            Debug.Log($"Resource added for player {ownerID} : {resource.ToString()} = {GameManager.Instance.GetPlayer(ownerID).PlayerModel.Resources[resource]}");
         }
     }
 }

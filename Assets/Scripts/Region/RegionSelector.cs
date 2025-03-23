@@ -17,7 +17,7 @@ public class RegionSelector : MonoBehaviour
     private void OnMouseDown()
     {
         // Check if the game is in move mode.
-        if (GameManager.Instance != null && GameManager.Instance.IsMoveModeActive)
+        if (GameManager.Instance.CurrentState == GameManager.State.Move)
         {
             // Set this region as the destination.
             GameManager.Instance.SetDestination(regionCapturePoint);

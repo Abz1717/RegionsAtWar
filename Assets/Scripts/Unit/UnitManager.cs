@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using System.Drawing;
 using System.Collections;
+using System.Linq;
 
 
 public class UnitManager : Singleton<UnitManager>
 {
     // Singleton instance for easy global access
 
-    [SerializeField] private UnitController unitPrefab;
+    [SerializeField] private UnitsConfiguration config;
 
     //private UnitController unitController;
     private List<UnitController> spawnedUnits = new List<UnitController>();
 
+    private Dictionary<UnitType, int> unitCount = new Dictionary<UnitType, int>();
+
+
     //maps enemy units to the time until which they should remain visible
     private Dictionary<UnitController, float> forcedVisibility = new Dictionary<UnitController, float>();
-
-
 
     private void Update()
     {
@@ -27,30 +29,88 @@ public class UnitManager : Singleton<UnitManager>
         {
             UpdateEnemyUnitVisibility(GameManager.Instance.SelectedUnit.transform.position);
         }
-
     }
-
-
 
     public void SpawnPlayerUnits(PlayerData playerData)
     {
         foreach(var spawnRegion in playerData.SpawnPoints)
         {
             var region = RegionManager.Instance.regions[spawnRegion];
-            SpawnUnit(region.transform, playerData.Id);
+            SpawnUnit(region, playerData.Id, config.units[0]);
         }
     }
 
-    public void SpawnUnit(Transform point, int faction)
+    public void SpawnUnit(RegionCapturePoint point, int faction, UnitData data)
     {
-        Vector3 spawnPos = point.position;
+        Vector3 spawnPos = point.transform.position;
         spawnPos.z = 0f; // Force Z to 0 if needed
-        UnitController newUnit = Instantiate(unitPrefab, spawnPos, Quaternion.identity);
+        UnitController newUnit = Instantiate(data.prefab, spawnPos, Quaternion.identity, transform);
         // If your unit has an Initialize method that takes a Transform:
-        newUnit.Initialize(point);
+        newUnit.Initialize(point,data);
         newUnit.SetFaction(faction);
 
+
+        // Update the counter for this unit type.
+        if (!unitCount.ContainsKey(data.type))
+        {
+            unitCount[data.type] = 0;
+        }
+        unitCount[data.type]++;
+        int count = unitCount[data.type];
+
+        // Build the unit's name using ordinal conversion.
+        // For example, if the unit type is Archer, it becomes "1st Archery Regiment", "2nd Archery Regiment", etc.
+        string ordinal = GetOrdinal(count);
+        string unitName = "";
+
+        switch (data.type)
+        {
+            case UnitType.Archer:
+                unitName = ordinal + " Archery Regiment";
+                break;
+            case UnitType.Cavalry:
+                unitName = ordinal + " Cavalry Squadron";
+                break;
+            case UnitType.Catapult:
+                unitName = ordinal + " Catapult Battalion";
+                break;
+            case UnitType.Infantry:  
+                unitName = ordinal + " Order of Knights";
+                break;
+            default:
+                unitName = data.name;
+                break;
+        }
+
+        newUnit.gameObject.name = unitName;
+        newUnit.SetCustomName(unitName);
+
         spawnedUnits.Add(newUnit);
+    }
+
+    public UnitController FindClosestUnit(Vector3 position, int factionId)
+    {
+        var factionUnits = GetFactionUnits(factionId);
+        if (factionUnits.Count == 0)
+            return null;
+        var closestUnit = factionUnits[0];
+        var minDistance = float.MaxValue;
+        foreach (var unit in factionUnits)
+        {
+            var distance = (position - unit.transform.position).sqrMagnitude;
+            if (minDistance > distance)
+            {
+                closestUnit = unit;
+                minDistance = distance;
+            }
+        }
+
+        return closestUnit;
+    }
+
+    public List<UnitController> GetFactionUnits(int factionId)
+    {
+        return spawnedUnits.FindAll(unit => unit != null && unit.Unit.factionID == factionId).ToList();
     }
 
     public void Reset()
@@ -76,6 +136,16 @@ public class UnitManager : Singleton<UnitManager>
             return;
         }
 
+        MoveUnit(selectedUnit, destinationRegion);
+
+        // After moving, update enemy visibility.
+        // Here we assume the player's unit position is the basis for what is visible.
+        UpdateEnemyUnitVisibility(selectedUnit.transform.position);
+    }
+
+    public void MoveUnit(UnitController unit, RegionCapturePoint destinationRegion)
+    {
+
         if (destinationRegion == null)
         {
             Debug.LogError("UnitManager: destinationRegion is NULL!");
@@ -83,7 +153,7 @@ public class UnitManager : Singleton<UnitManager>
         }
 
         // Calculate the start region from the SELECTED UNIT's position
-        RegionCapturePoint startRegion = RegionManager.Instance.GetCurrentRegion(selectedUnit.transform.position);
+        RegionCapturePoint startRegion = RegionManager.Instance.GetCurrentRegion(unit.transform.position);
         if (startRegion == null)
         {
             Debug.LogError("UnitManager: startRegion is NULL!");
@@ -101,12 +171,7 @@ public class UnitManager : Singleton<UnitManager>
 
         // Compute the path and move the selected Unit.
         List<RegionCapturePoint> path = RegionManager.Instance.GetPath(startRegion, destinationRegion);
-        selectedUnit.MoveAlongPath(path);
-
-
-        // After moving, update enemy visibility.
-        // Here we assume the player's unit position is the basis for what is visible.
-        UpdateEnemyUnitVisibility(selectedUnit.transform.position);
+        unit.MoveAlongPath(path);
     }
 
     /// <summary>
@@ -259,6 +324,32 @@ public class UnitManager : Singleton<UnitManager>
             UpdateEnemyUnitVisibility(GameManager.Instance.SelectedUnit.transform.position);
         }
     }
+
+
+    private string GetOrdinal(int number)
+    {
+        if (number <= 0) return number.ToString();
+
+        int lastDigit = number % 10;
+        int lastTwoDigits = number % 100;
+
+        if (lastTwoDigits >= 11 && lastTwoDigits <= 13)
+        {
+            return number + "th";
+        }
+        switch (lastDigit)
+        {
+            case 1:
+                return number + "st";
+            case 2:
+                return number + "nd";
+            case 3:
+                return number + "rd";
+            default:
+                return number + "th";
+        }
+    }
+
 
 
 
