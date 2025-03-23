@@ -7,11 +7,15 @@ public class HomePanelManager : MonoBehaviour
     public GameObject ReleaseNotesPanel;
     public GameObject GameTipsPanel;
     public GameObject GameChatPanel;
+    public GameObject JoinGamePanel;
+    public GamesMenu GamesMenu;
+
 
     [Header("Sub-Panel Buttons (Inside Home)")]
     public Button ReleaseNotesButton;
     public Button TipsButton;
     public Button ChatButton;
+    public Button JoinGameButton;
 
     private void Start()
     {
@@ -20,6 +24,8 @@ public class HomePanelManager : MonoBehaviour
         ReleaseNotesButton.onClick.AddListener(ShowReleaseNotesPanel);
         TipsButton.onClick.AddListener(ShowTipsPanel);
         ChatButton.onClick.AddListener(ShowChatPanel);
+        JoinGameButton.onClick.AddListener(ShowGamesPanel);
+
     }
 
     public void ShowReleaseNotesPanel()
@@ -41,5 +47,11 @@ public class HomePanelManager : MonoBehaviour
         ReleaseNotesPanel.SetActive(false);
         GameTipsPanel.SetActive(false);
         GameChatPanel.SetActive(true);
+    }
+
+
+    public void ShowGamesPanel()
+    {
+        GamesMenu.gameObject.SetActive(true);
     }
 }

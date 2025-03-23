@@ -78,7 +78,7 @@ public class ProductionScreen : MonoBehaviour, IUIPanel
     {
         buildingSelectPanel.gameObject.SetActive(false);
         unitsSelectPanel.Show(UnitType.Infantry);
-        unitsTypeSelectPanel.gameObject.SetActive(true);
+        unitsTypeSelectPanel.Show(currentRegion);
         buildingTypeSelectPanel.gameObject.SetActive(false);
     }
 

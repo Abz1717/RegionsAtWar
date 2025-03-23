@@ -7,7 +7,8 @@ using System.Collections.Generic;
 
 public class GameSessionManager : MonoBehaviour
 {
-    // This static variable stores the current game session ID so it can be used in the lobby.
+
+    /*
     public static string CurrentGameID;
 
     public GameObject gameEntryPrefab;
@@ -17,13 +18,12 @@ public class GameSessionManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("🟢 [GameSessionManager] Start() called. Checking existing game sessions...");
+       
 
         // Load known images
         gameImages["British Isles"] = Resources.Load<Sprite>("GameImages/BritishIsles");
-        Debug.Log("🟢 [GameSessionManager] Loaded image for British Isles");
 
-        // Optionally ensure a static singleplayer session exists, then...
+      
         LoadExistingGameSessions();
     }
 
@@ -32,12 +32,12 @@ public class GameSessionManager : MonoBehaviour
     // -------------------------------
     public void JoinOrCreateSinglePlayerGame(string mapName)
     {
-        Debug.Log($"🟢 [JoinOrCreateSinglePlayerGame] Called for map: {mapName}");
+        
 
         FirebaseUser user = FirebaseAuth.DefaultInstance.CurrentUser;
         if (user == null)
         {
-            Debug.LogError("User not authenticated!");
+        
             return;
         }
 
@@ -49,12 +49,12 @@ public class GameSessionManager : MonoBehaviour
         {
             if (task.IsFaulted)
             {
-                Debug.LogError("❌ [JoinOrCreateSinglePlayerGame] Error: " + task.Exception);
+           
                 return;
             }
             if (!task.IsCompleted)
             {
-                Debug.LogWarning("⚠ [JoinOrCreateSinglePlayerGame] Task not completed!");
+          
                 return;
             }
 
@@ -62,12 +62,10 @@ public class GameSessionManager : MonoBehaviour
             if (snapshot.Exists && snapshot.Child("gameID").Exists)
             {
                 string existingGameID = snapshot.Child("gameID").Value.ToString();
-                Debug.Log($"🟢 [JoinOrCreateSinglePlayerGame] Found existing game ID: {existingGameID}");
                 LoadLobbyScene(existingGameID);
             }
             else
             {
-                Debug.Log($"🟢 [JoinOrCreateSinglePlayerGame] No session found for {mapName}, creating new...");
                 CreateNewSinglePlayerSession(userId, mapName);
             }
         });
@@ -88,21 +86,17 @@ public class GameSessionManager : MonoBehaviour
             { "timestamp", ServerValue.Timestamp }
         };
 
-        Debug.Log($"🟢 [CreateNewSinglePlayerSession] Setting value at: game_sessions/{gameID}");
         gameRef.SetValueAsync(gameData).ContinueWithOnMainThread(task =>
         {
             if (task.IsFaulted)
             {
-                Debug.LogError("❌ [CreateNewSinglePlayerSession] Failed: " + task.Exception);
                 return;
             }
             if (task.IsCanceled)
             {
-                Debug.LogWarning("⚠ [CreateNewSinglePlayerSession] Task was canceled!");
                 return;
             }
 
-            Debug.Log("✅ [CreateNewSinglePlayerSession] Session data written to Firebase. Updating user_games...");
 
             // Save the newly created gameID under user_games for future lookups
             FirebaseDatabase.DefaultInstance
@@ -112,10 +106,8 @@ public class GameSessionManager : MonoBehaviour
                 {
                     if (task2.IsFaulted)
                     {
-                        Debug.LogError("❌ [CreateNewSinglePlayerSession] Error updating user_games: " + task2.Exception);
                         return;
                     }
-                    Debug.Log("✅ [CreateNewSinglePlayerSession] user_games updated. Loading lobby scene...");
                     LoadLobbyScene(gameID);
                 });
         });
@@ -126,7 +118,6 @@ public class GameSessionManager : MonoBehaviour
     // -------------------------------
     public void JoinMultiplayerGame(string gameType)
     {
-        Debug.Log($"🟢 [JoinMultiplayerGame] Called for type: {gameType}");
 
         DatabaseReference gamesRef = FirebaseDatabase.DefaultInstance.GetReference("game_sessions");
         gamesRef.OrderByChild("map").EqualTo(gameType).GetValueAsync()
@@ -134,17 +125,14 @@ public class GameSessionManager : MonoBehaviour
             {
                 if (task.IsFaulted)
                 {
-                    Debug.LogError("❌ [JoinMultiplayerGame] Error querying: " + task.Exception);
                     return;
                 }
                 if (!task.IsCompleted)
                 {
-                    Debug.LogWarning("⚠ [JoinMultiplayerGame] Task not completed!");
                     return;
                 }
 
                 DataSnapshot snapshot = task.Result;
-                Debug.Log($"🟢 [JoinMultiplayerGame] snapshot.ChildrenCount: {snapshot.ChildrenCount} for type {gameType}");
 
                 string availableGameID = null;
                 foreach (var child in snapshot.Children)
@@ -160,12 +148,10 @@ public class GameSessionManager : MonoBehaviour
 
                 if (availableGameID != null)
                 {
-                    Debug.Log($"🟢 [JoinMultiplayerGame] Found session: {availableGameID}, joining...");
                     AddPlayerToMultiplayerGame(availableGameID);
                 }
                 else
                 {
-                    Debug.Log($"🟢 [JoinMultiplayerGame] No available session found, creating new...");
                     CreateNewMultiplayerSession(gameType);
                 }
             });
@@ -173,11 +159,9 @@ public class GameSessionManager : MonoBehaviour
 
     private void AddPlayerToMultiplayerGame(string gameID)
     {
-        Debug.Log($"🟢 [AddPlayerToMultiplayerGame] Called for {gameID}");
         FirebaseUser user = FirebaseAuth.DefaultInstance.CurrentUser;
         if (user == null)
         {
-            Debug.LogError("User not authenticated!");
             return;
         }
 
@@ -189,21 +173,17 @@ public class GameSessionManager : MonoBehaviour
         {
             if (task.IsFaulted)
             {
-                Debug.LogError("❌ [AddPlayerToMultiplayerGame] Failed to join: " + task.Exception);
                 return;
             }
-            Debug.Log($"✅ [AddPlayerToMultiplayerGame] Joined game: {gameID}");
             LoadLobbyScene(gameID);
         });
     }
 
     private void CreateNewMultiplayerSession(string gameType)
     {
-        Debug.Log($"🟢 [CreateNewMultiplayerSession] Called for {gameType}");
         FirebaseUser user = FirebaseAuth.DefaultInstance.CurrentUser;
         if (user == null)
         {
-            Debug.LogError("User not authenticated!");
             return;
         }
 
@@ -221,15 +201,12 @@ public class GameSessionManager : MonoBehaviour
             { "timestamp", ServerValue.Timestamp }
         };
 
-        Debug.Log($"🟢 [CreateNewMultiplayerSession] Setting value at game_sessions/{gameID}");
         gameRef.SetValueAsync(gameData).ContinueWithOnMainThread(task =>
         {
             if (task.IsFaulted)
             {
-                Debug.LogError("❌ [CreateNewMultiplayerSession] Failed: " + task.Exception);
                 return;
             }
-            Debug.Log("✅ [CreateNewMultiplayerSession] New game created: " + gameID);
             LoadLobbyScene(gameID);
         });
     }
@@ -239,24 +216,20 @@ public class GameSessionManager : MonoBehaviour
     // -------------------------------
     public void LoadExistingGameSessions()
     {
-        Debug.Log("🟢 [LoadExistingGameSessions] Loading sessions...");
         DatabaseReference gameSessionsRef = FirebaseDatabase.DefaultInstance.GetReference("game_sessions");
 
         gameSessionsRef.GetValueAsync().ContinueWithOnMainThread(task =>
         {
             if (task.IsFaulted)
             {
-                Debug.LogError("❌ [LoadExistingGameSessions] Error: " + task.Exception);
                 return;
             }
             if (!task.IsCompleted)
             {
-                Debug.LogWarning("⚠ [LoadExistingGameSessions] Task not completed!");
                 return;
             }
 
             DataSnapshot snapshot = task.Result;
-            Debug.Log($"🟢 [LoadExistingGameSessions] snapshot.ChildrenCount: {snapshot.ChildrenCount}");
 
             foreach (var child in snapshot.Children)
             {
@@ -265,7 +238,6 @@ public class GameSessionManager : MonoBehaviour
                 int maxPlayers = int.Parse(child.Child("maxPlayers").Value.ToString());
                 int currentPlayers = (int)child.Child("players").ChildrenCount;
 
-                Debug.Log($"🟢 [LoadExistingGameSessions] Found {gameTitle} with ID {gameID}. {currentPlayers}/{maxPlayers}");
                 CreateGameSession(gameTitle, gameID, maxPlayers, currentPlayers);
             }
         });
@@ -273,11 +245,9 @@ public class GameSessionManager : MonoBehaviour
 
     private void CreateGameSession(string gameTitle, string gameID, int maxPlayers, int currentPlayers)
     {
-        Debug.Log($"🟢 [CreateGameSession] Creating UI for {gameTitle} (ID: {gameID}). {currentPlayers}/{maxPlayers}");
 
         if (gameEntryPrefab == null || contentPanel == null)
         {
-            Debug.LogError("❌ GameEntryPrefab or ContentPanel not assigned!");
             return;
         }
 
@@ -294,11 +264,9 @@ public class GameSessionManager : MonoBehaviour
                 GetGameImage(gameTitle),
                 isMultiplayer
             );
-            Debug.Log($"✅ [CreateGameSession] UI created for {gameTitle}");
         }
         else
         {
-            Debug.LogError("❌ GameEntryUI component missing on prefab!");
         }
     }
 
@@ -414,5 +382,7 @@ public class GameSessionManager : MonoBehaviour
             SceneManager.LoadScene("LobbyScene");
         }
     }
+
+    */
 
 }

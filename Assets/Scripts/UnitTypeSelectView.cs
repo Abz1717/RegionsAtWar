@@ -13,6 +13,8 @@ public class UnitTypeSelectView : MonoBehaviour
 
     private UnitTypeData typeData;
 
+    public UnitType Type => typeData.type;
+
     private void Start()
     {
         button.onClick.AddListener(ProcessClick);

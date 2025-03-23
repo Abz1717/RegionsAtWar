@@ -204,4 +204,15 @@ public class GameManager : Singleton<GameManager>
             return -1;
         }
     }
+
+
+    public void UpdateScoreUI()
+    {
+        foreach (var player in gameConfig.Players)
+        {
+            int regionsCount = RegionManager.Instance.regionData.FindAll(region => region.ownerID == player.Id).Count;
+            // Update your taskbar UI for each player.
+            
+        }
+    }
 }

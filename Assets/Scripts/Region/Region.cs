@@ -29,7 +29,7 @@ public class Region : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     private Color originalColor;
 
-    private List<BuildingData> buildings = new();
+    public List<BuildingData> buildings = new();
 
 
     private void Awake()
@@ -38,6 +38,16 @@ public class Region : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)
             originalColor = Color.white;
+
+
+        StartProduction(Resource.Money, moneyRate);
+        StartProduction(Resource.Manpower, manpowerRate);
+        StartProduction(resourseType, resourceRate);
+    }
+
+    private void StartProduction(Resource resourseType, int resourceRate)
+    {
+        ServiceCoroutine.Instance.RunCoroutine(Production(resourseType, resourceRate));
     }
 
     public void SetOwner(int id)
@@ -47,11 +57,10 @@ public class Region : MonoBehaviour
         UpdateOwnerVisual();
         GameManager.Instance.CheckGameEnd();
 
-        StopAllCoroutines();
-
-        StartCoroutine(Production(Resource.Money, moneyRate));
-        StartCoroutine(Production(Resource.Manpower, manpowerRate));
-        StartCoroutine(Production(resourseType, resourceRate));
+        if (MaproomUIManager.Instance != null)
+        {
+            MaproomUIManager.Instance.UpdateScoreUI();
+        }
     }
 
     public void SetColor(Color color)
@@ -94,8 +103,10 @@ public class Region : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(productionTime);
-            GameManager.Instance.AddPlayerResource(ownerID,resource, ammount);
-            Debug.Log($"Resource added for player {ownerID} : {resource.ToString()} = {GameManager.Instance.GetPlayer(ownerID).PlayerModel.Resources[resource]}");
+            if(ownerID >= 0)
+            {
+                GameManager.Instance.AddPlayerResource(ownerID, resource, ammount);
+            }
         }
     }
 }

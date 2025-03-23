@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-
 public class Road : MonoBehaviour
 {
     [Header("Road Settings")]

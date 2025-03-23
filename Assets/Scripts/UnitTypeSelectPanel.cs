@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UnitTypeSelectPanel : MonoBehaviour
@@ -7,7 +8,9 @@ public class UnitTypeSelectPanel : MonoBehaviour
 
     [SerializeField] private UnitsConfiguration unitConfiguration;
     [SerializeField] private UnitTypeSelectView unitSelectPrefab;
-    [SerializeField] private Transform buttonsParent;  //put GridLayoutGroup on parent
+    [SerializeField] private Transform buttonsParent;  
+
+    private List<UnitTypeSelectView> unitTypes = new List<UnitTypeSelectView>();
 
     private void Start()
     {
@@ -16,11 +19,19 @@ public class UnitTypeSelectPanel : MonoBehaviour
             var view = Instantiate(unitSelectPrefab, buttonsParent);
             view.SetData(unit);
             view.OnClick += ProcessUnitSelected;
+            unitTypes.Add(view);
         }
     }
 
     private void ProcessUnitSelected(UnitType unit)
     {
         OnUnitSelected?.Invoke(unit);
+    }
+
+    internal void Show(Region currentRegion)
+    {
+        gameObject.SetActive(true);
+        var catapultButton = unitTypes.Find(unitType => unitType.Type == UnitType.Catapult);
+        catapultButton.gameObject.SetActive(currentRegion.buildings.Exists(building => building.type == BuildingType.Foundry));
     }
 }

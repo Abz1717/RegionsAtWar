@@ -25,6 +25,7 @@ public class UnitActionPanel : MonoBehaviour, IUIPanel
     [SerializeField] private TextMeshProUGUI attackText;
     [SerializeField] private TextMeshProUGUI defenseText;
     [SerializeField] private TextMeshProUGUI speedText;
+    [SerializeField] private TextMeshProUGUI stateText;
 
     [Header("Common Health Bar (Same for All Units)")]
     [SerializeField] private Image commonHealthBarImage;
@@ -99,8 +100,12 @@ public class UnitActionPanel : MonoBehaviour, IUIPanel
 
         // Update the stats:
         attackText.text = unit.attack.ToString();
-        defenseText.text = unit.defense.ToString();
+        defenseText.text = unit.defense.ToString("P0");
         speedText.text = unit.moveSpeed.ToString();
+
+        stateText.text = unitController.CurrentState.ToString();
+
+
 
 
         // Update the flag image based on the selected unit's faction.

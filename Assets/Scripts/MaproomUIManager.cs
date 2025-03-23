@@ -2,6 +2,8 @@
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
+using System.Collections;
 
 public class MaproomUIManager : Singleton<MaproomUIManager>
 {
@@ -48,6 +50,33 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
     [SerializeField] private UnitActionPanel unitActionPanel;
     public UnitActionPanel UnitActionPanel => unitActionPanel;
 
+    [Header("Taskbar Score Counters")]
+    [SerializeField] private TextMeshProUGUI primaryCounterText;   
+    [SerializeField] private TextMeshProUGUI secondaryCounterText; 
+
+    private int primaryCounter = 1;     
+    private int secondaryCounter = 0;   
+
+    
+    private int dayLengthInMinutes = 5;
+
+
+
+    private Coroutine taskbarCounterCoroutine;
+
+
+
+
+
+    [System.Serializable]
+    public class PlayerScoreUI
+    {
+        public int playerId;
+        public TextMeshProUGUI scoreNumberText;       // Displays raw region count
+        public TextMeshProUGUI rankText;              // Displays the rank 
+    }
+
+    public List<PlayerScoreUI> playerScoreUIList;
 
     private bool allowClosing = false; // Controls outside-click closure
 
@@ -88,6 +117,13 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
         marketButton?.onClick.AddListener(() => ShowSubPanel(marketPanel, marketButton));
         researchButton?.onClick.AddListener(() => ShowSubPanel(researchPanel, researchButton));
         moreButton?.onClick.AddListener(() => ShowSubPanel(morePanel, moreButton));
+
+        if (GameManager.Instance != null && GameManager.Instance.gameConfig != null)
+        {
+            dayLengthInMinutes = GameManager.Instance.gameConfig.dayLengthInMinutes;
+        }
+
+
     }
 
     private void Update()
@@ -324,6 +360,134 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
             return unitActionPanel != null && unitActionPanel.gameObject.activeSelf;
         }
     }
+
+
+    public void UpdateScoreUI()
+    {
+        int totalRegions = RegionManager.Instance.regionData.Count;
+
+        List<PlayerScoreData> scores = new List<PlayerScoreData>();
+        foreach (var player in GameManager.Instance.gameConfig.Players)
+        {
+            int regionCount = RegionManager.Instance.regionData.FindAll(r => r.ownerID == player.Id).Count;
+            scores.Add(new PlayerScoreData { playerId = player.Id, regionCount = regionCount });
+        }
+
+        scores.Sort((a, b) => b.regionCount.CompareTo(a.regionCount));
+
+        Dictionary<int, string> playerRankings = new Dictionary<int, string>();
+
+        for (int i = 0; i < scores.Count; i++)
+        {
+            int rankNumber = i + 1; // Rank starts at 1.
+            string rankString = GetOrdinal(rankNumber);
+            playerRankings[scores[i].playerId] = rankString;
+        }
+
+        foreach (var playerScore in playerScoreUIList)
+        {
+            int regionCount = RegionManager.Instance.regionData.FindAll(r => r.ownerID == playerScore.playerId).Count;
+            playerScore.scoreNumberText.text = regionCount.ToString();
+
+            if (playerRankings.ContainsKey(playerScore.playerId))
+            {
+                playerScore.rankText.text = playerRankings[playerScore.playerId];
+            }
+            else
+            {
+                playerScore.rankText.text = "";
+            }
+        }
+    }
+
+    private string GetOrdinal(int number)
+    {
+        if (number <= 0)
+            return number.ToString();
+
+        int lastTwoDigits = number % 100;
+        int lastDigit = number % 10;
+        if (lastTwoDigits >= 11 && lastTwoDigits <= 13)
+            return number + "th";
+        switch (lastDigit)
+        {
+            case 1:
+                return number + "st";
+            case 2:
+                return number + "nd";
+            case 3:
+                return number + "rd";
+            default:
+                return number + "th";
+        }
+    }
+
+    private class PlayerScoreData
+    {
+        public int playerId;
+        public int regionCount;
+    }
+
+
+    // Coroutine to update the taskbar counters.
+    private IEnumerator TaskbarCounterRoutine()
+    {
+        float interval = 1f;
+        while (true)
+        {
+            yield return new WaitForSeconds(interval);
+
+            secondaryCounter++; 
+
+            if (secondaryCounter >= dayLengthInMinutes)
+            {
+                secondaryCounter = 0;
+                primaryCounter++;
+            }
+
+            UpdateTaskbarCountersUI();
+        }
+    }
+
+    private void UpdateTaskbarCountersUI()
+    {
+        if (primaryCounterText != null)
+            primaryCounterText.text = primaryCounter.ToString(); 
+        if (secondaryCounterText != null)
+            secondaryCounterText.text = secondaryCounter.ToString();
+    }
+
+
+
+    private void OnEnable()
+    {
+        if (taskbarCounterCoroutine != null)
+            return;
+
+        primaryCounter = 1;
+        secondaryCounter = 0;
+
+        if (GameManager.Instance != null && GameManager.Instance.gameConfig != null)
+        {
+            dayLengthInMinutes = GameManager.Instance.gameConfig.dayLengthInMinutes;
+        }
+
+        taskbarCounterCoroutine = StartCoroutine(TaskbarCounterRoutine());
+    }
+
+
+    private void OnDisable()
+    {
+        // Stop the coroutine when the UI is disabled.
+        if (taskbarCounterCoroutine != null)
+        {
+            StopCoroutine(taskbarCounterCoroutine);
+            taskbarCounterCoroutine = null;
+        }
+    }
+
+
 }
+
 
 public interface IUIPanel { void Hide(); }

@@ -4,6 +4,7 @@ using System.Collections;
 
 public class Unit : MonoBehaviour
 {
+    public const float FORT_DEFENCE = 0.3f;
     public event Action OnEnemyKilled;
 
     [Tooltip("Which faction/team this unit belongs to. E.g., 0 = Player, 1 = AI.")]
@@ -12,7 +13,7 @@ public class Unit : MonoBehaviour
     [Header("Unit Stats")]
     public int maxHealth = 100;
     public int attack = 10;
-    public int defense = 5;
+    public float defense = 0.2f;
     public float moveSpeed = 3f;
 
     [SerializeField] private Animator animator;
@@ -28,6 +29,8 @@ public class Unit : MonoBehaviour
     // Store the last attacker so that when this unit dies, the killer's faction can capture the region.
     private Unit lastAttacker;
 
+    public Region region;
+
     private void Awake()
     {
         // Set the unit's current health to its maximum health when it spawns.
@@ -38,8 +41,11 @@ public class Unit : MonoBehaviour
     /// If an attacker is provided and this unit isn't already attacking, it immediately counterattacks.
     public bool TakeDamage(int damage)
     {
-        int effectiveDamage = Mathf.Max(damage - defense, 0);
-        CurrentHealth -= effectiveDamage;
+        float effectiveDefence = defense;
+        if (region.buildings.Exists(building => building.type == BuildingType.Fort));
+            effectiveDefence += FORT_DEFENCE;
+        float effectiveDamage = damage * (1 - effectiveDefence);
+        CurrentHealth -= (int)effectiveDamage;
         Debug.Log($"{gameObject.name} took {effectiveDamage} damage, current health: {CurrentHealth}");
 
 

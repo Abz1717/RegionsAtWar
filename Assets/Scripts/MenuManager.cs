@@ -10,7 +10,9 @@ public class MenuManager : MonoBehaviour
     public GameObject SettingsPanel;
     public GameObject ReleaseNotesPanel;
     public GameObject GameTipsPanel;
-    public GameObject GameChatPanel;
+    public GameObject GameChatPanel; 
+    public GameObject JoinGamePanel;
+
 
     [Header("Buttons")]
     public Button HomeButton;
@@ -54,6 +56,8 @@ public class MenuManager : MonoBehaviour
         ReleaseNotesPanel.SetActive(false);
         GameTipsPanel.SetActive(false);
         GameChatPanel.SetActive(false);
+        JoinGamePanel.SetActive(false); 
+
 
         // Show only the selected panel
         panelToShow.SetActive(true);

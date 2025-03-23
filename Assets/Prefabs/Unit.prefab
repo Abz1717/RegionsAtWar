@@ -373,7 +373,6 @@ GameObject:
   - component: {fileID: 5618737985938090521}
   - component: {fileID: 3592514696728482271}
   - component: {fileID: 1527361431794085297}
-  - component: {fileID: 6170043460025106614}
   - component: {fileID: 5943939939191043856}
   - component: {fileID: 3556169156363233580}
   - component: {fileID: 7579313891059655599}
@@ -436,24 +435,10 @@ MonoBehaviour:
   factionID: 0
   maxHealth: 100
   attack: 50
-  defense: 5
+  defense: 0.2
   moveSpeed: 100
   animator: {fileID: 3592514696728482271}
---- !u!114 &6170043460025106614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3052359053848356086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 008a301fd40607d43863e288f0704edd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitActionPanel: {fileID: 0}
-  unitNameText: {fileID: 0}
-  moveButton: {fileID: 0}
+  region: {fileID: 0}
 --- !u!114 &5943939939191043856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,7 +454,6 @@ MonoBehaviour:
   unit: {fileID: 1527361431794085297}
   pivot: {fileID: 18304289613849864}
   mesh: {fileID: 542305319012094596}
-  speed: 1
 --- !u!61 &3556169156363233580
 BoxCollider2D:
   m_ObjectHideFlags: 0

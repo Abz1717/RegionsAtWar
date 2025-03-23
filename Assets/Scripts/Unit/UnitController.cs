@@ -4,6 +4,7 @@ using DG.Tweening;  // Make sure you have DOTween imported
 using System.Collections.Generic;
 using System;
 using System.Collections;
+using UnityEditor;
 
 public class UnitController : MonoBehaviour
 {
@@ -22,8 +23,14 @@ public class UnitController : MonoBehaviour
     public RegionCapturePoint CurrentPoint { get; private set; }
     public UnitData Data { get; private set; }
 
+    public enum UnitState { Idle, Moving, Attacking }
+    public UnitState CurrentState { get; private set; } = UnitState.Idle;
+
+
+
     private Sequence tweener;
     // Optionally, reference a UI button that triggers movement.
+
 
     // Call this method when instantiating your unit.
     public void Initialize(RegionCapturePoint startPoint, UnitData data)
@@ -34,11 +41,17 @@ public class UnitController : MonoBehaviour
         newPos.z = 0f;
         transform.position = newPos;
 
-        CurrentPoint = startPoint;
+        SetRegion(startPoint);
         Data = data;
 
 
         unit.OnEnemyKilled += ProcessEnemyKilled;
+    }
+
+    private void SetRegion(RegionCapturePoint regionPoint)
+    {
+        CurrentPoint = regionPoint;
+        unit.region = regionPoint.region;
     }
 
 
@@ -72,13 +85,40 @@ public class UnitController : MonoBehaviour
         // Remove the starting region since unit is already there
         path.RemoveAt(0);
 
+
+        CurrentState = UnitState.Moving;
+
+
         unit.Walk();
 
         // Create a DOTween sequence to chain movements.
         Sequence moveSequence = DOTween.Sequence();
 
-        foreach (RegionCapturePoint region in path)
+        List<Road> roads = new();
+
+        for (int i = 0; i < path.Count - 1; i++)
         {
+            var currentRegion = path[i];
+            var region = path[i + 1];
+            var road = RoadManager.Instance.GetRoad(path[i].region.regionID, path[i+1].region.regionID);
+
+            if (road != null)
+            {
+                road.SetSelectable(true);
+                roads.Add(road);
+            }
+            else
+            {
+                Debug.LogError($"No road found between region {currentRegion.region.regionID} and {region.region.regionID}");
+            }
+            road.SetSelectable(true);
+            roads.Add(road);
+        }
+
+        for (int i =0; i < path.Count; i++)
+        {
+            var region = path[i];
+
             // Get the region's position, but override its z coordinate
             Vector3 targetPos = region.transform.position;
             targetPos.z = 0f;  // or your desired constant value
@@ -90,13 +130,14 @@ public class UnitController : MonoBehaviour
                 // Update enemy visibility continuously during the movement.
                 .OnUpdate(() =>
                 {
-                    CurrentPoint = region;
+                    SetRegion(region);
                     UnitManager.Instance.UpdateEnemyUnitVisibility(transform.position);
                 })
                 .OnComplete(() =>
                 {
+                    roads[i-1].SetSelectable(false);
                     // When reaching this region, set its owner if it's not contested.
-                    if (!region.IsContested())  
+                    if (!region.IsContested())
                     {
                         region.region.SetOwner(unit.factionID);
 
@@ -109,8 +150,6 @@ public class UnitController : MonoBehaviour
         tweener = moveSequence;
         moveSequence.Play().OnComplete(() =>
         {
-
-
             // At the end of the movement, capture the destination region.
             RegionCapturePoint finalRegion = path[path.Count - 1];
             if (!finalRegion.IsContested())
@@ -125,6 +164,8 @@ public class UnitController : MonoBehaviour
             }
 
             unit.Reset();
+            CurrentState = UnitState.Idle;
+
             Debug.Log("Move complete. New position: " + transform.position);
             StartCoroutine(DelayedEnemyVisibilityUpdate());
         });
@@ -151,6 +192,8 @@ public class UnitController : MonoBehaviour
                 {
                 tweener.Pause();
                 }
+
+                CurrentState = UnitState.Attacking;
 
 
                 // Force the enemy to remain visible for 60 seconds.

@@ -52,8 +52,8 @@ public class ReleaseNotesManager : MonoBehaviour
 
             //commented out to stop overusing vonfig during testing
 
-            //remoteConfig = FirebaseRemoteConfig.DefaultInstance;
-            //FetchAndActivateConfig(); 
+            remoteConfig = FirebaseRemoteConfig.DefaultInstance;
+            FetchAndActivateConfig(); 
         });
     }
 

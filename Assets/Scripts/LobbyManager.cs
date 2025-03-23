@@ -9,6 +9,7 @@ using System.Collections.Generic;
 
 public class LobbyManager : MonoBehaviour
 {
+    /*
     // Store the currently selected country.
     public string selectedCountry = "";
 
@@ -185,4 +186,6 @@ public class LobbyManager : MonoBehaviour
         Debug.Log("🟢 [OnBackButtonPressed] Loading MainMenuScene...");
         SceneManager.LoadScene("MainMenuScene");
     }
+
+    */
 }

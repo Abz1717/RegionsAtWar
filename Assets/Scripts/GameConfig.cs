@@ -4,8 +4,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Game Configuration", menuName = "Configs/Game")]
 public class GameConfig : ScriptableObject
 {
-    public ResourcesConfiguration resourcesConfiguration;
     public List<PlayerData> Players;
+
+    public int dayLengthInMinutes = 5;
 
 }
 
