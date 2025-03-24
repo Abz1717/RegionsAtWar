@@ -201,10 +201,19 @@ public class UnitController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var enemy = collision.gameObject.GetComponent<Unit>();
+        //var enemy = collision.gameObject.GetComponent<Unit>();
 
         // Declare enemyController here:
-        var enemyController = collision.gameObject.GetComponent<UnitController>();
+        //var enemyController = collision.gameObject.GetComponent<UnitController>();
+
+       /* ColliderIdentifier identifier = collision.GetComponent<ColliderIdentifier>();
+        if (identifier == null || identifier.role != ColliderRole.Range)
+        {
+            // If it’s not the ranged collider, ignore the trigger event.
+            return;
+        }*/
+
+        Unit enemy = collision.gameObject.GetComponent<Unit>();
         if (enemy != null && enemy.factionID != unit.factionID)
         {
             if (enemy != null && enemy.factionID != unit.factionID)
@@ -217,6 +226,7 @@ public class UnitController : MonoBehaviour
 
                 CurrentState = UnitState.Attacking;
 
+                var enemyController = collision.gameObject.GetComponent<UnitController>();
 
                 // Force the enemy to remain visible for 60 seconds.
                 if (enemyController != null)

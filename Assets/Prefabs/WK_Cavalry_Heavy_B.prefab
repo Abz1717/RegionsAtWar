@@ -826,7 +826,7 @@ Transform:
   m_GameObject: {fileID: 1422211261386316880}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -895,9 +895,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   factionID: 0
   maxHealth: 100
-  attack: 50
-  defense: 0.2
-  moveSpeed: 100
+  attack: 35
+  defense: 0.05
+  moveSpeed: 70
   animator: {fileID: 5004412157767775733}
   region: {fileID: 0}
 --- !u!114 &3390979089450771854
@@ -974,10 +974,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.075035036, y: 1.0027398}
+  m_Offset: {x: -0.075035036, y: 1.2627125}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -988,7 +988,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4774946, y: 3.0054796}
+  m_Size: {x: 1.4774946, y: 2.4855342}
   m_EdgeRadius: 0
 --- !u!1 &1549370630884445071
 GameObject:
@@ -3557,7 +3557,7 @@ Transform:
   m_GameObject: {fileID: 4381091185189401825}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

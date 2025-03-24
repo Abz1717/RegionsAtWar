@@ -434,9 +434,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   factionID: 0
   maxHealth: 100
-  attack: 50
-  defense: 0.2
-  moveSpeed: 100
+  attack: 45
+  defense: 0.3
+  moveSpeed: 15
   animator: {fileID: 3592514696728482271}
   region: {fileID: 0}
 --- !u!114 &5943939939191043856

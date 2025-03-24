@@ -17,17 +17,38 @@ MonoBehaviour:
     name: Barracks Level 1
     type: 0
     sprite: {fileID: 21300000, guid: 16fc781c952d49e4db708df95721cf6c, type: 3}
-    cost: []
+    cost:
+    - resource: 0
+      ammount: 524
+    - resource: 2
+      ammount: 424
+    - resource: 3
+      ammount: 245
+    duration: 1
   - id: 1
     name: Fortification Level 1
     type: 1
     sprite: {fileID: 21300000, guid: a8d585a2ea6d7d6408796cd085004ebb, type: 3}
-    cost: []
+    cost:
+    - resource: 0
+      ammount: 574
+    - resource: 2
+      ammount: 461
+    - resource: 4
+      ammount: 124
+    duration: 1
   - id: 2
     name: Foundry Level 1
     type: 2
     sprite: {fileID: 21300000, guid: a7dc818099d9cde45b9dbfe481123c44, type: 3}
-    cost: []
+    cost:
+    - resource: 0
+      ammount: 314
+    - resource: 3
+      ammount: 272
+    - resource: 4
+      ammount: 259
+    duration: 1
   types:
   - name: Barracks
     type: 0

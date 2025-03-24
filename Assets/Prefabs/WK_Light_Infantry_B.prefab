@@ -290,8 +290,8 @@ MonoBehaviour:
   factionID: 0
   maxHealth: 100
   attack: 10
-  defense: 0.2
-  moveSpeed: 3
+  defense: 0.15
+  moveSpeed: 5
   animator: {fileID: 3650906682565172489}
   region: {fileID: 0}
 --- !u!50 &5599819517917519684
@@ -393,10 +393,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.057815433, y: 0.55502844}
+  m_Offset: {x: -0.057815433, y: 0.8075908}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -407,7 +407,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1850092, y: 2.1100564}
+  m_Size: {x: 1.1850092, y: 1.6049317}
   m_EdgeRadius: 0
 --- !u!1 &966623893511432157
 GameObject:
@@ -1196,7 +1196,7 @@ Transform:
   m_GameObject: {fileID: 2285580893292249338}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

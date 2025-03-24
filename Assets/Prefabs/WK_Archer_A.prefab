@@ -4218,6 +4218,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7048028921016623842}
+  - component: {fileID: 1784284464629638497}
+  - component: {fileID: 3218810492989450326}
   m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
@@ -4234,7 +4236,7 @@ Transform:
   m_GameObject: {fileID: 7982671876609923447}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4264,6 +4266,64 @@ Transform:
   - {fileID: 8349160007574865104}
   m_Father: {fileID: 1967739824337930690}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1784284464629638497
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7982671876609923447}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5}
+  m_EdgeRadius: 0
+--- !u!114 &3218810492989450326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7982671876609923447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccd3b8101ebafa4ba750f8eb62a59a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 1
 --- !u!1 &8018856825914986534
 GameObject:
   m_ObjectHideFlags: 0
@@ -4402,6 +4462,7 @@ GameObject:
   - component: {fileID: 1051442846411144095}
   - component: {fileID: -6320336348129327909}
   - component: {fileID: 8661852597260856776}
+  - component: {fileID: 8490895808571001812}
   m_Layer: 0
   m_Name: WK_Archer_A
   m_TagString: Untagged
@@ -4493,9 +4554,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   factionID: 0
   maxHealth: 100
-  attack: 50
-  defense: 0.2
-  moveSpeed: 100
+  attack: 40
+  defense: 0.1
+  moveSpeed: 25
   animator: {fileID: 4928308691220930034}
   region: {fileID: 0}
 --- !u!114 &-6320336348129327909
@@ -4570,10 +4631,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0014712214, y: 1.2377728}
+  m_Offset: {x: 0.001471281, y: 1.1127592}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4584,8 +4645,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7098068, y: 3.4755461}
+  m_Size: {x: 1.200033, y: 2.223553}
   m_EdgeRadius: 0
+--- !u!114 &8490895808571001812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8123800067081499059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccd3b8101ebafa4ba750f8eb62a59a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 0
 --- !u!1 &8292267243430464026
 GameObject:
   m_ObjectHideFlags: 0

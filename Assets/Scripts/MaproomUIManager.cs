@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using System.Collections.Generic;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
 
 public class MaproomUIManager : Singleton<MaproomUIManager>
 {
@@ -53,12 +54,14 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
 
     [Header("Taskbar Score Counters")]
     [SerializeField] private TextMeshProUGUI primaryCounterText;   
-    [SerializeField] private TextMeshProUGUI secondaryCounterText; 
+    [SerializeField] private TextMeshProUGUI secondaryCounterText;
 
     private int primaryCounter = 1;     
-    private TimeSpan secondaryCounter;   
+    private TimeSpan secondaryCounter;
 
-    
+    [Header("Menu Button")]
+    public Button mainMenuButton;
+
     private int dayLengthInMinutes = 5;
 
 
@@ -78,6 +81,7 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
     public bool HasPanel => currentPanel != null;
     private void Start()
     {
+
         // Hide all panels initially.
         regionActionPanel.Hide();
         negotiatePanel?.SetActive(false);
@@ -92,7 +96,8 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
         mapPanel?.SetActive(true);
 
         secondaryCounter = TimeSpan.FromMinutes( GameManager.Instance.gameConfig.dayLengthInMinutes);
-       
+
+        mainMenuButton?.onClick.AddListener(GoToMainMenu);
 
         // Force each map text to use its own material instance.
         if (mapTexts != null)
@@ -133,6 +138,10 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
         UpdateMapTextFade();
     }
 
+    private void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenuScene");
+    }
     private void CheckOutsideClick()
     {
         if (!allowClosing) return;
