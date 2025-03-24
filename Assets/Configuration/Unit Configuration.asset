@@ -39,7 +39,8 @@ MonoBehaviour:
     uniqueTwentyFiveSprite: {fileID: 21300000, guid: 17bca3f2ee8ddf940b6e2466c1728578,
       type: 3}
     duration: 1
-    prefab: {fileID: 145745441269884598, guid: 5159bcc97d95c284eaf583bcf14959ff, type: 3}
+    prefab: {fileID: 5943939939191043856, guid: cdde97322b4562d4cb69360afbbcc1e9,
+      type: 3}
     cost:
     - resource: 0
       ammount: 424

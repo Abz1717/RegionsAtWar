@@ -143,11 +143,21 @@ public class UnitController : MonoBehaviour
                 .OnUpdate(() =>
                 {
                     SetRegion(region);
-                    UnitManager.Instance.UpdateEnemyUnitVisibility(transform.position);
+
+                    if (GameManager.Instance.SelectedUnit != null)
+                    {
+                        UnitManager.Instance.UpdateEnemyUnitVisibility(GameManager.Instance.SelectedUnit.transform.position);
+                    }
+                    //UnitManager.Instance.UpdateEnemyUnitVisibility(transform.position);
                 })
                 .OnComplete(() =>
                 {
-                    road.SetSelectable(false);
+
+                    if (GetComponent<AIUnitController>() == null)
+                    {
+                        road.SetSelectable(false);
+                    }
+                    
                     // When reaching this region, set its owner if it's not contested.
                     if (!region.IsContested())
                     {

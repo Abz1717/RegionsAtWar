@@ -453,7 +453,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unit: {fileID: 1527361431794085297}
   pivot: {fileID: 18304289613849864}
-  mesh: {fileID: 542305319012094596}
+  meshes: []
+  textures:
+  - color: 0
+    texture: {fileID: 0}
 --- !u!61 &3556169156363233580
 BoxCollider2D:
   m_ObjectHideFlags: 0

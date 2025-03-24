@@ -50,6 +50,15 @@ public class UnitManager : Singleton<UnitManager>
         newUnit.SetFaction(faction);
 
 
+        // Attach AIUnitController if this faction is AI-controlled.
+        if (IsAIFaction(faction))
+        {
+            if (newUnit.GetComponent<AIUnitController>() == null)
+            {
+                newUnit.gameObject.AddComponent<AIUnitController>();
+            }
+        }
+
         // Update the counter for this unit type.
         if (!unitCount.ContainsKey(data.type))
         {
@@ -88,6 +97,12 @@ public class UnitManager : Singleton<UnitManager>
         spawnedUnits.Add(newUnit);
     }
 
+
+    private bool IsAIFaction(int faction)
+    {
+        // Replace with your logic. For example, if local player's faction is not AI:
+        return faction != GameManager.Instance.LocalPlayerId;
+    }
     public UnitController FindClosestUnit(Vector3 position, int factionId)
     {
         var factionUnits = GetFactionUnits(factionId);

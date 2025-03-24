@@ -17,31 +17,35 @@ public class FirebaseAuthManager : MonoBehaviour
     private FirebaseUser user;
 
     [Header("UI Panels")]
-    public GameObject mainStartPanel;  // New main start panel containing the three buttons (Google, Login, Register)
-    public GameObject loginPanel;      // Existing login panel for email and password
-    public GameObject registerPanel;   // Registration panel for username, email, and password
-    public GameObject usernamePopup;   // Popup for setting username for first-time Google logins
+    public GameObject mainStartPanel;   // The main start panel containing the three buttons (Google, Login, Register)
+    public GameObject loginPanel;       // Panel for email/password login
+    public GameObject registerPanel;    // Panel for registration (username, email, password)
+    public GameObject usernamePopup;    // Popup for setting username for first-time Google logins
+    public GameObject newPlayerPanel;   // New panel for new players
 
     [Header("Main Start Panel Buttons")]
-    public Button googleButtonMain;    // Google sign-in button on the main start panel
-    public Button loginButtonMain;     // Button to open the login panel
-    public Button registerButtonMain;  // Button to open the registration panel
+    public Button googleButtonMain;     // Google sign-in button on the main start panel
+    public Button loginButtonMain;      // Button to open the login panel
+    public Button registerButtonMain;   // Button to open the registration panel
 
     [Header("Login Panel UI References")]
     public TMP_InputField loginEmailInput;
     public TMP_InputField loginPasswordInput;
     public Button loginButton;
-    public Button backButtonLogin;     // Back button on the login panel
+    public Button backButtonLogin;      // Back button on the login panel
 
     [Header("Register Panel UI References")]
     public TMP_InputField registerEmailInput;
     public TMP_InputField registerPasswordInput;
     public TMP_InputField registerUsernameInput;
     public Button registerButton;
-    public Button backButtonRegister;  // Back button on the registration panel
+    public Button backButtonRegister;   // Back button on the registration panel
+
+    [Header("New Player Panel UI References")]
+    public Button backButtonNewPlayer;  // Back button on the new player panel
 
     [Header("Google Username Popup UI References")]
-    public TMP_InputField googleUsernameInput;   // For Google username entry on first login
+    public TMP_InputField googleUsernameInput; // For Google username entry on first login
     public Button confirmGoogleUsernameButton;
 
     [Header("Message Display")]
@@ -55,11 +59,12 @@ public class FirebaseAuthManager : MonoBehaviour
     {
         auth = FirebaseAuth.DefaultInstance;
 
-        // Start with only the main start panel visible.
+        // Set initial panel visibility.
         mainStartPanel.SetActive(true);
         loginPanel.SetActive(false);
         registerPanel.SetActive(false);
         usernamePopup.SetActive(false);
+        newPlayerPanel.SetActive(false);  // Hide the new player panel initially
 
         // Setup listeners for main start panel buttons.
         googleButtonMain.onClick.AddListener(GoogleLogin);
@@ -78,6 +83,7 @@ public class FirebaseAuthManager : MonoBehaviour
         loginButton.onClick.AddListener(LoginUser);
         backButtonLogin.onClick.AddListener(() =>
         {
+            Debug.Log("LoginPanel Back button pressed");
             loginPanel.SetActive(false);
             mainStartPanel.SetActive(true);
         });
@@ -86,7 +92,16 @@ public class FirebaseAuthManager : MonoBehaviour
         registerButton.onClick.AddListener(RegisterUser);
         backButtonRegister.onClick.AddListener(() =>
         {
+            Debug.Log("RegisterPanel Back button pressed");
             registerPanel.SetActive(false);
+            mainStartPanel.SetActive(true);
+        });
+
+        // Setup listener for new player panel back button.
+        backButtonNewPlayer.onClick.AddListener(() =>
+        {
+            Debug.Log("NewPlayerPanel Back button pressed");
+            newPlayerPanel.SetActive(false);
             mainStartPanel.SetActive(true);
         });
 
