@@ -94,6 +94,6 @@ public class ProductionScreen : MonoBehaviour, IUIPanel
     {
         gameObject.SetActive(false );
         MaproomUIManager.Instance.mapPanel.SetActive(true);
-        MaproomUIManager.Instance.taskbarPanel.SetActive(false);
+        MaproomUIManager.Instance.taskbarPanel.SetActive(true);
     }
 }

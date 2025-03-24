@@ -47,7 +47,7 @@ public class Road : MonoBehaviour
     {
         isSelectable = state;
         if (spriteRenderer != null)
-            spriteRenderer.color = state ? Color.yellow : originalColor;
+            spriteRenderer.color = state ? Color.red : originalColor;
     }
 
     /// <summary>

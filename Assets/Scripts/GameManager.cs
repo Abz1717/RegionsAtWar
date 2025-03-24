@@ -134,7 +134,7 @@ public class GameManager : Singleton<GameManager>
 
     public void TryBuyUnit(Region currentRegion, UnitData data)
     {
-        if (HasEnoughMoney(data.cost) && currentRegion.ownerID == LocalPlayerId)
+        if (HasEnoughMoney(data.cost) && currentRegion!= null && currentRegion.ownerID == LocalPlayerId)
         {
             UnitManager.Instance.SpawnUnit(RegionManager.Instance.regions.Find(region => region.region.regionID == currentRegion.regionID), LocalPlayerId, data);
             MakePurchase(LocalPlayerId, data.cost);
@@ -143,7 +143,7 @@ public class GameManager : Singleton<GameManager>
 
     public void TryBuyBuilding(Region currentRegion, BuildingData data)
     {
-        if (HasEnoughMoney(data.cost) && currentRegion.ownerID == LocalPlayerId)
+        if (HasEnoughMoney(data.cost) && currentRegion!=null && currentRegion.ownerID == LocalPlayerId)
         {
             currentRegion.ConstructBuilding(data);
             MakePurchase(LocalPlayerId, data.cost);

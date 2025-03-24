@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 using System.Collections;
+using System;
 
 public class MaproomUIManager : Singleton<MaproomUIManager>
 {
@@ -22,8 +23,8 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
 
     [Header("Taskbar Buttons (for Region Action Panel)")]
     public Button negotiateButton;
+    public Button constructButton;
     public Button produceButton;
-    public Button provinceButton;
     public Button marketButton;
     public Button researchButton;      // New Research button.
     public Button moreButton;          // New More button.
@@ -55,17 +56,10 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
     [SerializeField] private TextMeshProUGUI secondaryCounterText; 
 
     private int primaryCounter = 1;     
-    private int secondaryCounter = 0;   
+    private TimeSpan secondaryCounter;   
 
     
     private int dayLengthInMinutes = 5;
-
-
-
-    private Coroutine taskbarCounterCoroutine;
-
-
-
 
 
     [System.Serializable]
@@ -97,6 +91,9 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
         taskbarPanel?.SetActive(true);
         mapPanel?.SetActive(true);
 
+        secondaryCounter = TimeSpan.FromMinutes( GameManager.Instance.gameConfig.dayLengthInMinutes);
+       
+
         // Force each map text to use its own material instance.
         if (mapTexts != null)
         {
@@ -112,16 +109,13 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
 
         // Assign button listeners.
         negotiateButton?.onClick.AddListener(() => ShowSubPanel(negotiatePanel, negotiateButton));
-        produceButton?.onClick.AddListener(() => ShowSubPanel(producePanel, produceButton));
-        provinceButton?.onClick.AddListener(() => ShowSubPanel(provincePanel, provinceButton));
+        constructButton?.onClick.AddListener(() => OpenRegionConstruction(RegionClickHandler.currentlySelectedRegion == null ? null: RegionClickHandler.currentlySelectedRegion.RegionData));
+        produceButton?.onClick.AddListener(() => OpenRegionProduction(RegionClickHandler.currentlySelectedRegion == null ? null : RegionClickHandler.currentlySelectedRegion.RegionData));
         marketButton?.onClick.AddListener(() => ShowSubPanel(marketPanel, marketButton));
         researchButton?.onClick.AddListener(() => ShowSubPanel(researchPanel, researchButton));
         moreButton?.onClick.AddListener(() => ShowSubPanel(morePanel, moreButton));
 
-        if (GameManager.Instance != null && GameManager.Instance.gameConfig != null)
-        {
-            dayLengthInMinutes = GameManager.Instance.gameConfig.dayLengthInMinutes;
-        }
+        ServiceCoroutine.Instance.StartCoroutine(TaskbarCounterRoutine());
 
 
     }
@@ -224,6 +218,7 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
 
     private void HideCurrentPanel()
     {
+        taskbarPanel.gameObject.SetActive(true);
         if (currentPanel != null)
         {
             currentPanel.Hide();
@@ -248,7 +243,7 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
         Invoke(nameof(EnablePanelClosing), 0.2f);
     }
 
-    public void OpenRegionConsruction(Region region)
+    public void OpenRegionConstruction(Region region)
     {
         HideCurrentPanel();
         currentPanel = productionScreen;
@@ -437,11 +432,11 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
         {
             yield return new WaitForSeconds(interval);
 
-            secondaryCounter++; 
+            secondaryCounter-=TimeSpan.FromSeconds(1); 
 
-            if (secondaryCounter >= dayLengthInMinutes)
+            if (secondaryCounter.TotalSeconds < 0)
             {
-                secondaryCounter = 0;
+                secondaryCounter = TimeSpan.FromMinutes( GameManager.Instance.gameConfig.dayLengthInMinutes);
                 primaryCounter++;
             }
 
@@ -454,38 +449,8 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
         if (primaryCounterText != null)
             primaryCounterText.text = primaryCounter.ToString(); 
         if (secondaryCounterText != null)
-            secondaryCounterText.text = secondaryCounter.ToString();
+            secondaryCounterText.text = $"{secondaryCounter.Minutes:00}:{secondaryCounter.Seconds:00}";
     }
-
-
-
-    private void OnEnable()
-    {
-        if (taskbarCounterCoroutine != null)
-            return;
-
-        primaryCounter = 1;
-        secondaryCounter = 0;
-
-        if (GameManager.Instance != null && GameManager.Instance.gameConfig != null)
-        {
-            dayLengthInMinutes = GameManager.Instance.gameConfig.dayLengthInMinutes;
-        }
-
-        taskbarCounterCoroutine = StartCoroutine(TaskbarCounterRoutine());
-    }
-
-
-    private void OnDisable()
-    {
-        // Stop the coroutine when the UI is disabled.
-        if (taskbarCounterCoroutine != null)
-        {
-            StopCoroutine(taskbarCounterCoroutine);
-            taskbarCounterCoroutine = null;
-        }
-    }
-
 
 }
 

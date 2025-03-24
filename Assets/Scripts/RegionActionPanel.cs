@@ -124,7 +124,7 @@ public class RegionActionPanel : MonoBehaviour, IUIPanel
     private void Construct()
     {
         Hide();
-        MaproomUIManager.Instance.OpenRegionConsruction(currentRegion);
+        MaproomUIManager.Instance.OpenRegionConstruction(currentRegion);
     }
 
     private void Produce()

@@ -36,7 +36,7 @@ public class UnitSelectView : MonoBehaviour
         unitData = data;
         image.sprite = data.sprite;
         nameText.text = data.name;
-        durationText.text = data.duration;
+        durationText.text = data.duration.ToString()+"m";
 
         foreach (var resourceCost in data.cost)
         {

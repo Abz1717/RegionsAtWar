@@ -18,7 +18,7 @@ public class PlayerData
     public Sprite flag;
     public List<int> StartRegions;
     public List<int> SpawnPoints;
-    public Color color;
+    public PlayerColor color;
 }
 
 public enum PlayerType

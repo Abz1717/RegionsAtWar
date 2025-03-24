@@ -16,6 +16,8 @@ public class RegionClickHandler : MonoBehaviour
     // Reference to region data (if available).
     private Region regionData;
 
+    public Region RegionData => regionData;
+
     void Start()
     {
 

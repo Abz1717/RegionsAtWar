@@ -8,6 +8,9 @@ public class RoadManager : Singleton<RoadManager>
     public Road GetRoad(string startRegionID, string endRegionID)
     {
         Debug.Log("ROAD   " + startRegionID + "   " + endRegionID);
-        return roads.Find(road => (road.startRegion.regionID.Equals(startRegionID) && road.endRegion.regionID.Equals(endRegionID)) || (road.startRegion.regionID.Equals(endRegionID) && road.endRegion.regionID.Equals(startRegionID)));
+        var road = roads.Find(road => (road.startRegion.regionID.Equals(startRegionID) && road.endRegion.regionID.Equals(endRegionID)) || 
+        (road.startRegion.regionID.Equals(endRegionID) && road.endRegion.regionID.Equals(startRegionID)));
+        Debug.Log("ROAD FOUND " + road.startRegion.regionID + "  " +  road.endRegion.regionID);
+        return road;
     }
 }

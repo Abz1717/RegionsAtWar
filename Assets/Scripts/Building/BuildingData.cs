@@ -10,7 +10,7 @@ public class BuildingData
     public BuildingType type;
     public Sprite sprite;
     public List<Cost> cost;
-    internal string duration;
+    public float duration = 1;
     //public BuildingController prefab;
 
 }

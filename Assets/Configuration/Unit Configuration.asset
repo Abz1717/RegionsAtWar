@@ -38,8 +38,8 @@ MonoBehaviour:
       type: 3}
     uniqueTwentyFiveSprite: {fileID: 21300000, guid: 17bca3f2ee8ddf940b6e2466c1728578,
       type: 3}
-    prefab: {fileID: 5943939939191043856, guid: cdde97322b4562d4cb69360afbbcc1e9,
-      type: 3}
+    duration: 1
+    prefab: {fileID: 145745441269884598, guid: 5159bcc97d95c284eaf583bcf14959ff, type: 3}
     cost:
     - resource: 0
       ammount: 424
@@ -59,7 +59,8 @@ MonoBehaviour:
       type: 3}
     uniqueTwentyFiveSprite: {fileID: 21300000, guid: 5f5641db267bc754099f04f36b39c42a,
       type: 3}
-    prefab: {fileID: 5943939939191043856, guid: cdde97322b4562d4cb69360afbbcc1e9,
+    duration: 1
+    prefab: {fileID: -6320336348129327909, guid: df61ed4dfbe491646a964547137d462f,
       type: 3}
     cost:
     - resource: 0
@@ -80,7 +81,8 @@ MonoBehaviour:
       type: 3}
     uniqueTwentyFiveSprite: {fileID: 21300000, guid: 912baffe44f35974e9eec295a11de462,
       type: 3}
-    prefab: {fileID: 5943939939191043856, guid: cdde97322b4562d4cb69360afbbcc1e9,
+    duration: 1
+    prefab: {fileID: 3390979089450771854, guid: 9fc04d9b44874a44ba8dc13ff8e9d284,
       type: 3}
     cost:
     - resource: 0
@@ -101,7 +103,8 @@ MonoBehaviour:
       type: 3}
     uniqueTwentyFiveSprite: {fileID: 21300000, guid: e1b79390d180c564b9a5261c67312b7f,
       type: 3}
-    prefab: {fileID: 5943939939191043856, guid: cdde97322b4562d4cb69360afbbcc1e9,
+    duration: 1
+    prefab: {fileID: 5758250445642479832, guid: 5094cbc6983ab5247bb0c84a3400eb91,
       type: 3}
     cost:
     - resource: 0

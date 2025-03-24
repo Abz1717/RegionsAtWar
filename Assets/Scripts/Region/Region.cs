@@ -87,8 +87,9 @@ public class Region : MonoBehaviour
         {
             var config = GameManager.Instance.gameConfig;
             if (ownerID >= 0)
-            {
-                originalColor = GameManager.Instance.gameConfig.Players.Find(p => p.Id == ownerID).color;
+            { 
+                // change players colours
+                originalColor = GameManager.Instance.gameConfig.Players.Find(p => p.Id == ownerID).color == PlayerColor.Green ? Color.yellow : Color.red;
             }
             else
             {

@@ -5,12 +5,25 @@ using System.Collections.Generic;
 using System;
 using System.Collections;
 using UnityEditor;
+public enum PlayerColor
+{
+    Green, Blue
+}
+
+[Serializable]
+public class UnitTexture
+{
+    public PlayerColor color;
+    public Texture2D texture;
+}
 
 public class UnitController : MonoBehaviour
 {
     [SerializeField] private Unit unit;
     [SerializeField] private Transform pivot;
-    [SerializeField] private SkinnedMeshRenderer mesh;
+    [SerializeField] private List<SkinnedMeshRenderer> meshes;
+
+    [SerializeField] private List<UnitTexture> textures;
 
     public Unit Unit => unit;
 
@@ -63,9 +76,12 @@ public class UnitController : MonoBehaviour
         }
     }
 
-    public void SetColor(Color color)
+    public void SetColor(PlayerColor color)
     {
-        mesh.material.color = color;
+        foreach (var mesh in meshes)
+        {
+            mesh.material.mainTexture = textures.Find(texture => texture.color == color).texture;
+        }
     }
 
     public void SetFaction(int faction)
@@ -83,11 +99,8 @@ public class UnitController : MonoBehaviour
             return;
         }
         // Remove the starting region since unit is already there
-        path.RemoveAt(0);
-
 
         CurrentState = UnitState.Moving;
-
 
         unit.Walk();
 
@@ -111,11 +124,9 @@ public class UnitController : MonoBehaviour
             {
                 Debug.LogError($"No road found between region {currentRegion.region.regionID} and {region.region.regionID}");
             }
-            road.SetSelectable(true);
-            roads.Add(road);
         }
 
-        for (int i =0; i < path.Count; i++)
+        for (int i =1; i < path.Count; i++)
         {
             var region = path[i];
 
@@ -124,6 +135,7 @@ public class UnitController : MonoBehaviour
             targetPos.z = 0f;  // or your desired constant value
 
             var distance = targetPos - transform.position;
+            var road = roads[i - 1];
 
             // Assuming each RegionCapturePoint’s transform.position is the center of that region.
             var tween = transform.DOMove(targetPos, distance.magnitude / unit.moveSpeed).SetEase(Ease.Linear)
@@ -135,7 +147,7 @@ public class UnitController : MonoBehaviour
                 })
                 .OnComplete(() =>
                 {
-                    roads[i-1].SetSelectable(false);
+                    road.SetSelectable(false);
                     // When reaching this region, set its owner if it's not contested.
                     if (!region.IsContested())
                     {

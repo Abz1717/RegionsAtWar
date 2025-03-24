@@ -16,10 +16,10 @@ public class UnitData
     public Sprite uniqueFiftySprite;
     public Sprite uniqueTwentyFiveSprite;
 
+    public float duration = 1;
 
     public UnitController prefab;
     public List<Cost> cost;
-    internal string duration;
 }
 
 [Serializable]

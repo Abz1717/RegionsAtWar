@@ -155,6 +155,7 @@ public class RegionManager : Singleton<RegionManager>
         foreach (var region in regionData)
         { 
             region.SetOwner(-1);
+            region.buildings.Clear();
         }
     }
 

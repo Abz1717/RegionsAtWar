@@ -12,7 +12,7 @@ public class UnitTypeSelectPanel : MonoBehaviour
 
     private List<UnitTypeSelectView> unitTypes = new List<UnitTypeSelectView>();
 
-    private void Start()
+    private void Awake()
     {
         foreach (var unit in unitConfiguration.unitTypes)
         {
@@ -31,7 +31,9 @@ public class UnitTypeSelectPanel : MonoBehaviour
     internal void Show(Region currentRegion)
     {
         gameObject.SetActive(true);
+        if (currentRegion == null)
+            return;
         var catapultButton = unitTypes.Find(unitType => unitType.Type == UnitType.Catapult);
-        catapultButton.gameObject.SetActive(currentRegion.buildings.Exists(building => building.type == BuildingType.Foundry));
+        catapultButton.gameObject.SetActive(currentRegion!= null && currentRegion.buildings.Exists(building => building.type == BuildingType.Foundry));
     }
 }
