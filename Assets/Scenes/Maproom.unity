@@ -2437,6 +2437,51 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &56641120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 56641122}
+  - component: {fileID: 56641121}
+  m_Layer: 0
+  m_Name: AIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &56641121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56641120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3ffbf7fee8d0f4b85b05fbfe7b01a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveInterval: 600
+--- !u!4 &56641122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56641120}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 457.91653, y: 90.700195, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &57745019
 GameObject:
   m_ObjectHideFlags: 0
@@ -9090,8 +9135,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283518794
-  m_fontColor: {r: 0.2901961, g: 0.30980393, b: 0.31764707, a: 1}
+    rgba: 4289704114
+  m_fontColor: {r: 0.69803923, g: 0.6901961, b: 0.6862745, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11756,7 +11801,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 3
+  resourseType: 2
   productionTime: 3
   neighbors:
   - {fileID: 1515461754}
@@ -22072,7 +22117,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 2
+  resourseType: 3
   productionTime: 3
   neighbors:
   - {fileID: 633018630}
@@ -22917,7 +22962,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 2
+  resourseType: 3
   productionTime: 3
   neighbors:
   - {fileID: 1143113512}
@@ -23425,7 +23470,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 2
+  resourseType: 3
   productionTime: 3
   neighbors:
   - {fileID: 2131047228}
@@ -27230,7 +27275,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 2
+  resourseType: 3
   productionTime: 3
   neighbors:
   - {fileID: 1286482098}
@@ -36235,7 +36280,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 3
+  resourseType: 2
   productionTime: 3
   neighbors:
   - {fileID: 834200189}
@@ -42381,7 +42426,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 3
+  resourseType: 2
   productionTime: 3
   neighbors:
   - {fileID: 1372730175}
@@ -42729,7 +42774,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 3
+  resourseType: 2
   productionTime: 3
   neighbors:
   - {fileID: 2125575534}
@@ -47648,7 +47693,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 3
+  resourseType: 2
   productionTime: 3
   neighbors:
   - {fileID: 1576112417}
@@ -48603,7 +48648,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 3
+  resourseType: 2
   productionTime: 3
   neighbors:
   - {fileID: 1036098739}
@@ -50841,7 +50886,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 3
+  resourseType: 2
   productionTime: 3
   neighbors:
   - {fileID: 2136256483}
@@ -56324,7 +56369,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 3
+  resourseType: 2
   productionTime: 3
   neighbors:
   - {fileID: 1732332752}
@@ -57962,7 +58007,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 4
+  resourseType: 2
   productionTime: 3
   neighbors:
   - {fileID: 554478188}
@@ -58594,7 +58639,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 3
+  resourseType: 2
   productionTime: 3
   neighbors:
   - {fileID: 1298299743}
@@ -62298,7 +62343,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 2
+  resourseType: 3
   productionTime: 3
   neighbors:
   - {fileID: 1589263997}
@@ -64899,8 +64944,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283518794
-  m_fontColor: {r: 0.2901961, g: 0.30980393, b: 0.31764707, a: 1}
+    rgba: 4289704370
+  m_fontColor: {r: 0.69803923, g: 0.69411767, b: 0.6862745, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -67979,7 +68024,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 2
+  resourseType: 3
   productionTime: 3
   neighbors:
   - {fileID: 2125575534}
@@ -73300,7 +73345,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 3
+  resourseType: 2
   productionTime: 3
   neighbors:
   - {fileID: 1149580485}
@@ -79284,7 +79329,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 2
+  resourseType: 3
   productionTime: 3
   neighbors:
   - {fileID: 1908738042}
@@ -80269,7 +80314,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 2
+  resourseType: 3
   productionTime: 3
   neighbors:
   - {fileID: 554478188}
@@ -80781,7 +80826,7 @@ MonoBehaviour:
   moneyRate: 10
   manpowerRate: 10
   resourceRate: 10
-  resourseType: 2
+  resourseType: 3
   productionTime: 3
   neighbors:
   - {fileID: 1351208407}
@@ -81502,3 +81547,4 @@ SceneRoots:
   - {fileID: 1763691182}
   - {fileID: 945573520}
   - {fileID: 230643298}
+  - {fileID: 56641122}
