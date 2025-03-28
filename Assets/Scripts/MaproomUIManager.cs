@@ -225,7 +225,7 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
         resourcesBar.UpdateResource(type, ammount);
     }
 
-    private void HideCurrentPanel()
+    public void HideCurrentPanel()
     {
         taskbarPanel.gameObject.SetActive(true);
         if (currentPanel != null)
@@ -268,7 +268,7 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
 
     public void CloseRegionActionPanel()
     {
-        regionActionPanel.Hide();
+        HideCurrentPanel();
         taskbarPanel?.SetActive(true);
         mapPanel?.SetActive(true);
     }
@@ -338,7 +338,7 @@ public class MaproomUIManager : Singleton<MaproomUIManager>
 
     public void CloseUnitActionPanel()
     {
-        unitActionPanel.Hide();
+        HideCurrentPanel();
         taskbarPanel?.SetActive(true);
     }
 

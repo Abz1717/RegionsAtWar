@@ -5,6 +5,8 @@ using System.Collections;
 public class Unit : MonoBehaviour
 {
     public const float FORT_DEFENCE = 0.3f;
+
+    public event Action OnDied;
     public event Action OnEnemyKilled;
 
     [Tooltip("Which faction/team this unit belongs to. E.g., 0 = Player, 1 = AI.")]
@@ -124,6 +126,8 @@ public class Unit : MonoBehaviour
     private void Die()
     {
         Debug.Log($"{gameObject.name} has died.");
+
+        OnDied?.Invoke();
 
 
         // Only capture the region if there's a recorded attacker.

@@ -13,14 +13,25 @@ public class ClickManager : MonoBehaviour
         mainCamera = Camera.main;
     }
 
+    private bool IsPointerOverUIObject()
+    {
+        var eventSystem = EventSystem.current;
+        PointerEventData eventData = new PointerEventData(eventSystem);
+        eventData.position = Input.mousePosition;
+        List<RaycastResult> results = new List<RaycastResult>();
+        eventSystem.RaycastAll(eventData, results);
+        return results.Count > 0;
+    }
+
     private void Update()
     {
+
         if (Input.GetMouseButtonDown(0))
         {
 
 
             // Check if the click is on a UI element.
-            if (EventSystem.current.IsPointerOverGameObject())
+            if (IsPointerOverUIObject())
             {
                 return;
             }
@@ -60,7 +71,7 @@ public class ClickManager : MonoBehaviour
                 Debug.Log("No selectable road was clicked.");
                 return;
             }
-            
+
 
             if (hits.Length > 0)
             {
@@ -77,8 +88,11 @@ public class ClickManager : MonoBehaviour
                         {
                             GameManager.Instance.AttackRegion(GameManager.Instance.LocalPlayerId, unit.CurrentPoint.region);
                         }
-                        GameManager.Instance.SelectUnit(unit);
-                        MaproomUIManager.Instance.OpenUnitActionPanel();
+                        else if (!MaproomUIManager.Instance.HasPanel)
+                        {
+                            GameManager.Instance.SelectUnit(unit);
+                            MaproomUIManager.Instance.OpenUnitActionPanel();
+                        }
                         return;
                     }
                 }
@@ -86,7 +100,7 @@ public class ClickManager : MonoBehaviour
                 foreach (RaycastHit2D hit in hits)
                 {
                     RegionClickHandler region = hit.collider.GetComponentInParent<RegionClickHandler>();
-                    if (region != null)
+                    if (region != null && !MaproomUIManager.Instance.HasPanel)
                     {
                         region.OnRegionSelected();
                         return;

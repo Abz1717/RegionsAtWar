@@ -215,7 +215,7 @@ MonoBehaviour:
   maxHealth: 100
   attack: 50
   defense: 0.2
-  moveSpeed: 0.3
+  moveSpeed: 2
   animator: {fileID: 3092732629909492146}
   region: {fileID: 0}
 --- !u!114 &5758250445642479832

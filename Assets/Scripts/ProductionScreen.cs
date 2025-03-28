@@ -40,13 +40,13 @@ public class ProductionScreen : MonoBehaviour, IUIPanel
 
     private void TryBuyBuilding(BuildingData data)
     {
-        Hide();
+        MaproomUIManager.Instance.HideCurrentPanel();
         GameManager.Instance.TryBuyBuilding(currentRegion, data);
     }
 
     private void TryBuyUnit(UnitData data)
     {
-        Hide();
+        MaproomUIManager.Instance.HideCurrentPanel();
         GameManager.Instance.TryBuyUnit(currentRegion, data);
     }
 

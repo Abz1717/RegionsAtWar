@@ -12,6 +12,7 @@ public class CameraController : MonoBehaviour
 
     private Camera cam;
     private Vector3 dragOrigin; // Stores the initial click/touch position
+    private int touchId = 1;
 
     void Start()
     {
@@ -35,7 +36,8 @@ public class CameraController : MonoBehaviour
         );
 
         // Pinch Zoom (Mobile)
-        if (Input.touchCount == 2)
+        if (Input.touchCount == 2 && (Input.touches[0].phase == TouchPhase.Stationary || Input.touches[0].phase == TouchPhase.Moved) && 
+            (Input.touches[1].phase == TouchPhase.Stationary || Input.touches[1].phase == TouchPhase.Moved))
         {
             Touch touch0 = Input.GetTouch(0);
             Touch touch1 = Input.GetTouch(1);
@@ -75,6 +77,8 @@ public class CameraController : MonoBehaviour
 
     void HandleDrag()
     {
+
+#if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0)) // Start dragging with left click
         {
             dragOrigin = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -92,5 +96,26 @@ public class CameraController : MonoBehaviour
                 transform.position.z
             );
         }
+
+#else
+        if (Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Began) // Start dragging with left click
+        {
+            touchId = Input.touches[0].fingerId;
+            dragOrigin = cam.ScreenToWorldPoint(Input.mousePosition);
+        }
+
+        if (Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Moved && Input.touches[0].fingerId == touchId) // Drag while holding left click
+        {
+            Vector3 difference = dragOrigin - cam.ScreenToWorldPoint(Input.mousePosition);
+            transform.position += difference;
+
+            // Keep camera within bounds
+            transform.position = new Vector3(
+                Mathf.Clamp(transform.position.x, minBounds.x, maxBounds.x),
+                Mathf.Clamp(transform.position.y, minBounds.y, maxBounds.y),
+                transform.position.z
+            );
+        }
+#endif
     }
 }

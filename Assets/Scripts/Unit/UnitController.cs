@@ -4,7 +4,7 @@ using DG.Tweening;  // Make sure you have DOTween imported
 using System.Collections.Generic;
 using System;
 using System.Collections;
-using UnityEditor;
+using UnityEngine.SocialPlatforms;
 public enum PlayerColor
 {
     Green, Blue
@@ -38,10 +38,10 @@ public class UnitController : MonoBehaviour
 
     public enum UnitState { Idle, Moving, Attacking }
     public UnitState CurrentState { get; private set; } = UnitState.Idle;
-
-
+    private UnitState previousState = UnitState.Idle;
 
     private Sequence tweener;
+    private List<Road> roads = new();
     // Optionally, reference a UI button that triggers movement.
 
 
@@ -59,6 +59,25 @@ public class UnitController : MonoBehaviour
 
 
         unit.OnEnemyKilled += ProcessEnemyKilled;
+
+        unit.OnDied += ProcessUnitDied;
+    }
+
+    private void ProcessUnitDied()
+    {
+        foreach (var road in roads)
+        {
+            road.SetSelectable(false);
+        }
+    }
+
+    public void SetState(UnitState state)
+    {
+        Debug.LogWarning("UNIT STATE " + state.ToString() + "PREVIOUS " + CurrentState.ToString());
+        if (state == CurrentState)
+            return;
+        previousState = CurrentState;
+        CurrentState = state;
     }
 
     private void SetRegion(RegionCapturePoint regionPoint)
@@ -70,9 +89,16 @@ public class UnitController : MonoBehaviour
 
     private void ProcessEnemyKilled()
     {
-        if (tweener != null && !tweener.IsComplete() && !tweener.IsPlaying())
+        var wasMoving = previousState == UnitState.Moving;
+        if (wasMoving && tweener != null && !tweener.IsComplete() && !tweener.IsPlaying())
         {
+            unit.Walk();
+            SetState(UnitState.Moving);
             tweener.TogglePause();
+        }
+        else
+        {
+            SetState(UnitState.Idle);
         }
     }
 
@@ -93,6 +119,11 @@ public class UnitController : MonoBehaviour
     // Call this method when move is triggered (e.g., via a button press).
     public void MoveAlongPath(List<RegionCapturePoint> path)
     {
+        if (CurrentState != UnitState.Idle)
+        {
+            Debug.LogWarning("unit is not idle");
+            return;
+        }
         if (path == null || path.Count == 0)
         {
             Debug.LogWarning("No path to move along.");
@@ -100,14 +131,17 @@ public class UnitController : MonoBehaviour
         }
         // Remove the starting region since unit is already there
 
-        CurrentState = UnitState.Moving;
+        if(tweener != null)
+            tweener.Kill();
+
+        SetState(UnitState.Moving);
 
         unit.Walk();
 
         // Create a DOTween sequence to chain movements.
         Sequence moveSequence = DOTween.Sequence();
 
-        List<Road> roads = new();
+        roads.Clear();
 
         for (int i = 0; i < path.Count - 1; i++)
         {
@@ -115,7 +149,7 @@ public class UnitController : MonoBehaviour
             var region = path[i + 1];
             var road = RoadManager.Instance.GetRoad(path[i].region.regionID, path[i+1].region.regionID);
 
-            if (road != null)
+            if (road != null && unit.factionID == GameManager.Instance.LocalPlayerId)
             {
                 road.SetSelectable(true);
                 roads.Add(road);
@@ -153,7 +187,7 @@ public class UnitController : MonoBehaviour
                 .OnComplete(() =>
                 {
 
-                    if (GetComponent<AIUnitController>() == null)
+                    if (GetComponent<AIUnitController>() == null && unit.factionID == GameManager.Instance.LocalPlayerId)
                     {
                         road.SetSelectable(false);
                     }
@@ -186,7 +220,7 @@ public class UnitController : MonoBehaviour
             }
 
             unit.Reset();
-            CurrentState = UnitState.Idle;
+            SetState(UnitState.Idle);
 
             Debug.Log("Move complete. New position: " + transform.position);
             StartCoroutine(DelayedEnemyVisibilityUpdate());
@@ -224,7 +258,7 @@ public class UnitController : MonoBehaviour
                 tweener.Pause();
                 }
 
-                CurrentState = UnitState.Attacking;
+                SetState(UnitState.Attacking);
 
                 var enemyController = collision.gameObject.GetComponent<UnitController>();
 

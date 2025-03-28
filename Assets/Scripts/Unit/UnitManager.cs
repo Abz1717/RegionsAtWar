@@ -212,12 +212,6 @@ public class UnitManager : Singleton<UnitManager>
             visibleRegions.Add(neighbor);
         }
 
-        Debug.Log("Player region: " + playerRCP.region.regionID);
-        foreach (var vr in visibleRegions)
-        {
-            Debug.Log("Visible region: " + vr.regionID);
-        }
-
         // Loop through all spawned units.
         foreach (UnitController unitController in spawnedUnits)
         {
@@ -243,7 +237,6 @@ public class UnitManager : Singleton<UnitManager>
                 }
 
 
-                Debug.Log(unitController.name + " is in region " + enemyRegion + " isVisible: " + isVisible);
 
                 // If your enemy units do not use SpriteRenderer, ensure you re-enable their actual Renderer component if applicable.
                 Renderer[] renderers = unitController.GetComponentsInChildren<Renderer>();

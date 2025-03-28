@@ -12056,7 +12056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
+  m_RenderShadows: 0
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
@@ -12101,8 +12101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panSpeed: 5
-  zoomSpeed: 500
-  minZoom: 60
+  zoomSpeed: 150
+  minZoom: 100
   maxZoom: 1250
   minBounds: {x: -500, y: 350}
   maxBounds: {x: 1500, y: 1500}
@@ -13894,7 +13894,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -40060,11 +40060,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 445446666}
         m_TargetAssemblyTypeName: MaproomUIManager, Assembly-CSharp
-        m_MethodName: CloseSubPanel
-        m_Mode: 2
+        m_MethodName: HideCurrentPanel
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 492861848}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
