@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57515bd67cf09a54f897d066ea78fd2a, type: 3}
+  m_Name: Buildings Configuration 1
+  m_EditorClassIdentifier: Assembly-CSharp::BuildingConfiguration
+  buildings:
+  - id: 0
+    name: Barracks Level 1
+    type: 0
+    sprite: {fileID: 21300000, guid: 16fc781c952d49e4db708df95721cf6c, type: 3}
+    cost:
+    - resource: 0
+      ammount: 524
+    - resource: 2
+      ammount: 424
+    - resource: 3
+      ammount: 245
+    duration: 1
+  - id: 1
+    name: Fortification Level 1
+    type: 1
+    sprite: {fileID: 21300000, guid: a8d585a2ea6d7d6408796cd085004ebb, type: 3}
+    cost:
+    - resource: 0
+      ammount: 574
+    - resource: 2
+      ammount: 461
+    - resource: 4
+      ammount: 124
+    duration: 1
+  - id: 2
+    name: Foundry Level 1
+    type: 2
+    sprite: {fileID: 21300000, guid: a7dc818099d9cde45b9dbfe481123c44, type: 3}
+    cost:
+    - resource: 0
+      ammount: 314
+    - resource: 3
+      ammount: 272
+    - resource: 4
+      ammount: 259
+    duration: 1
+  types:
+  - name: Barracks
+    type: 0
+    sprite: {fileID: 21300000, guid: 8b2767977e4135b4188385090a0f941f, type: 3}
+  - name: Fort
+    type: 1
+    sprite: {fileID: 21300000, guid: 7238afd3dbf4e2a479f9bda57e4cfc63, type: 3}
+  - name: Foundry
+    type: 2
+    sprite: {fileID: 21300000, guid: 133a3c15593c01c4391ef1c99dec8d2c, type: 3}

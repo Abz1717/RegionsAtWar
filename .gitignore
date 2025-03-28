@@ -1,0 +1,12 @@
+Library/
+Temp/
+Logs/
+UserSettings/
+obj/
+.vs/
+*.csproj
+*.sln
+
+
+RegionsAtWar.git.bfg-report/
+RegionsAtWar.git/

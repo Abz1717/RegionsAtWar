@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "380051859595",
+    "firebase_url": "https://regionsatwar-72061-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "regionsatwar-72061",
+    "storage_bucket": "regionsatwar-72061.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380051859595:android:307f972d96e10b1aa74c8e",
+        "android_client_info": {
+          "package_name": "com.nalutlabs.regionsatwar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380051859595-i00140p7puo5lp1oib3u6s8viq6p67gh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nalutlabs.regionsatwar",
+            "certificate_hash": "24534bd716bc4bf1f50117ce75c472e3ab4d3800"
+          }
+        },
+        {
+          "client_id": "380051859595-k4ljv5hur0pn3356tfqc1ucjjalt5rnh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoqmdkvGyB2hMa8kbj0bi2OTJBJy-Jftk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380051859595-k4ljv5hur0pn3356tfqc1ucjjalt5rnh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
